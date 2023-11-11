@@ -88,12 +88,21 @@
     @apply h-11;
   }
 
-  .middle-height {
+  .middle-dimensions {
     height: calc(100vh - 2.75rem - 21px);
+    width: 50px;
+  }
+
+  .explorer-dimensions {
+    @apply w-64 min-w-[256px];
   }
 
   .statusbar-height {
     @apply h-[21px];
+  }
+
+  .main-height {
+    @apply h-[calc(100vh-110px)];
   }
 
   .statusbar-button {
@@ -109,6 +118,6 @@
   }
 
   .terminal-placement {
-    @apply w-[calc(100vw-230px)] bottom-6 left-[230px] h-[40%];
+    @apply bottom-6 right-0 h-[40%] w-[calc(100vw-50px-256px)];
   }
 }

@@ -1,11 +1,12 @@
 import {
+  mdiCodeJson,
+  mdiFile,
   mdiLanguageCss3,
   mdiLanguageHtml5,
+  mdiLanguageJavascript,
   mdiLanguageMarkdown,
   mdiLanguageTypescript,
-  mdiLanguageJavascript,
   mdiReact,
-  mdiCodeJson,
 } from "@mdi/js";
 
 const extColorDict: Record<string, string> = {
@@ -39,5 +40,5 @@ export const getIconFromFileExt = (filename: string): string => {
   const lastDotIndex = filename.lastIndexOf(".");
   const ext = lastDotIndex !== -1 ? filename.substring(lastDotIndex) : filename;
 
-  return extIconDict[ext] || mdiReact;
+  return extIconDict[ext] || mdiFile;
 };

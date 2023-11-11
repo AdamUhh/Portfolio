@@ -1,4 +1,4 @@
-// Assuming types for explorerList, usePathname, getColorFromFileExt, and getIconFromFileExt are defined
+"use client";
 
 import { mdiWindowClose } from "@mdi/js";
 import Icon from "@mdi/react";
@@ -20,6 +20,7 @@ function Tab({ route, name }: TabProps) {
       href={route}
       className={`group flex h-full min-w-[115px] items-center justify-between gap-4 bg-tab px-2 hover:bg-tab-ACTIVE
         ${route === pathname ? "tab-active bg-tab-ACTIVE" : ""}`}
+      title={name}
     >
       <div className="flex items-center gap-1">
         <Icon
@@ -32,6 +33,7 @@ function Tab({ route, name }: TabProps) {
       <button
         className={`rounded-md p-1 brightness-75 hover:bg-explorer-HOVER hover:brightness-100 group-hover:visible
           ${route === pathname ? "visible" : "invisible"}`}
+        title="Decorative close icon :D"
       >
         <Icon path={mdiWindowClose} size={0.8} />
       </button>

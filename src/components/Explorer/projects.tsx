@@ -1,3 +1,5 @@
+"use client"
+
 import { mdiChevronDown, mdiFolder, mdiFolderOpen } from "@mdi/js";
 import Icon from "@mdi/react";
 import Link from "next/link";
@@ -55,7 +57,7 @@ export default function Projects() {
           size={1}
           className={showFolder ? "" : "-rotate-90"}
         />
-        <Icon path={showFolder ? mdiFolderOpen : mdiFolder} size={0.9} />
+        <Icon path={showFolder ? mdiFolderOpen : mdiFolder} size={0.9} color={'#F7C427'} />
         <span className="ml-1">Projects</span>
       </button>
       <div className={cn("", showFolder ? "block" : "hidden")}>

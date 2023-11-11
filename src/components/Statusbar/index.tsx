@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import {
   mdiAlertOutline,
   mdiBellOutline,
@@ -10,20 +11,21 @@ import {
   mdiHistory,
 } from "@mdi/js";
 import Icon from "@mdi/react";
+import React from "react";
 import Time from "./Time";
-import TimeOnSiteComponent from "./TimeOnApp";
+import TimeOnApp from "./TimeOnApp";
 
 interface StatusbarButtonProps {
-  icon: string;
-  size: number;
+  icon?: string;
+  size?: number;
   text?: string;
   children?: React.ReactNode;
 }
 
-function StatusbarButton({ icon, size, text, children }: StatusbarButtonProps) {
+function StatusbarButton({ icon, size = 1, text, children }: StatusbarButtonProps) {
   return (
     <div className="statusbar-button">
-      <Icon path={icon} size={size} />
+      {icon && <Icon path={icon} size={size} />}
       {text && <span>{text}</span>}
       {children}
     </div>
@@ -43,12 +45,14 @@ export default function Statusbar() {
         <span>0</span>
       </StatusbarButton>
       <StatusbarButton icon={mdiHistory} size={0.7}>
-        <TimeOnSiteComponent />
+        <TimeOnApp />
       </StatusbarButton>
       <div className="ml-auto flex h-full items-center">
         <StatusbarButton icon={mdiCodeBraces} size={0.7} text="TypeScriptJSX" />
         <StatusbarButton icon={mdiCheckAll} size={0.8} text="Prettier" />
-        <Time />
+        <StatusbarButton>
+          <Time />
+        </StatusbarButton>
         <StatusbarButton icon={mdiBellOutline} size={0.8} />
       </div>
     </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
+import AboutMe from "components/AboutMe";
 
-export default function AboutMe() {
-  return <div>AboutMe</div>;
+export default function About() {
+  return <AboutMe />;
 }

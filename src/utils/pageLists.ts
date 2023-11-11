@@ -1,11 +1,11 @@
 import {
-  mdiEmailEdit,
+  mdiCog,
+  mdiConsole,
   mdiDevTo,
+  mdiEmailEdit,
   mdiFileMultipleOutline,
   mdiGithub,
   mdiInformationOutline,
-  mdiCog,
-  mdiConsole,
 } from "@mdi/js";
 
 export const explorerList: {
@@ -105,3 +105,53 @@ export const actionbarBottomList: {
     route: "/settings",
   },
 ];
+
+interface Skill {
+  name: string;
+  experience: "Beginner" | "Amateur" | "Intermediate" | "Advanced";
+}
+
+interface SkillDict<T extends Skill[]> {
+  [key: string]: T;
+}
+
+export const skillDict: SkillDict<Skill[]> = {
+  languages: [
+    { name: "HTML5", experience: "Advanced" },
+    { name: "CSS3", experience: "Intermediate" },
+    { name: "Sass", experience: "Amateur" },
+    { name: "TypeScript", experience: "Intermediate" },
+    { name: "CSharp", experience: "Amateur" },
+    { name: "Autohotkey", experience: "Beginner" },
+  ],
+  frontend: [
+    { name: "React", experience: "Advanced" },
+    { name: "Next.js", experience: "Advanced" },
+    { name: "Redux", experience: "Intermediate" },
+  ],
+  backend: [
+    { name: "Node.js", experience: "Intermediate" },
+    { name: "Express", experience: "Amateur" },
+    { name: "GraphQL", experience: "Amateur" },
+    { name: "Prisma", experience: "Intermediate" },
+    { name: "Docker", experience: "Amateur" },
+  ],
+  databases: [
+    { name: "MySQL", experience: "Intermediate" },
+    { name: "PostgreSQL", experience: "Intermediate" },
+    { name: "MongoDB", experience: "Intermediate" },
+    { name: "Firebase", experience: "Intermediate" },
+    { name: "Supabase", experience: "Amateur" },
+  ],
+  cloud: [{ name: "AWS", experience: "Beginner" }],
+  design: [
+    { name: "Photoshop", experience: "Amateur" },
+    { name: "Figma", experience: "Amateur" },
+  ],
+  gameDevelopment: [{ name: "Unity", experience: "Beginner" }],
+  ecommerce: [{ name: "Shopify", experience: "Intermediate" }],
+  desktopApplications: [
+    { name: "Electron", experience: "Intermediate" },
+    { name: "AvaloniaUI", experience: "Beginner" },
+  ],
+};

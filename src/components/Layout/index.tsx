@@ -1,13 +1,13 @@
 "use client";
 
-import Titlebar from "components/Titlebar";
-import Tabs from "components/Tabs";
-import Statusbar from "components/Statusbar";
 import Actionbar from "components/Actionbar";
 import Explorer from "components/Explorer";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
-import { ReactNode, useState } from "react";
+import Statusbar from "components/Statusbar";
+import Tabs from "components/Tabs";
 import Terminal from "components/Terminal";
+import Titlebar from "components/Titlebar";
+import { ReactNode, useState } from "react";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 export default function AppLayout({ children }: { children: ReactNode }) {
   const handle = useFullScreenHandle();
@@ -15,14 +15,19 @@ export default function AppLayout({ children }: { children: ReactNode }) {
   const [showTerminal, setShowTerminal] = useState<boolean>(false);
 
   return (
-    <FullScreen handle={handle} className="h-screen w-screen">
+    <FullScreen handle={handle} className="h-screen w-screen overflow-hidden">
       <Titlebar handle={handle} />
       <div className="flex">
-        <Actionbar showTerminal={showTerminal} setShowTerminal={setShowTerminal} />
+        <Actionbar
+          showTerminal={showTerminal}
+          setShowTerminal={setShowTerminal}
+        />
         <Explorer />
         <div className="w-full overflow-x-auto overflow-y-hidden">
           <Tabs />
-          <main className="px-1">{children}</main>
+          <main className="main-height w-full overflow-y-auto px-1">
+            {children}
+          </main>
         </div>
       </div>
       <Statusbar />

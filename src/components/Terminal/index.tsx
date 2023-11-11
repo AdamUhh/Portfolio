@@ -14,7 +14,7 @@ export default function Terminal({
   return (
     <div
       className={cn(
-        "terminal-placement bg-terminal px-4 py-3",
+        "terminal-placement bg-terminal px-4 py-3 border-t-accent border-t-2 border-l-accent border-l-2",
         showTerminal ? "fixed" : "hidden",
       )}
     >

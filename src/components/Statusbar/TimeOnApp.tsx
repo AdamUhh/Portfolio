@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+"use client"
+
+import { useEffect, useState } from "react";
 
 export default function TimeOnApp() {
   const [startTime] = useState<Date>(new Date());

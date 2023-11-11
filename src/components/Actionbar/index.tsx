@@ -1,10 +1,12 @@
-import React from "react";
+"use client";
+
 import Icon from "@mdi/react";
+import { I_Terminal } from "components/Terminal";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 import { cn } from "utils/cn";
-import { actionbarList, actionbarBottomList } from "utils/pageLists";
-import { I_Terminal } from "components/Terminal";
+import { actionbarBottomList, actionbarList } from "utils/pageLists";
 
 interface ActionItemProps {
   route: string;
@@ -12,7 +14,10 @@ interface ActionItemProps {
   icon: string;
   external?: boolean;
   isActive?: boolean;
-  setShowTerminal?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+interface ActionButtonItemProps extends ActionItemProps {
+  setShowTerminal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function ActionButtonItem({
@@ -20,16 +25,16 @@ function ActionButtonItem({
   icon,
   isActive,
   setShowTerminal,
-}: ActionItemProps) {
+}: ActionButtonItemProps) {
   return (
     <button
       type="button"
+      title={title}
       onClick={() =>
         setShowTerminal && setShowTerminal((prev: boolean) => !prev)
       }
     >
       <Icon
-        title={title}
         path={icon}
         size={2.3}
         className={cn(
@@ -49,9 +54,8 @@ function ActionItem({
   isActive,
 }: ActionItemProps) {
   return (
-    <Link href={route} target={external ? "_blank" : "_self"}>
+    <Link href={route} target={external ? "_blank" : "_self"} title={title}>
       <Icon
-        title={title}
         path={icon}
         size={2.3}
         className={cn(
@@ -70,7 +74,7 @@ export default function Actionbar({
   const pathname = usePathname();
 
   return (
-    <div className="middle-height flex flex-col items-center bg-actionbar">
+    <div className="middle-dimensions flex flex-col items-center bg-actionbar">
       {actionbarList.map((a) => (
         <ActionItem key={a.route} isActive={pathname === a.route} {...a} />
       ))}
@@ -84,12 +88,7 @@ export default function Actionbar({
               setShowTerminal={setShowTerminal}
             />
           ) : (
-            <ActionItem
-              key={a.route}
-              isActive={pathname === a.route}
-              {...a}
-              setShowTerminal={setShowTerminal}
-            />
+            <ActionItem key={a.route} isActive={pathname === a.route} {...a} />
           ),
         )}
       </div>

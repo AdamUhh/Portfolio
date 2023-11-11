@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+"use client";
+
 import { mdiChevronDown, mdiDotsHorizontal } from "@mdi/js";
 import Icon from "@mdi/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { cn } from "utils/cn";
-import Projects from "./projects";
 import { getColorFromFileExt, getIconFromFileExt } from "utils/getFromExt";
 import { explorerList } from "utils/pageLists";
+import Projects from "./projects";
 
 interface ExplorerItemProps {
   route: string;
@@ -16,7 +18,7 @@ interface ExplorerItemProps {
 
 function ExplorerItem({ route, name, isActive }: ExplorerItemProps) {
   return (
-    <Link href={route} key={name}>
+    <Link href={route} key={name} title={name}>
       <div
         className={cn(
           "mb-1 flex items-center gap-1 px-2 py-[1px] hover:bg-explorer-HOVER",
@@ -39,7 +41,7 @@ export default function Explorer() {
   const [showFolder, setShowFolder] = useState<boolean>(true);
 
   return (
-    <div className="w-64 bg-explorer pt-2">
+    <div className="explorer-dimensions bg-explorer pt-2">
       <div className="flex items-center justify-between pl-6 pr-4 text-sm">
         <h4 className="tracking-tight brightness-75">EXPLORER</h4>
         <button className="rounded-md p-1 brightness-75 hover:bg-explorer-HOVER hover:brightness-100">

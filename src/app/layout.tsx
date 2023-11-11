@@ -1,7 +1,6 @@
 import AppLayout from "components/Layout";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// import { ThemeProvider } from "./ThemeProvider";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -19,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body suppressHydrationWarning>
         <Providers>
-          <AppLayout>{children}</AppLayout>
+          <div className={inter.className}>
+            <AppLayout>{children}</AppLayout>
+          </div>
         </Providers>
       </body>
     </html>
