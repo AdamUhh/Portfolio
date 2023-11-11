@@ -2,26 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --main: #24292e;
+    --main-foreground: 0 0% 94%; /* This is HSL in order to be able to change opacity inline */
+
+    --accent-color: #f9826c;
+
+    --titlebar: #1f2428;
+    --titlebar-hover: #424649;
+
+    --actionbar: #24292e;
+    --actionbar-hover: #1f2428;
+
+    --explorer: #1f2428;
+    --explorer-hover: #333e43;
+    --explorer-border: #161a1d;
+
+    --tab: #1f2428;
+    --tab-active: #2e353a;
+    --tab-border: #24292e;
+    --tab-background: #1f2428;
+
+    --statusbar: #16181b;
+    --statusbar-hover: #4f4f52;
+    --statusbar-border: #1b1f23;
+    --statusbar-dev-remote-window: #6788cd;
+
+    --article: #1f2428;
+
+    --button-bg: #176f2c;
+    --button-foreground: #dcffe4;
+
+    --scrollbar-track: #24292e;
+    --scrollbar-thumb: #333536;
+
+    --terminal: #16181b;
+  }
+
+  .dark {
+    --main: #24292e;
+    --main-foreground: #efefef;
+
+    --accent-color: #f9826c;
+
+    --titlebar: #1f2428;
+
+    --actionbar: #24292e;
+    --actionbar-hover: #1f2428;
+
+    --explorer: #1f2428;
+    --explorer-hover: #24292e;
+    --explorer-border: #161a1d;
+
+    --tab: #1f2428;
+    --tab-active: #24292e;
+    --tab-border: #24292e;
+    --tab-background: #1f2428;
+
+    --statusbar: #24292e;
+    --statusbar-hover: #4f4f52;
+    --statusbar-border: #1b1f23;
+
+    --article: #1f2428;
+
+    --button-bg: #176f2c;
+    --button-foreground: #dcffe4;
+
+    --scrollbar-track: #24292e;
+    --scrollbar-thumb: #333536;
+
+    --terminal: #16181b;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply bg-main text-main-FOREGROUND;
+  }
+
+  .titlebar-height {
+    @apply h-11;
+  }
+
+  .middle-height {
+    height: calc(100vh - 2.75rem - 21px);
+  }
+
+  .statusbar-height {
+    @apply h-[21px];
+  }
+
+  .statusbar-button {
+    @apply flex h-full cursor-pointer items-center gap-1 px-3 text-sm hover:bg-statusbar-HOVER;
+  }
+
+  .actionbar-border {
+    @apply shadow-[inset_2px_0px_0px] shadow-accent;
+  }
+
+  .tab-active {
+    @apply shadow-[inset_0px_-2px_0px] shadow-accent;
+  }
+
+  .terminal-placement {
+    @apply w-[calc(100vw-230px)] bottom-6 left-[230px] h-[40%];
+  }
 }
