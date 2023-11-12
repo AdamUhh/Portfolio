@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: ["class"],
   theme: {
@@ -36,6 +36,7 @@ const config: Config = {
     },
     extend: {
       spacing: {
+        "0.5px": "2px",
         "1.5px": "6px",
       },
       colors: {
@@ -45,10 +46,17 @@ const config: Config = {
         },
 
         accent: "var(--accent-color)",
+        faded: "var(--faded-color)",
 
         titlebar: {
           DEFAULT: "var(--titlebar)",
           HOVER: "var(--titlebar-hover)",
+        },
+
+        aboutme: {
+          CLASS: "var(--aboutme-css-class)",
+          PROPERTY: "var(--aboutme-css-property)",
+          VALUE: "var(--aboutme-css-value)",
         },
 
         actionbar: {
@@ -69,7 +77,7 @@ const config: Config = {
         },
         statusbar: {
           DEFAULT: "var(--statusbar)",
-          HOVER: "var(--statusbar-hover)",
+          HOVER: "hsl(var(--statusbar-hover))",
           BORDER: "var(--statusbar-border)",
           REMOTE: "var(--statusbar-dev-remote-window)",
         },

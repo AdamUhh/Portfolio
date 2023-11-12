@@ -8,6 +8,7 @@
     --main-foreground: 0 0% 94%; /* This is HSL in order to be able to change opacity inline */
 
     --accent-color: #f9826c;
+    --faded-color: rgba(255, 255, 255, 0.3);
 
     --titlebar: #1f2428;
     --titlebar-hover: #424649;
@@ -19,13 +20,20 @@
     --explorer-hover: #333e43;
     --explorer-border: #161a1d;
 
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+    /* --aboutme-css-class: #69BE7D;
+    --aboutme-css-property: #45ccf5;
+    --aboutme-css-value: #A676E0; */
+
     --tab: #1f2428;
     --tab-active: #2e353a;
     --tab-border: #24292e;
     --tab-background: #1f2428;
 
     --statusbar: #16181b;
-    --statusbar-hover: #4f4f52;
+    --statusbar-hover: 240 2% 32%;
     --statusbar-border: #1b1f23;
     --statusbar-dev-remote-window: #6788cd;
 
@@ -118,6 +126,29 @@
   }
 
   .terminal-placement {
-    @apply bottom-6 right-0 h-[40%] w-[calc(100vw-50px-256px)];
+    @apply bottom-6 right-0 h-[40%] w-[calc(100vw-50px-256px)] lg:w-[calc(100vw-50px)];
+  }
+
+  .undraggable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .taskbar-bg {
+    backdrop-filter: blur(20.5px);
+    background: rgba(3, 21, 41, 0.35);
+  }
+
+  .skill-bar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    @apply border-b-2 border-faded md:hidden;
   }
 }
