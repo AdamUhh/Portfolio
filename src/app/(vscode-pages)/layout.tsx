@@ -1,10 +1,18 @@
 import AppLayout from "components/common/Layout";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
 import "../globals.css";
 import { Providers } from "../providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetBrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetBrains",
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "AdamUhh's Portfolio",
@@ -18,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <div className={inter.className}>
+      <div className={`${jetBrains.variable} ${poppins.variable} font-poppins overflow-hidden`}>
         <AppLayout>{children}</AppLayout>
       </div>
     </Providers>

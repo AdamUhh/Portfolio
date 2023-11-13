@@ -22,7 +22,7 @@ interface DesktopLinkProps extends DesktopProps {
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
-    className="flex flex-col items-center justify-center gap-1"
+    className="flex flex-col items-center justify-center gap-1 "
     title={title}
   >
     {children}
@@ -40,7 +40,7 @@ export const DesktopItem = ({
   rotate,
 }: DesktopIconProps) => (
   <li
-    className="flex h-full w-full cursor-pointer items-center justify-center hover:bg-[#83c3ff3d]"
+    className="flex h-full w-full cursor-pointer items-center justify-center hover:bg-[#83c3ff3d] rounded-md"
     title={title}
     onClick={onClick}
   >
@@ -64,7 +64,7 @@ export const DesktopLink = ({
   name,
   title,
 }: DesktopLinkProps) => (
-  <li className="h-full w-full hover:bg-[#83c3ff3d]">
+  <li className="h-full w-full hover:bg-[#83c3ff3d] rounded-md">
     <Link
       href={href}
       target={target}

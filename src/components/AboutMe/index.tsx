@@ -59,8 +59,8 @@ export default function AboutMe() {
         </div>
         <div className="flex flex-col justify-center gap-3 pl-4">
           <div className="flex items-center gap-2">
-            <h4 className="h-11 text-3xl font-semibold">AdamUhh</h4>
-            <code className="h-6 rounded-md bg-[#4b4b4b] px-2 py-[1px] text-white/50">
+            <h4 className="h-11 text-3xl font-semibold font-jet">AdamUhh</h4>
+            <code className="h-6 rounded-md bg-[#4b4b4b] px-2 py-[1px] text-white/50 font-jetBrains">
               full_stack.developer
             </code>
           </div>

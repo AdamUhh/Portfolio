@@ -30,7 +30,8 @@ export default function Home() {
     <div
       className="home-wallpaper relative h-screen w-screen p-2"
       style={{
-        backgroundImage: `url('/home_screen.jpg')`,
+        backgroundImage: `url('/wallpaper.png')`,
+        // backgroundImage: `url('/home_screen.jpg')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
@@ -38,7 +39,7 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <ul className="grid list-none grid-cols-[90px] gap-3 grid-rows-[90px_90px_90px] font-medium">
+      <ul className="grid list-none grid-cols-[90px] gap-3 grid-rows-[90px_90px_90px_90px] font-medium">
         <DesktopItem
           onClick={handleVSCodeClick}
           name="Portfolio"

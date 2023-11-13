@@ -35,9 +35,16 @@ const config: Config = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
+      fontFamily: {
+        jetBrains: ['var(--font-jetBrains)'],
+        poppins: ['var(--font-poppins)'],
+      },
       spacing: {
         "0.5px": "2px",
         "1.5px": "6px",
+      },
+      borderWidth: {
+        "1": "1px"
       },
       colors: {
         main: {

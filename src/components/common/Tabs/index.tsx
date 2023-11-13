@@ -46,7 +46,7 @@ export default function Tabs() {
 
   return (
     <>
-      <div className="titlebar-height no-scrollbar text-xs flex overflow-auto bg-tab">
+      <div className="titlebar-height no-scrollbar text-xs flex overflow-auto bg-tab font-poppins">
         {explorerList
           .filter((t) => !t.hideInTabs)
           .map((t) => (
