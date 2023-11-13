@@ -1,4 +1,5 @@
+import Projects from "components/Projects";
 
-export default function Projects() {
-  return <div>Projects</div>;
+export default function ProjectsPage() {
+  return <Projects />;
 }

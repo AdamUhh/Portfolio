@@ -92,6 +92,26 @@
     @apply bg-main text-main-FOREGROUND;
   }
 
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2f2c30;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-sm border-faded bg-faded brightness-105;
+  }
+
   .titlebar-height {
     @apply h-11;
   }
@@ -150,5 +170,10 @@
     top: 50%;
     transform: translateY(-50%);
     @apply border-b-2 border-faded md:hidden;
+  }
+
+  .numbered-row::before {
+    content: attr(data-number); /* Use the data-number attribute as content */
+    padding-right: 5px; /* Adjust spacing */
   }
 }

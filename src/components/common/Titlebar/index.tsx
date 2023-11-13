@@ -27,12 +27,8 @@ export default function Titlebar({ handle }: TitlebarProps) {
         <span>AdamUhh - VSCode Portfolio</span>
       </div>
       <div className="ml-auto flex flex-1 items-center">
-        <Link
-          href={"/"}
-          className="ml-auto flex h-[14px] w-[14px] cursor-pointer  rounded-full bg-[#ff5f57] hover:brightness-90"
-        />
         <button
-          className="ml-2 h-[14px] w-[14px] cursor-pointer rounded-full bg-[#febc2e] hover:brightness-90"
+          className="ml-auto  h-[14px] w-[14px] cursor-pointer rounded-full bg-[#febc2e] hover:brightness-90"
           type="button"
           onClick={handle.active ? handle.exit : handle.enter}
         ></button>
@@ -43,6 +39,10 @@ export default function Titlebar({ handle }: TitlebarProps) {
         >
           <span className="mt-[-1px] h-[11px] w-[11px] animate-custom-ping rounded-full bg-[#28c840]" />
         </button>
+        <Link
+          href={"/"}
+          className="ml-2 flex h-[14px] w-[14px] cursor-pointer  rounded-full bg-[#ff5f57] hover:brightness-90"
+        />
       </div>
     </div>
   );

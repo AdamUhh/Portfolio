@@ -1,9 +1,11 @@
 "use client";
 import { mdiClose, mdiHelp } from "@mdi/js";
 import Icon from "@mdi/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { cn } from "utils/cn";
+import { vscodeIcon } from "../../assets";
 
 export default function Notification() {
   const [isVisible, setIsVisible] = useState(true);
@@ -39,34 +41,55 @@ export default function Notification() {
       </button>
       <div
         className={cn(
-          "  bottom-20 right-4 flex h-44 w-96 rounded-lg bg-gradient-to-r  from-[#e0edf8] to-[#d6deef] shadow-lg shadow-black",
+          "  bottom-20 right-4 flex h-fit min-w-[400px] rounded-lg bg-gradient-to-r  from-[#e0edf8] to-[#d6deef] shadow-lg shadow-black",
           isVisible ? "fixed" : "hidden",
         )}
       >
         <div className="h-full w-full px-6 py-4">
           <div className="flex h-full flex-col text-black">
-            <div className=" flex items-center font-bold">
+            <div className="flex items-center font-bold">
               <span className="text-2xl">👋</span>
-              <h1 className="text-lg">Welcome to my Portfolio!</h1>
+              <h1 className="text-xl pl-1">Welcome to my Portfolio!</h1>
               <button
                 type="button"
                 onClick={handleClose}
-                className="hover:bg-statusbar-HOVER/20 ml-auto rounded-md p-1"
+                className="ml-auto rounded-md p-1 hover:bg-statusbar-HOVER/20"
               >
                 <Icon path={mdiClose} size={0.8} color={"#000"} />
               </button>
             </div>
-            <div>
-              <p>To continue, click on the VSCode Icon</p>
+            <div className="text-lg mt-2">
+              <div className="flex items-center">
+                <span>To continue, click on the VSCode Icon</span>
+                <Link
+                  href={"/about"}
+                  className=" hover:brightness-95 ml-8"
+                  title="Go To Portfolio"
+                >
+                  <Image
+                    src={vscodeIcon}
+                    alt="VSCode Icon"
+                    width={40}
+                    height={40}
+                  />
+                </Link>
+              </div>
               <p>or click the below</p>
             </div>
-            <div className="mt-auto flex justify-evenly gap-6 text-center font-medium">
+            <div className="mt-6 flex flex-col justify-evenly gap-3 text-center font-medium">
               <Link
                 href={"/about"}
                 className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
                 title="Go To Portfolio"
               >
                 Go To Portfolio
+              </Link>
+              <Link
+                href={"/cv"}
+                className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
+                title="Go To Portfolio"
+              >
+                View CV
               </Link>
             </div>
           </div>

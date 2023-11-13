@@ -4,8 +4,8 @@ import Actionbar from "components/common/Actionbar";
 import Explorer from "components/common/Explorer";
 import Statusbar from "components/common/Statusbar";
 import Tabs from "components/common/Tabs";
-import Terminal from "components/common/Terminal";
 import Titlebar from "components/common/Titlebar";
+import VSCodeTerminal from "components/common/VSCodeTerminal";
 import { ReactNode, useState } from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -31,7 +31,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         </div>
       </div>
       <Statusbar />
-      <Terminal showTerminal={showTerminal} setShowTerminal={setShowTerminal} />
+      <VSCodeTerminal showTerminal={showTerminal} setShowTerminal={setShowTerminal} />
     </FullScreen>
   );
 }

@@ -1,72 +1,34 @@
-import { mdiConsole, mdiConsoleLine, mdiGithub } from "@mdi/js";
+"use client";
+
+import { mdiBadgeAccount, mdiConsole, mdiGithub } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
-import Link from "next/link";
-import { ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { vscodeIcon } from "../../assets";
-import Taskbar from "./Taskbar";
+import { DesktopItem, DesktopLink } from "./CommonButtons";
+import HomeTerminal from "./HomeTerminal";
 import Notification from "./Notification";
-
-interface DesktopIconProps {
-  path: string;
-  size: number;
-  title: string;
-  rotate?: boolean;
-  children?: ReactNode;
-}
-
-function DesktopIcon({
-  path,
-  size,
-  title,
-  children,
-  rotate,
-}: DesktopIconProps) {
-  return (
-    <li
-      className="cursor-pointer flex h-20 w-20 items-center justify-center hover:bg-[#83c3ff3d]"
-      title={title}
-    >
-      {children ? (
-        children
-      ) : (
-        <Icon path={path} size={size} className={rotate ? "rotate-90" : ""} />
-      )}
-    </li>
-  );
-}
-
-interface DesktopLinkProps {
-  href: string;
-  target?: string;
-  title: string;
-  children?: ReactNode;
-}
-
-function DesktopLink({
-  href,
-  target = "_self",
-  children,
-  title,
-}: DesktopLinkProps) {
-  return (
-    <li className="h-20 w-20 hover:bg-[#83c3ff3d]">
-      <Link
-        href={href}
-        target={target}
-        title={title}
-        className="flex h-full w-full items-center justify-center"
-      >
-        {children}
-      </Link>
-    </li>
-  );
-}
+import Taskbar from "./Taskbar";
+import VSCodeLoading from "./VSCodeLoading";
 
 export default function Home() {
+  const [isVSCodeOpen, setIsVSCodeOpen] = useState(false);
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  const router = useRouter();
+
+  const handleVSCodeClick = () => {
+    router.replace("/about");
+    setIsVSCodeOpen(true);
+  };
+
+  const handleTerminalClick = () => {
+    setIsTerminalOpen((prev) => !prev);
+  };
+
   return (
     <div
-      className="home-wallpaper relative h-screen w-screen"
+      className="home-wallpaper relative h-screen w-screen p-2"
       style={{
         backgroundImage: `url('/home_screen.jpg')`,
         backgroundSize: "cover",
@@ -76,19 +38,44 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <ul className="h-[calc(100%-56px)] w-fit list-none p-3">
-        <DesktopLink href="/about" title="Go To Portfolio">
+      <ul className="grid list-none grid-cols-[90px] gap-3 grid-rows-[90px_90px_90px] font-medium">
+        <DesktopItem
+          onClick={handleVSCodeClick}
+          name="Portfolio"
+          title="Go To Portfolio"
+          size={1}
+        >
           <Image src={vscodeIcon} alt="VSCode Portfolio" width={35} />
-        </DesktopLink>
+        </DesktopItem>
         <DesktopLink
           href="https://github.com/AdamUhh"
           target="_blank"
+          name="Github"
           title="Go To AdamUhh's Github"
         >
           <Icon path={mdiGithub} size={2} />
         </DesktopLink>
-        <DesktopIcon path={mdiConsole} size={2} title="Open Terminal" />
+        <DesktopItem
+          path={mdiConsole}
+          size={2}
+          title="Open Terminal"
+          name="Terminal"
+          onClick={handleTerminalClick}
+        />
+        <DesktopLink
+          href="/cv"
+          target="_blank"
+          name="CV"
+          title="View My CV"
+        >
+          <Icon path={mdiBadgeAccount} size={2} />
+        </DesktopLink>
       </ul>
+      {isVSCodeOpen && <VSCodeLoading />}
+      <HomeTerminal
+        handleClose={handleTerminalClick}
+        isTerminalOpen={isTerminalOpen}
+      />
       <Notification />
       <Taskbar />
     </div>
