@@ -1,6 +1,7 @@
 import AppLayout from "components/common/Layout";
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
+import { JetBrains_Mono, Poppins } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 import "../globals.css";
 import { Providers } from "../providers";
 
@@ -26,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <div className={`${jetBrains.variable} ${poppins.variable} font-poppins overflow-hidden`}>
+      <NextTopLoader />
+      <div
+        className={`${jetBrains.variable} ${poppins.variable} overflow-hidden font-poppins`}
+      >
         <AppLayout>{children}</AppLayout>
       </div>
     </Providers>
