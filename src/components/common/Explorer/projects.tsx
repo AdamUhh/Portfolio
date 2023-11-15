@@ -1,23 +1,28 @@
-"use client"
+"use client";
 
 import { mdiChevronDown, mdiFolder, mdiFolderOpen } from "@mdi/js";
 import Icon from "@mdi/react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "utils/cn";
 import { getColorFromFileExt, getIconFromFileExt } from "utils/getFromExt";
-import { projectList } from "utils/lists";
+import { projectExplorerList } from "utils/lists";
 
 interface ProjectProps {
   route: string;
   name: string;
   isActive?: boolean;
+  isProjectUrl?: boolean;
 }
 
-function ProjectLink({ route, name, isActive }: ProjectProps) {
+function ProjectLink({ route, name, isActive, isProjectUrl }: ProjectProps) {
   return (
-    <Link href={`/projects${route}`} key={name}>
+    <Link
+      href={`/projects${route}`}
+      key={name}
+      scroll={isProjectUrl ? true : false}
+    >
       <div
         className={cn(
           "mb-1  flex items-center gap-1 px-2 py-[1px] hover:bg-explorer-HOVER",
@@ -37,6 +42,7 @@ function ProjectLink({ route, name, isActive }: ProjectProps) {
 }
 
 export default function Projects() {
+  const pathname = usePathname();
   const params = useParams();
 
   const [showFolder, setShowFolder] = useState<boolean>(true);
@@ -47,7 +53,7 @@ export default function Projects() {
   }, [params]);
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="mt-4 flex flex-col gap-1">
       <button
         className="flex w-full items-center text-sm font-semibold tracking-wide hover:bg-explorer-HOVER"
         onClick={() => setShowFolder((prev) => !prev)}
@@ -57,12 +63,21 @@ export default function Projects() {
           size={1}
           className={showFolder ? "" : "-rotate-90"}
         />
-        <Icon path={showFolder ? mdiFolderOpen : mdiFolder} size={0.9} color={'#F7C427'} />
+        <Icon
+          path={showFolder ? mdiFolderOpen : mdiFolder}
+          size={0.9}
+          color={"#F7C427"}
+        />
         <span className="ml-1">Projects</span>
       </button>
       <div className={cn("", showFolder ? "block" : "hidden")}>
-        {projectList.map((e) => (
-          <ProjectLink key={e.name} isActive={urlHash === e.route} {...e} />
+        {projectExplorerList.map((e) => (
+          <ProjectLink
+            key={e.name}
+            isActive={urlHash === e.route}
+            isProjectUrl={pathname === "/projects"}
+            {...e}
+          />
         ))}
       </div>
     </div>

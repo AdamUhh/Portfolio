@@ -13,7 +13,7 @@ export default function Titlebar({ handle }: TitlebarProps) {
   return (
     <div className="titlebar-height flex items-center justify-center border-b-2 border-b-black bg-titlebar p-2 pl-3 text-md">
       <Image src={vscodeIcon} alt="VS Code Icon" width={20} />
-      <div className="ml-2 flex flex-1 gap-1 ">
+      <div className="ml-2 flex flex-1 gap-1 md:hidden ">
         {fileList.map((f) => (
           <p
             key={f}
@@ -23,12 +23,14 @@ export default function Titlebar({ handle }: TitlebarProps) {
           </p>
         ))}
       </div>
-      <div className="flex flex-1 items-center justify-center rounded-lg bg-titlebar-HOVER px-6 text-center text-ms font-semibold text-main-FOREGROUND/75 ">
-        <span>AdamUhh - VSCode Portfolio</span>
+      <div className="flex flex-1 items-center justify-center  text-center text-ms font-semibold text-main-FOREGROUND/75">
+        <span className="whitespace-nowrap bg-titlebar-HOVER rounded-lg w-fit px-10 sm:px-4">
+          AdamUhh - VSCode Portfolio
+        </span>
       </div>
-      <div className="ml-auto flex flex-1 items-center">
+      <div className="flex w-fit flex-1 items-center md:hidden">
         <button
-          className="ml-auto  h-[14px] w-[14px] cursor-pointer rounded-full bg-[#febc2e] hover:brightness-90"
+          className="ml-auto h-[14px] w-[14px] cursor-pointer rounded-full bg-[#febc2e] hover:brightness-90"
           type="button"
           onClick={handle.active ? handle.exit : handle.enter}
         ></button>

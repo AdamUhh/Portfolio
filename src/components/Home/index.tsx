@@ -77,7 +77,7 @@ export default function Home() {
         handleClose={handleTerminalClick}
         isTerminalOpen={isTerminalOpen}
       />
-      <Notification />
+      <Notification handleVSCodeClick={handleVSCodeClick} />
       <Taskbar />
     </div>
   );

@@ -1,14 +1,20 @@
 import { actionbarBottomList, actionbarTopList } from "./actionbarList";
 import { Skill, SkillExperience, skillDict, skillList } from "./experienceList";
 import { explorerList } from "./explorerList";
-import { projectList } from "./projectsList";
+import {
+  I_ProjectList,
+  projectExplorerList,
+  projectList,
+} from "./projectsList";
 
 export {
   actionbarBottomList,
   actionbarTopList,
   explorerList,
-  skillDict,
-  skillList,
+  projectExplorerList,
   projectList,
+  skillDict,
+  skillList
 };
-export type { Skill, SkillExperience };
+export type { I_ProjectList, Skill, SkillExperience };
+

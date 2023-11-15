@@ -1,12 +1,12 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ReactNode, useState } from "react";
 import { calculateAge } from "utils/calculateAge";
+import { cn } from "utils/cn";
 import { Skill, SkillExperience, skillDict, skillList } from "utils/lists";
 import { selfLogo } from "../../assets";
-import { cn } from "utils/cn";
 
 type ExperienceFilterOptions = SkillExperience | "Show All";
 
@@ -59,8 +59,8 @@ export default function AboutMe() {
         </div>
         <div className="flex flex-col justify-center gap-3 pl-4">
           <div className="flex items-center gap-2">
-            <h4 className="h-11 text-3xl font-semibold font-jet">AdamUhh</h4>
-            <code className="h-6 rounded-md bg-[#4b4b4b] px-2 py-[1px] text-white/50 font-jetBrains">
+            <h4 className="font-jet h-11 text-3xl font-semibold">AdamUhh</h4>
+            <code className="h-6 rounded-md bg-[#4b4b4b] px-2 py-[1px] font-jetBrains text-white/50">
               full_stack.developer
             </code>
           </div>
@@ -107,11 +107,10 @@ export default function AboutMe() {
       <Sections>
         <DetailHeader name="👋 Introduction" />
         <p>
-          Hello! I&apos;m Adam, a Full Stack Developer who&apos;s into creating
-          practical applications. I&apos;m proficient in building responsive,
-          user-friendly web applications. My overall approach to problem-solving
-          and adaptability to new technologies makes me an asset in dynamic
-          development environments - Change this its rubbish.
+          Hey there! I&apos;m Adam, a Full Stack Developer who loves making
+          useful apps. I&apos;m good at building responsive, user-friendly web
+          applications. I&apos;m flexible with problem-solving and can adapt to
+          new tech, making me handy in fast-paced development.
         </p>
         <p>
           Explore my
@@ -121,31 +120,29 @@ export default function AboutMe() {
           >
             Projects
           </Link>
-          and let&apos;s collaborate to turn your ideas into reality!
+          and let&apos;s collaborate to bring your ideas to life!
         </p>
       </Sections>
       <Sections>
         <DetailHeader name="💡Interests" />
         <p>
-          In terms of development, my interests are centered around creating
-          practical applications and websites. I have had a lot of fun
-          developing desktop applications using Electron and am exploring
-          cross-platform apps with AvaloniaUI. Additionally, I have a keen
-          interest in design, using tools like Photoshop and Figma. Game
-          development is on my radar too, as I am also slowly learning more
-          about Unity, Unreal Engine 4, and Blender.
+          I&apos;ve had a lot of fun (and stress) creating desktop apps with
+          Electron and am exploring making apps that work on different devices
+          with AvaloniaUI. I&apos;m also into design, using tools like Photoshop
+          and Figma. I&apos;m also dipping my toes into game development,
+          learning about Unity, Unreal Engine 4, and Blender.
         </p>
       </Sections>
       <Sections>
         <DetailHeader name="🛠️What it's like to work with me" />
         <p>
-          Working with me is like having a helpful teammate who&apos;s great at
-          solving problems and learning new things fast. However, I&apos;m
-          working on getting better at talking with others and gaining more
-          experience in teamwork. The tech world is changing a lot, so I&apos;m
-          staying on my toes to keep up with an open mind. While I might not be
-          a networking pro yet, I&apos;m determined to grow and be a valuable
-          part of the team.
+          I&apos;d say working with me is manageable/typical, like having a
+          helpful teammate who&apos;s able to solve problems and is able to
+          learn new things quickly. At the moment, I&apos;m working on getting
+          better at talking with others and gaining more experience in teamwork.
+          The tech world is always changing, and I&apos;m keeping up with it and
+          staying open-minded. I might not be a networking expert yet, but I&apos;m
+          determined to learn and be a helpful part of the team.
         </p>
       </Sections>
       <Sections>

@@ -1,4 +1,7 @@
 
 Todo:
   ☐ Responsiveness
-  
+  ✘ Analytics @cancelled(23-11-15 19:31)
+  ☐ Contact Me (AWS SES)
+  ☐ Refactor colors, make sure all colors are inside css variables
+  ☐ refactor code in general

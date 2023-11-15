@@ -17,10 +17,6 @@ export const explorerList: {
     route: "/projects",
   },
   {
-    name: "github.md",
-    route: "/github",
-  },
-  {
     name: "contact.css",
     route: "/contact",
   },

@@ -1,12 +1,12 @@
 "use client";
 
 import Icon from "@mdi/react";
-import { I_Terminal } from "components/common/Terminal";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { cn } from "utils/cn";
 import { actionbarBottomList, actionbarTopList } from "utils/lists";
+import { I_Terminal } from "../VSCodeTerminal";
 
 interface ActionItemProps {
   route: string;

@@ -7,7 +7,11 @@ import { useEffect, useState } from "react";
 import { cn } from "utils/cn";
 import { vscodeIcon } from "../../assets";
 
-export default function Notification() {
+export default function Notification({
+  handleVSCodeClick,
+}: {
+  handleVSCodeClick: () => void;
+}) {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -49,7 +53,7 @@ export default function Notification() {
           <div className="flex h-full flex-col text-black">
             <div className="flex items-center font-bold">
               <span className="text-2xl">👋</span>
-              <h1 className="text-xl pl-1">Welcome to my Portfolio!</h1>
+              <h1 className="pl-1 text-xl">Welcome to my Portfolio!</h1>
               <button
                 type="button"
                 onClick={handleClose}
@@ -58,12 +62,12 @@ export default function Notification() {
                 <Icon path={mdiClose} size={0.8} color={"#000"} />
               </button>
             </div>
-            <div className="text-lg mt-2">
+            <div className="mt-2 text-lg">
               <div className="flex items-center">
                 <span>To continue, click on the VSCode Icon</span>
                 <Link
                   href={"/about"}
-                  className=" hover:brightness-95 ml-8"
+                  className=" ml-8 hover:brightness-95"
                   title="Go To Portfolio"
                 >
                   <Image
@@ -79,6 +83,7 @@ export default function Notification() {
             <div className="mt-6 flex flex-col justify-evenly gap-3 text-center font-medium">
               <Link
                 href={"/about"}
+                onClick={handleVSCodeClick}
                 className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
                 title="Go To Portfolio"
               >
@@ -87,7 +92,7 @@ export default function Notification() {
               <Link
                 href={"/cv"}
                 className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
-                title="Go To Portfolio"
+                title="View My CV"
               >
                 View CV
               </Link>

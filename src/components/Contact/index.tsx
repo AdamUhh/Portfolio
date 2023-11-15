@@ -52,7 +52,7 @@ export default function ContactMe() {
           <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
           <pre className="text-green-400">
             <code>
-              <span className="text-white">.contact-info</span>
+              <span className="text-white">contact_info</span>
               <span className="ml-2 text-blue-500">&#123;</span>
               <br />
               {Object.entries(contactInfo).map(([key, value]) => (
@@ -60,7 +60,7 @@ export default function ContactMe() {
                   <span className="ml-4 text-yellow-300">{key}:</span>{" "}
                   {value.type === "link" ? (
                     <Link href={value.text} target="_blank">
-                      {value.text}
+                       &apos;{value.text}&apos;
                     </Link>
                   ) : (
                     <span className="text-blue-300">

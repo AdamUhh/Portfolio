@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <NextTopLoader />
+      <NextTopLoader showSpinner={false} />
       <div
         className={`${jetBrains.variable} ${poppins.variable} overflow-hidden font-poppins`}
       >
