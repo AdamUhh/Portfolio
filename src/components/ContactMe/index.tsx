@@ -48,22 +48,22 @@ export default function ContactMe() {
   return (
     <div className="flex h-full w-full items-center justify-center text-white ">
       <div className="flex min-h-[50%] min-w-[50%] gap-10 2xl:my-auto 2xl:flex-col 2xl:p-6 ">
-        <div className="flex w-fit flex-col rounded-xl bg-gray-700 p-6 2xl:w-full">
+        <div className="flex w-fit flex-col rounded-xl bg-gray-700 p-6  2xl:w-full">
           <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
-          <pre className="text-green-400">
-            <code>
-              <span className="text-white">contact_info</span>
+          <pre className="mb-2 text-green-400">
+            <code className="font-jetBrains ">
+              <span className="text-contactme-CLASS ">contact_info</span>
               <span className="ml-2 text-blue-500">&#123;</span>
               <br />
               {Object.entries(contactInfo).map(([key, value]) => (
                 <React.Fragment key={key}>
-                  <span className="ml-4 text-yellow-300">{key}:</span>{" "}
+                  <span className="text-contactme-PROPERTY ml-4">{key}:</span>{" "}
                   {value.type === "link" ? (
                     <Link href={value.text} target="_blank">
-                       &apos;{value.text}&apos;
+                      &apos;{value.text}&apos;
                     </Link>
                   ) : (
-                    <span className="text-blue-300">
+                    <span className="text-contactme-VALUE">
                       &apos;{value.text}&apos;
                     </span>
                   )}
@@ -127,7 +127,7 @@ function FormLayout({ children }: React.PropsWithChildren<{}>) {
 function ContactForm({ handleSubmit, onSubmit, register, errors }: Props) {
   return (
     <FormLayout>
-      <h2 className="mb-4 text-3xl font-bold">Contact Me</h2>
+      <h2 className="mb-4 text-3xl font-bold">Or Drop Me a Note</h2>
       <Field
         label="Name"
         type="text"

@@ -48,38 +48,38 @@ export const projectList: I_ProjectList[] = [
       "A task manager/todo list app, inspired by the clean look of VSCode. You can easily create, edit, and delete tasks in a file-like structure. Utilize quick shortcuts to transform lines into todo checkboxes. Whether hosted locally or saved on the cloud, it's a straightforward tool to enhance your productivity.",
     languagesUsed: [
       { name: "React", color: "#0284C7" },
-      { name: "Electron", color: "#50A8EE", text: "#333" },
+      { name: "Electron", color: "#50A8EE", text: "#000" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/VSTL",
   },
-  {
-    name: "e-commerce-site.tsx",
-    route: "#ecommerce",
-    title: "E-Commerce Site",
-    imgSrc: loFlo,
-    description:
-      "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
-    languagesUsed: [
-      { name: "NextJS", color: "#0284C7" },
-      { name: "Prisma ORM", color: "#7E22CE" },
-      { name: "Sqlite/Postgres", color: "#15803D" },
-    ],
-    sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
-  },
-  {
-    name: "e-commerce-dashboard.tsx",
-    route: "#headless-ecommerce-dashboard",
-    title: "Headless E-Commerce Dashboard",
-    imgSrc: loFlo,
-    description:
-      "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
-    languagesUsed: [
-      { name: "NextJS", color: "#0284C7" },
-      { name: "Prisma ORM", color: "#7E22CE" },
-      { name: "Sqlite/Postgres", color: "#15803D" },
-    ],
-    sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
-  },
+  // {
+  //   name: "e-commerce-site.tsx",
+  //   route: "#ecommerce",
+  //   title: "E-Commerce Site",
+  //   imgSrc: loFlo,
+  //   description:
+  //     "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
+  //   languagesUsed: [
+  //     { name: "NextJS", color: "#0284C7" },
+  //     { name: "Prisma ORM", color: "#7E22CE" },
+  //     { name: "Sqlite/Postgres", color: "#15803D" },
+  //   ],
+  //   sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
+  // },
+  // {
+  //   name: "e-commerce-dashboard.tsx",
+  //   route: "#headless-ecommerce-dashboard",
+  //   title: "Headless E-Commerce Dashboard",
+  //   imgSrc: loFlo,
+  //   description:
+  //     "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
+  //   languagesUsed: [
+  //     { name: "NextJS", color: "#0284C7" },
+  //     { name: "Prisma ORM", color: "#7E22CE" },
+  //     { name: "Sqlite/Postgres", color: "#15803D" },
+  //   ],
+  //   sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
+  // },
   // {
   //   name: "nammaX.js",
   //   route: "#nammaX",

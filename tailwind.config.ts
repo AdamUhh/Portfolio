@@ -36,15 +36,15 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        jetBrains: ['var(--font-jetBrains)'],
-        poppins: ['var(--font-poppins)'],
+        jetBrains: ["var(--font-jetBrains)"],
+        poppins: ["var(--font-poppins)"],
       },
       spacing: {
         "0.5px": "2px",
         "1.5px": "6px",
       },
       borderWidth: {
-        "1": "1px"
+        "1": "1px",
       },
       colors: {
         main: {
@@ -64,6 +64,12 @@ const config: Config = {
           CLASS: "var(--aboutme-css-class)",
           PROPERTY: "var(--aboutme-css-property)",
           VALUE: "var(--aboutme-css-value)",
+        },
+
+        contactme: {
+          CLASS: "var(--contactme-css-class)",
+          PROPERTY: "var(--contactme-css-property)",
+          VALUE: "var(--contactme-css-value)",
         },
 
         actionbar: {
@@ -90,10 +96,6 @@ const config: Config = {
         },
 
         terminal: "var(--terminal)",
-
-        // terminal: {
-        //   DEFAULT: "var(--terminal)",
-        // },
 
         button: {
           DEFAULT: "var(--button-bg)",

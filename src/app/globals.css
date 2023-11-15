@@ -20,12 +20,16 @@
     --explorer-hover: #333e43;
     --explorer-border: #161a1d;
 
+    /* --aboutme-css-class: #fff;
+    --aboutme-css-property: #fde047;
+    --aboutme-css-value: #93c5fd; */
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
-    /* --aboutme-css-class: #69BE7D;
-    --aboutme-css-property: #45ccf5;
-    --aboutme-css-value: #A676E0; */
+
+    --contactme-css-class: #fff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
 
     --tab: #1f2428;
     --tab-active: #2e353a;

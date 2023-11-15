@@ -5,3 +5,16 @@ Todo:
   ☐ Contact Me (AWS SES)
   ☐ Refactor colors, make sure all colors are inside css variables
   ☐ refactor code in general
+
+Pages:
+  ☐ About Me
+    ☐ Create CV pdf
+  ☐ Projects
+    ☐ Add/Create more projects
+  ☐ Contact
+    ☐ Add AWS SES functionality
+      ☐ Ensure that it cannot be spammed or have too many bounced requests?
+      ☐ Max 2 posts per session per day? I dont know
+  ☐ Terminal
+    ☐ Either have all data generalized to both frontend and terminal
+    ☐ Or create 2 different text for frontend and terminal

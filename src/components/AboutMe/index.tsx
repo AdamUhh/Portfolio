@@ -19,14 +19,15 @@ const SkillCategory = ({
   skills: Skill[];
   experienceFilter: ExperienceFilterOptions;
 }) => (
-  <div className="relative w-fit min-w-[300px] rounded-lg border-[3px] border-faded p-4 pb-6 lg:min-w-full">
+  <div className="relative w-full min-w-[300px] rounded-lg border-[3px] border-faded p-4 pb-6 font-jetBrains  lg:min-w-full">
     <div className="absolute right-1 top-[-5px] flex w-fit items-center gap-1 bg-main px-2">
       <div className="h-[10px] w-[10px] flex-shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#ff5f57] hover:brightness-90" />
       <div className="h-[10px] w-[10px] flex-shrink-0 cursor-pointer rounded-full bg-[#febc2e] hover:brightness-90" />
       <div className="h-[10px] w-[10px] flex-shrink-0 cursor-pointer rounded-full bg-[#28c840] hover:brightness-90" />
     </div>
-    <h5 className="w-full pt-2 text-md font-semibold">
-      <span className="text-aboutme-CLASS">.{category}</span> {"{"}
+    <h5 className="w-full pt-2 text-md  ">
+      <span className=" font-normal text-aboutme-CLASS">.{category}</span>
+      <span className="ml-2 font-normal text-main-FOREGROUND">&#123;</span>
     </h5>
     <ul className="list-none pl-5 font-medium">
       {skills.map(({ name, experience }) => (
@@ -43,7 +44,8 @@ const SkillCategory = ({
         </li>
       ))}
     </ul>
-    {"}"}
+    {/* &#125; */}
+    <span className="font-normal text-main-FOREGROUND">&#125;</span>
   </div>
 );
 
@@ -141,8 +143,8 @@ export default function AboutMe() {
           learn new things quickly. At the moment, I&apos;m working on getting
           better at talking with others and gaining more experience in teamwork.
           The tech world is always changing, and I&apos;m keeping up with it and
-          staying open-minded. I might not be a networking expert yet, but I&apos;m
-          determined to learn and be a helpful part of the team.
+          staying open-minded. I might not be a networking expert yet, but
+          I&apos;m determined to learn and be a helpful part of the team.
         </p>
       </Sections>
       <Sections>
