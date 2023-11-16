@@ -5,6 +5,7 @@ Todo:
   ☐ Contact Me (AWS SES)
   ☐ Refactor colors, make sure all colors are inside css variables
   ☐ refactor code in general
+  ☐ Add not-found.tsx page
 
 Pages:
   ☐ About Me
@@ -18,3 +19,8 @@ Pages:
   ☐ Terminal
     ☐ Either have all data generalized to both frontend and terminal
     ☐ Or create 2 different text for frontend and terminal
+
+Left Off References:
+  ☐ https://www.youtube.com/watch?v=dDpZfOQBMaU
+  ☐ https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations#server-only-forms
+  ☐ https://www.youtube.com/watch?v=RadgkoJrhu0

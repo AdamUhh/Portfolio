@@ -122,7 +122,7 @@ export default function AboutMe() {
           >
             Projects
           </Link>
-          and let&apos;s collaborate to bring your ideas to life!
+          and let&apos;s collaborate!
         </p>
       </Sections>
       <Sections>

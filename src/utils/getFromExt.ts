@@ -12,6 +12,7 @@ import { explorerList } from "./lists";
 
 const extColorDict: Record<string, string> = {
   ".tsx": "#00bcd4",
+  ".jsx": "#00bcd4",
   ".ts": "#0a84c8",
   ".js": "#f6df1c",
   ".html": "#e44d26",
@@ -22,6 +23,7 @@ const extColorDict: Record<string, string> = {
 
 const extIconDict: Record<string, string> = {
   ".tsx": mdiReact,
+  ".jsx": mdiReact,
   ".ts": mdiLanguageTypescript,
   ".js": mdiLanguageJavascript,
   ".html": mdiLanguageHtml5,

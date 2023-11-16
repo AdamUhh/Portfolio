@@ -26,7 +26,7 @@ export interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
 
 export const projectList: I_ProjectList[] = [
   {
-    name: "lo-flo.tsx",
+    name: "lo-flo.jsx",
     route: "#lo-flo",
     title: "Lo-Flo",
     imgSrc: loFlo,
@@ -49,6 +49,7 @@ export const projectList: I_ProjectList[] = [
     languagesUsed: [
       { name: "React", color: "#0284C7" },
       { name: "Electron", color: "#50A8EE", text: "#000" },
+      { name: "Redux", color: "#7046B2" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/VSTL",
   },
