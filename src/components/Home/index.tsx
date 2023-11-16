@@ -1,6 +1,11 @@
 "use client";
 
-import { mdiBadgeAccount, mdiConsole, mdiGithub } from "@mdi/js";
+import {
+  mdiBadgeAccount,
+  mdiConsole,
+  mdiGithub,
+  mdiHumanGreeting,
+} from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -15,6 +20,7 @@ import VSCodeLoading from "./VSCodeLoading";
 export default function Home() {
   const [isVSCodeOpen, setIsVSCodeOpen] = useState(false);
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  const [isWelcomeGreetingOpen, setIsWelcomeGreetingOpen] = useState(true);
   const router = useRouter();
 
   const handleVSCodeClick = () => {
@@ -24,6 +30,10 @@ export default function Home() {
 
   const handleTerminalClick = () => {
     setIsTerminalOpen((prev) => !prev);
+  };
+
+  const handleWelcomeGreetingClick = () => {
+    setIsWelcomeGreetingOpen((prev) => !prev);
   };
 
   return (
@@ -39,7 +49,7 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <ul className="grid list-none grid-cols-[90px] gap-3 grid-rows-[90px_90px_90px_90px] font-medium">
+      <ul className="grid list-none grid-cols-[90px] grid-rows-[repeat(5,90px)] gap-3 font-medium">
         <DesktopItem
           onClick={handleVSCodeClick}
           name="Portfolio"
@@ -63,21 +73,25 @@ export default function Home() {
           name="Terminal"
           onClick={handleTerminalClick}
         />
-        <DesktopLink
-          href="/cv"
-          target="_blank"
-          name="CV"
-          title="View My CV"
-        >
+
+        <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
           <Icon path={mdiBadgeAccount} size={2} />
         </DesktopLink>
+        <DesktopItem
+          path={mdiHumanGreeting}
+          size={2}
+          title="Open Help/Greetings"
+          name="Help"
+          onClick={handleWelcomeGreetingClick}
+        />
       </ul>
       {isVSCodeOpen && <VSCodeLoading />}
-      <HomeTerminal
-        handleClose={handleTerminalClick}
-        isTerminalOpen={isTerminalOpen}
+      <HomeTerminal isOpen={isTerminalOpen} handleClose={handleTerminalClick} />
+      <Notification
+        isOpen={isWelcomeGreetingOpen}
+        handleClose={handleWelcomeGreetingClick}
+        handleVSCodeClick={handleVSCodeClick}
       />
-      <Notification handleVSCodeClick={handleVSCodeClick} />
       <Taskbar />
     </div>
   );

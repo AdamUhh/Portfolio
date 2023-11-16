@@ -29,7 +29,7 @@ export default function Projects() {
       >
         Personal Projects
       </h1>
-      <p className="mb-5 text-xl">
+      <p className="mb-5 text-xl text-faded">
         These are some of the projects I have worked on:
       </p>
       {projectList.map((project) => (
@@ -67,7 +67,7 @@ function ProjectTemplate({
         <h1 id="#lo-flo" className="text-2xl font-semibold">
           {title}
         </h1>
-        <h4 className="text-md">{description}</h4>
+        <h4 className="text-md text-white/50">{description}</h4>
         <div className="mb-3 mt-2 flex h-fit flex-wrap items-center gap-2 text-md font-medium">
           {languagesUsed.map((l) => (
             <div

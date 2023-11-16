@@ -26,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Providers>
+    <>
+    {/* <Providers> */}
       <NextTopLoader showSpinner={false} />
       <div
         className={`${jetBrains.variable} ${poppins.variable} overflow-hidden font-poppins`}
       >
         <AppLayout>{children}</AppLayout>
       </div>
-    </Providers>
+    {/* </Providers> */}
+    </>
   );
 }
