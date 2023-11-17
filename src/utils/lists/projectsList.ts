@@ -7,8 +7,13 @@ interface I_Language {
   text?: string;
 }
 
-interface I_LanguagesUsed {
+export interface I_LanguagesUsed {
   languagesUsed: I_Language[];
+}
+
+export interface I_ProjectExtraList {
+  title: string;
+  description: string[];
 }
 
 interface I_ProjectExplorerList {
@@ -22,6 +27,7 @@ export interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
   imgSrc: StaticImageData;
   sourceCodeUrl: string;
   viewDemoUrl?: string;
+  extra?: I_ProjectExtraList[];
 }
 
 export const projectList: I_ProjectList[] = [
@@ -38,6 +44,15 @@ export const projectList: I_ProjectList[] = [
       { name: "Sqlite/Postgres", color: "#15803D" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
+    extra: [
+      {
+        title: "Why I made it",
+        description: [
+          "I made this flashcard app because I wanted an easy way to remember some programming concepts and definitions. Learning programming concepts can be confusing at first, so I created a tool that keeps things simple.",
+          "This app, like Quizlet but more tailored to my needs, helps me study by using digital flashcards. It's straightforward and makes learning questions, definitions, or even natural languages easier. You can use it on your own computer or save it in the cloud (e.g. supabase) for easy access. I made it to make studying less of a hassle and more straightforward for anyone learning something new.",
+        ],
+      },
+    ],
   },
   {
     name: "vstl.tsx",
@@ -52,6 +67,30 @@ export const projectList: I_ProjectList[] = [
       { name: "Redux", color: "#7046B2" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/VSTL",
+  },
+  {
+    name: "portfolio.tsx",
+    route: "#portfolio",
+    title: "Portfolio",
+    imgSrc: loFlo,
+    description:
+      "A personal portfolio showcasing my skills, projects, and experiences. This website is designed to highlight my capabilities and provide a comprehensive overview of my work.",
+
+    languagesUsed: [
+      { name: "NextJS", color: "#0284C7" },
+      { name: "AWS SES", color: "#DAA83F" },
+    ],
+    sourceCodeUrl: "https://github.com/AdamUhh/Portfolio",
+    extra: [
+      {
+        title: "Why I made it",
+        description: [
+          "I created this portfolio to make it easy for employers and collaborators to know about me and my work.",
+          "My goal was to make it simple for anyone to explore my background, skills, and projects in a unique way.",
+          "The design is inspired by Visual Studio Code (VSCode), a popular code editor. I chose this theme to make visitors who are into coding feel at home. I think it showcases how much I enjoy coding, and connects my portfolio with the world of development",
+        ],
+      },
+    ],
   },
   // {
   //   name: "e-commerce-site.tsx",

@@ -1,7 +1,20 @@
 import { ReactNode } from "react";
+import ContactSection from "../common/ContactSection";
 import Details from "./Details";
 import Header from "./Header";
 import Skills from "./Skills";
+
+export function DetailHeader({ name = "Introduction" }: { name: string }) {
+  return <h4 className={"text-3xl font-semibold"}>{name}</h4>;
+}
+
+export function Sections({ children }: { children: ReactNode }) {
+  return (
+    <section className="mx-auto flex w-full flex-col px-5 py-3">
+      {children}
+    </section>
+  );
+}
 
 export default function AboutMe() {
   return (
@@ -14,18 +27,9 @@ export default function AboutMe() {
       </div>
       <Details />
       <Skills />
+      <Sections>
+        <ContactSection />
+      </Sections>
     </div>
-  );
-}
-
-export function DetailHeader({ name = "Introduction" }: { name: string }) {
-  return <h4 className={"text-3xl font-semibold"}>{name}</h4>;
-}
-
-export function Sections({ children }: { children: ReactNode }) {
-  return (
-    <section className="mx-auto flex w-full flex-col px-5 py-3">
-      {children}
-    </section>
   );
 }

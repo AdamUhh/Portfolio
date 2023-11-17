@@ -45,6 +45,7 @@ const config: Config = {
       },
       borderWidth: {
         "1": "1px",
+        "6": "6px",
       },
       colors: {
         main: {

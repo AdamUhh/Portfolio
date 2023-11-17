@@ -1,8 +1,6 @@
 import FormLayout, { Field } from "./FormLayout";
 
-interface ContactFormProps {}
-
-export default function ContactForm({}: ContactFormProps) {
+export default function ContactForm() {
   return (
     <FormLayout>
       <h2 className="mb-4 text-3xl font-bold">Or Drop Me a Note</h2>

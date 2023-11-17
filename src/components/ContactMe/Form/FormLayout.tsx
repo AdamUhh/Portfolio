@@ -1,5 +1,7 @@
-"use client"
+"use client";
 
+import { mdiAlertCircle } from "@mdi/js";
+import Icon from "@mdi/react";
 import { ReactNode } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import sendEmail from "./action";
@@ -67,7 +69,7 @@ export default function FormLayout({ children }: FormLayoutProps) {
 
   return (
     <form
-      className="w-fit min-w-[500px] rounded-xl bg-gray-700 p-6"
+      className="w-full min-w-[500px] rounded-xl bg-gray-700 p-6"
       action={formAction}
     >
       {children}
@@ -77,10 +79,13 @@ export default function FormLayout({ children }: FormLayoutProps) {
       )}
       {formState !== null &&
         (formState as unknown as T_formState)?.success === false && (
-          <p>
-            {(formState as unknown as T_formState)?.message ||
-              "Failed to send email"}
-          </p>
+          <div className="mt-2 flex items-center gap-1">
+            <Icon path={mdiAlertCircle} size={0.8} color={"#ff0000"} />
+            <p className="text-red-500">
+              {(formState as unknown as T_formState)?.message ||
+                "Failed to send email"}
+            </p>
+          </div>
         )}
     </form>
   );

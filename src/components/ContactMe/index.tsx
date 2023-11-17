@@ -1,25 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import { Fragment, MouseEvent, useState } from "react";
 import { cn } from "utils/cn";
 import ContactForm from "./Form";
+import { contactInfo, gmailUrl } from "./constants";
 
 export default function ContactMe() {
   const [isEmailCopied, setIsEmailCopied] = useState(false);
 
-  const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText(contactInfo.email.text);
+  const copyEmailToClipboard = async (
+    event: MouseEvent<HTMLAnchorElement> | MouseEvent<HTMLDivElement>,
+    url?: string | undefined,
+  ) => {
+    event.preventDefault();
+    await navigator.clipboard.writeText(contactInfo.email.text);
+
+    if (url) window.open(url, "_blank");
+
     setIsEmailCopied(true);
     setTimeout(() => {
       setIsEmailCopied(false);
-    }, 3000); // Reset the copied state after 3 seconds
-  };
-
-  const contactInfo: Record<string, { text: string; type?: "link" }> = {
-    name: { text: "Adam M" },
-    email: { text: "adamuhh.dev@gmail.com" },
-    github: { text: "https://github.com/AdamUhh", type: "link" },
+    }, 3000);
   };
 
   return (
@@ -33,7 +35,7 @@ export default function ContactMe() {
               <span className="ml-2 text-blue-500">&#123;</span>
               <br />
               {Object.entries(contactInfo).map(([key, value]) => (
-                <React.Fragment key={key}>
+                <Fragment key={key}>
                   <span className="ml-4 text-contactme-PROPERTY">{key}:</span>{" "}
                   {value.type === "link" ? (
                     <Link href={value.text} target="_blank">
@@ -46,7 +48,7 @@ export default function ContactMe() {
                   )}
                   ;
                   <br />
-                </React.Fragment>
+                </Fragment>
               ))}
               <span className="text-blue-500">&#125;</span>
             </code>
@@ -64,10 +66,8 @@ export default function ContactMe() {
               {isEmailCopied ? "Email copied to clipboard!" : "Copy Email"}
             </span>
           </div>
-          <Link
-            onClick={copyEmailToClipboard}
-            href={"https://mail.google.com/mail"}
-            target="_blank"
+          <div
+            onClick={(e) => copyEmailToClipboard(e, gmailUrl)}
             className="mt-2 cursor-pointer rounded-lg bg-tab p-1 px-3 text-center hover:bg-tab-ACTIVE"
           >
             <span
@@ -80,7 +80,7 @@ export default function ContactMe() {
                 ? "Email copied to clipboard!"
                 : "Copy Email and Go To Gmail"}
             </span>
-          </Link>
+          </div>
         </div>
         <ContactForm />
       </div>
