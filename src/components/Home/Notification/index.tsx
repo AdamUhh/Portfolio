@@ -1,12 +1,7 @@
 import NotificationContainer from "./Container";
 import NotificationContent from "./Content";
 import NotificationTitlebar from "./Titlebar";
-
-interface NotificationProps {
-  handleClose: () => void;
-  isOpen: boolean;
-  handleVSCodeClick: () => void;
-}
+import { NotificationProps } from "./types";
 
 export default function Notification({
   isOpen,

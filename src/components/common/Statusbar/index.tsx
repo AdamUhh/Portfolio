@@ -16,15 +16,14 @@ import React from "react";
 import { getFullExtensionFromName } from "utils/getFromExt";
 import Time from "./Time";
 import TimeOnApp from "./TimeOnApp";
+import { StatusbarButtonProps } from "./types";
 
-interface StatusbarButtonProps {
-  icon?: string;
-  size?: number;
-  text?: string;
-  children?: React.ReactNode;
-}
-
-function StatusbarButton({ icon, size = 1, text, children }: StatusbarButtonProps) {
+function StatusbarButton({
+  icon,
+  size = 1,
+  text,
+  children,
+}: StatusbarButtonProps) {
   return (
     <div className="statusbar-button">
       {icon && <Icon path={icon} size={size} />}
@@ -35,7 +34,7 @@ function StatusbarButton({ icon, size = 1, text, children }: StatusbarButtonProp
 }
 
 export default function Statusbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <footer className="statusbar-height flex w-screen items-center bg-statusbar">
@@ -52,7 +51,11 @@ export default function Statusbar() {
         <TimeOnApp />
       </StatusbarButton>
       <div className="ml-auto flex h-full items-center">
-        <StatusbarButton icon={mdiCodeBraces} size={0.7} text={getFullExtensionFromName(pathname)} />
+        <StatusbarButton
+          icon={mdiCodeBraces}
+          size={0.7}
+          text={getFullExtensionFromName(pathname)}
+        />
         <StatusbarButton icon={mdiCheckAll} size={0.8} text="Prettier" />
         <StatusbarButton>
           <Time />

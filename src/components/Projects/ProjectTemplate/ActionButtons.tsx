@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { cn } from "utils/cn";
+import { ActionButtonsProps } from "./types";
 
-interface ActionButtonsProps {
-  isExtra: boolean;
-  sourceCodeUrl?: string;
-  viewDemoUrl?: string;
-  handleReadMore: () => void;
-  showReadMore: boolean;
-}
 
 export default function ActionButtons({
   isExtra,
@@ -24,7 +18,7 @@ export default function ActionButtons({
       {isExtra && (
         <button
           type="button"
-          className={cn("bg-sky-600  hover:border-sky-400", commonClassNames)}
+          className={cn(" hover:bg-sky-600", commonClassNames)}
           onClick={handleReadMore}
         >
           {showReadMore ? "Hide" : "Read More..."}

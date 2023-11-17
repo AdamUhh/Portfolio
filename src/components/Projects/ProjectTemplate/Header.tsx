@@ -1,7 +1,4 @@
-interface ProjectHeaderProps {
-  title: string;
-  description: string;
-}
+import { ProjectHeaderProps } from "./types";
 
 export default function ProjectHeader({
   title,

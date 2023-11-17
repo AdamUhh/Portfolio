@@ -1,15 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "utils/cn";
-import { I_ProjectList } from "utils/lists";
 import ActionButtons from "./ActionButtons";
 import ProjectHeader from "./Header";
 import LanguagesUsedSection from "./LanguagesUsed";
 import ReadMoreSection from "./ReadMore";
-
-interface ProjectTemplateProps extends I_ProjectList {
-  isActive?: boolean;
-}
+import { ProjectTemplateProps } from "./types";
 
 export default function ProjectTemplate({
   route,

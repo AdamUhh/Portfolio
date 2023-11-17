@@ -3,11 +3,7 @@
 import { useRef } from "react";
 import Draggable from "react-draggable";
 import { cn } from "utils/cn";
-
-interface HomeTerminalContainerProps {
-  isOpen: boolean;
-  children: React.ReactNode;
-}
+import { HomeTerminalContainerProps } from "./types";
 
 export default function HomeTerminalContainer({
   isOpen,

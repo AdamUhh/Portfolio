@@ -2,28 +2,14 @@
 
 import { useState } from "react";
 import { cn } from "utils/cn";
-import { Skill, SkillExperience, skillDict, skillList } from "utils/lists";
+import { skillDict, skillList } from "utils/lists";
 import { DetailHeader, Sections } from ".";
-
-type ExperienceFilterOptions = SkillExperience | "Show All";
-
-interface SkillItemProps {
-  name: string;
-  experience: string;
-  experienceFilter: ExperienceFilterOptions;
-}
-
-interface SkillCategoryProps {
-  category: string;
-  skills: Skill[];
-  experienceFilter: ExperienceFilterOptions;
-}
-
-interface FilterButtonProps {
-  label: string;
-  isActive: boolean;
-  onClick: () => void;
-}
+import {
+  SkillItemProps,
+  SkillCategoryProps,
+  FilterButtonProps,
+  ExperienceFilterOptions,
+} from "./types";
 
 function SkillItem({ name, experience, experienceFilter }: SkillItemProps) {
   return (

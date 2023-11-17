@@ -1,16 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { vscodeIcon } from "../../../assets";
-
-interface NotificationContentProps {
-  handleVSCodeClick: () => void;
-}
+import { NotificationContentProps } from "./types";
 
 export default function NotificationContent({
   handleVSCodeClick,
 }: NotificationContentProps) {
   return (
-    <div className="h-[calc(100%-40px)] overflow-y-auto overflow-x-hidden px-4 py-2 text-black">
+    <div className="h-[calc(100%-40px)] overflow-y-auto overflow-x-hidden p-4 text-black">
       <div className="flex items-center font-bold">
         <span className="text-2xl">👋</span>
         <h1 className="pl-1 text-2xl">Welcome to my Portfolio!</h1>

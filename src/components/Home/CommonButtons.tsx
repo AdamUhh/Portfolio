@@ -1,24 +1,6 @@
 import Icon from "@mdi/react";
 import Link from "next/link";
-import { ReactNode } from "react";
-
-interface DesktopProps {
-  title: string;
-  name?: string;
-  children?: ReactNode;
-}
-
-interface DesktopIconProps extends DesktopProps {
-  path?: string;
-  size: number;
-  rotate?: boolean;
-  onClick?: () => void;
-}
-
-interface DesktopLinkProps extends DesktopProps {
-  href: string;
-  target?: string;
-}
+import { DesktopProps, DesktopIconProps, DesktopLinkProps } from "./types";
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
@@ -40,7 +22,7 @@ export const DesktopItem = ({
   rotate,
 }: DesktopIconProps) => (
   <li
-    className="flex h-full w-full cursor-pointer items-center justify-center hover:bg-[#83c3ff3d] rounded-md"
+    className="flex h-full w-full cursor-pointer items-center justify-center rounded-md hover:bg-[#83c3ff3d]"
     title={title}
     onClick={onClick}
   >
@@ -64,7 +46,7 @@ export const DesktopLink = ({
   name,
   title,
 }: DesktopLinkProps) => (
-  <li className="h-full w-full hover:bg-[#83c3ff3d] rounded-md">
+  <li className="h-full w-full rounded-md hover:bg-[#83c3ff3d]">
     <Link
       href={href}
       target={target}

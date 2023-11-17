@@ -1,13 +1,9 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
+import { useRef } from "react";
 import Draggable from "react-draggable";
 import { cn } from "utils/cn";
-
-interface NotificationContainerProps {
-  isOpen: boolean;
-  children: ReactNode;
-}
+import { NotificationContainerProps } from "./types";
 
 export default function NotificationContainer({
   isOpen,

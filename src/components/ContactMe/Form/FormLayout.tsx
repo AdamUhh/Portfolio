@@ -2,53 +2,9 @@
 
 import { mdiAlertCircle } from "@mdi/js";
 import Icon from "@mdi/react";
-import { ReactNode } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import sendEmail from "./action";
-
-interface FormLayoutProps {
-  children: ReactNode;
-}
-
-interface FieldProps {
-  label: string;
-  type: string;
-  id: any;
-}
-
-interface T_formState {
-  success?: boolean;
-  message?: string;
-}
-
-export function Field({ label, type, id }: FieldProps) {
-  return (
-    <div className="mb-4">
-      <label
-        className="mb-2 block text-sm font-bold text-yellow-300"
-        htmlFor={id}
-      >
-        {label}
-      </label>
-      {type === "textarea" ? (
-        <textarea
-          id={id}
-          name={id}
-          className="w-full rounded-md border border-gray-600 bg-gray-800 p-2"
-          required
-        />
-      ) : (
-        <input
-          type={type}
-          id={id}
-          name={id}
-          className="w-full rounded-md border border-gray-600 bg-gray-800 p-2"
-          required
-        />
-      )}
-    </div>
-  );
-}
+import { FormLayoutProps, T_formState } from "./types";
 
 function FormButton() {
   const { pending } = useFormStatus();

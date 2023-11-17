@@ -3,6 +3,7 @@ import { Skill, SkillExperience, skillDict, skillList } from "./experienceList";
 import { explorerList } from "./explorerList";
 import {
   I_ProjectList,
+  I_ProjectExtraList,
   projectExplorerList,
   projectList,
 } from "./projectsList";
@@ -14,7 +15,6 @@ export {
   projectExplorerList,
   projectList,
   skillDict,
-  skillList
+  skillList,
 };
-export type { I_ProjectList, Skill, SkillExperience };
-
+export type { I_ProjectList, Skill, SkillExperience, I_ProjectExtraList };

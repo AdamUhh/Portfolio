@@ -1,6 +1,4 @@
-interface HomeTerminalTitlebarProps {
-  handleClose: () => void;
-}
+import { HomeTerminalTitlebarProps } from "./types";
 
 export default function HomeTerminalTitlebar({
   handleClose,

@@ -1,10 +1,6 @@
 import { Fragment } from "react";
-import { I_ProjectExtraList } from "utils/lists/projectsList";
+import { ReadMoreSectionProps } from "./types";
 
-interface ReadMoreSectionProps {
-  showReadMore: boolean;
-  extra?: I_ProjectExtraList[];
-}
 export default function ReadMoreSection({
   showReadMore,
   extra,
@@ -25,5 +21,5 @@ export default function ReadMoreSection({
       </>
     );
 
-    return <></>
+  return <></>;
 }

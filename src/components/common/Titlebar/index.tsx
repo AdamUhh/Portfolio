@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FullScreenHandle } from "react-full-screen";
 import { closeTab } from "utils/window";
 import { vscodeIcon } from "../../../assets";
+import { TitlebarProps } from "./types";
 const fileList = ["File", "Edit", "View", "Go", "Run", "Terminal", "Help"];
 
-interface TitlebarProps {
-  handle: FullScreenHandle;
-}
 
 export default function Titlebar({ handle }: TitlebarProps) {
   return (

@@ -8,13 +8,7 @@ import { useEffect, useState } from "react";
 import { cn } from "utils/cn";
 import { getColorFromFileExt, getIconFromFileExt } from "utils/getFromExt";
 import { projectExplorerList } from "utils/lists";
-
-interface ProjectProps {
-  route: string;
-  name: string;
-  isActive?: boolean;
-  isProjectUrl?: boolean;
-}
+import { ProjectProps } from "./types";
 
 function ProjectLink({ route, name, isActive, isProjectUrl }: ProjectProps) {
   return (

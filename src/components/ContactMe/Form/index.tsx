@@ -1,4 +1,5 @@
-import FormLayout, { Field } from "./FormLayout";
+import Field from "./Field";
+import FormLayout from "./FormLayout";
 
 export default function ContactForm() {
   return (

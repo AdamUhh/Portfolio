@@ -1,8 +1,5 @@
 import Terminal from "components/common/Terminal";
-
-interface HomeTerminalContentProps {
-  isOpen: boolean;
-}
+import { HomeTerminalContentProps } from "./types";
 
 export default function HomeTerminalContent({
   isOpen,

@@ -2,11 +2,7 @@ import { mdiClose } from "@mdi/js";
 import Icon from "@mdi/react";
 import Terminal from "components/common/Terminal";
 import { cn } from "utils/cn";
-
-export interface I_Terminal {
-  showTerminal: boolean;
-  setShowTerminal: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { I_Terminal } from "./types";
 
 export default function VSCodeTerminal({
   showTerminal,
