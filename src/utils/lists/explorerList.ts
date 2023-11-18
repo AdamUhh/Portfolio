@@ -1,8 +1,10 @@
-export const explorerList: {
+interface I_ExplorerList {
   name: string;
   route: string;
   hideInTabs?: boolean;
-}[] = [
+}
+
+const explorerList: I_ExplorerList[] = [
   {
     name: "home.tsx",
     route: "/",
@@ -21,3 +23,5 @@ export const explorerList: {
     route: "/contact",
   },
 ];
+
+export { explorerList };

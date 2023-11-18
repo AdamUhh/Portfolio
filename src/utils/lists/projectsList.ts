@@ -7,11 +7,11 @@ interface I_Language {
   text?: string;
 }
 
-export interface I_LanguagesUsed {
+interface I_LanguagesUsed {
   languagesUsed: I_Language[];
 }
 
-export interface I_ProjectExtraList {
+interface I_ProjectExtraList {
   title: string;
   description: string[];
 }
@@ -22,7 +22,7 @@ interface I_ProjectExplorerList {
   title: string;
 }
 
-export interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
+interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
   description: string;
   imgSrc: StaticImageData;
   sourceCodeUrl: string;
@@ -30,7 +30,7 @@ export interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
   extra?: I_ProjectExtraList[];
 }
 
-export const projectList: I_ProjectList[] = [
+const projectList: I_ProjectList[] = [
   {
     name: "lo-flo.jsx",
     route: "#lo-flo",
@@ -87,56 +87,26 @@ export const projectList: I_ProjectList[] = [
         description: [
           "I created this portfolio to make it easy for employers and collaborators to know about me and my work.",
           "My goal was to make it simple for anyone to explore my background, skills, and projects in a unique way.",
-          "The design is inspired by Visual Studio Code (VSCode), a popular code editor. I chose this theme to make visitors who are into coding feel at home. I think it showcases how much I enjoy coding, and connects my portfolio with the world of development",
+          "The design is inspired by Visual Studio Code (VSCode), a popular code editor. I chose this theme to make visitors who are into coding feel at home. I think it showcases how much I enjoy coding, and connects my portfolio with the world of development.",
+          "Additionally, I learnt the new features of NextJS v14 from creating this project.",
+        ],
+      },
+      {
+        title: "Challenges",
+        description: [
+          "At first, I had issues finding a suitable design and what content to showcase and write about. After thinking about it, I decided to simply build it how I visioned it and get it working. I then cleaned the design a bit, before finally asking some friends and family what they thought and how it could be improved.",
         ],
       },
     ],
   },
-  // {
-  //   name: "e-commerce-site.tsx",
-  //   route: "#ecommerce",
-  //   title: "E-Commerce Site",
-  //   imgSrc: loFlo,
-  //   description:
-  //     "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
-  //   languagesUsed: [
-  //     { name: "NextJS", color: "#0284C7" },
-  //     { name: "Prisma ORM", color: "#7E22CE" },
-  //     { name: "Sqlite/Postgres", color: "#15803D" },
-  //   ],
-  //   sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
-  // },
-  // {
-  //   name: "e-commerce-dashboard.tsx",
-  //   route: "#headless-ecommerce-dashboard",
-  //   title: "Headless E-Commerce Dashboard",
-  //   imgSrc: loFlo,
-  //   description:
-  //     "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
-  //   languagesUsed: [
-  //     { name: "NextJS", color: "#0284C7" },
-  //     { name: "Prisma ORM", color: "#7E22CE" },
-  //     { name: "Sqlite/Postgres", color: "#15803D" },
-  //   ],
-  //   sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
-  // },
-  // {
-  //   name: "nammaX.js",
-  //   route: "#nammaX",
-  //   title: "NammaX Gym Website + Admin Dashboard",
-  //   imgSrc: loFlo,
-  //   description:
-  //     "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
-  //   languagesUsed: [
-  //     { name: "NextJS", color: "#0284C7" },
-  //     { name: "Prisma ORM", color: "#7E22CE" },
-  //     { name: "Sqlite/Postgres", color: "#15803D" },
-  //   ],
-  //   sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
-  // },
 ];
 
-export const projectExplorerList: I_ProjectExplorerList[] = [
+const projectExplorerList: I_ProjectExplorerList[] = [
   { name: "index.ts", route: "#overview", title: "overview" },
   ...projectList.map((p) => ({ name: p.name, route: p.route, title: p.title })),
 ];
+
+export { projectExplorerList, projectList };
+
+  export type { I_LanguagesUsed, I_ProjectExtraList, I_ProjectList };
+

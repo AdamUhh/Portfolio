@@ -1,6 +1,6 @@
 "use client";
 
-import ContactSection from "components/common/ContactSection";
+import ContactSection from "components/VSCode_Components/ContactSection";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { projectList } from "utils/lists";

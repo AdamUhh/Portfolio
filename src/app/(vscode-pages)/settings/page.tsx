@@ -1,4 +1,4 @@
-import Settings from "components/common/Settings";
+import Settings from "components/VSCode_Components/Settings";
 
 export default function SettingsPage() {
   return (

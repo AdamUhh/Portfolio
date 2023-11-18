@@ -10,8 +10,6 @@ Todo:
 Pages:
   ☐ About Me
     ☐ Create CV pdf
-  ☐ Projects
-    ☐ Add/Create more projects
   ☐ Contact
     ☐ Add AWS SES functionality
       ☐ Ensure that it cannot be spammed or have too many bounced requests?
@@ -25,33 +23,7 @@ Left Off References:
   ☐ https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations#server-only-forms
   ☐ https://www.youtube.com/watch?v=RadgkoJrhu0
 
-Jabez:
-  ☐ On projects page, have a call to action to go to the contact page
-  ☐ On about me page, looking to get something to develop, contact me or something like this, on the bottom
-    ☐ also change buttons inside skills, either make them clickable or change its design entirely
-      ☐ Perhaps make them maximizable/minimizable
-  ☐ Projects page, add a view more inside each project, where you talk about why you made it, what challenges you faced, the problem it solved, etc.
-  ☐ Add it to dribbble
-  ☐ about me page, change whats it like to work with me, dont put negatives like, 'while im not a networking expert' to something else that is more positive
-  ☐ look at https://www.itsoffbrand.com/, add the threejs circle in secret page with "have fun"
-
-Home Page:
-  ✔ The popup can be in the middle for a friendlier feel. @done(23-11-17 01:04)
-
-About Me Page:
-  ✔ Towards the bottom of the About Me page, let's add a part to tell people to reach out for development opportunities or just to say hi. @done(23-11-17 16:24)
-  
-Projects Page:
-  ☐ On the projects page, we can add a friendly note, suggesting visitors check out the contact page.
-  ☐ To make the Projects page more interesting, we'll add a "Read More" for each project. We can share why we made it, the challenges faced, and the cool problems it solves. (search term: significant outcomes/findings)
-    ☐ When clicking Read More, expand it downwards, dont go to differnt page
-  
-Skills Section:
-  ✔ The buttons in the Skills section could use a little update. We'll either make them easy to click or give them a fresh look. Maybe they can even expand and shrink! @done(23-11-17 01:47)
-  
 Dribbble and Secret Page:
   ☐ Maybe share work on Dribbble?
   ☐ Take inspiration from https://www.itsoffbrand.com, tldr: add a playful circle on the secret page with a message like "have fun."
   
-Working Together:
-  ☐ Time to rewrite the working together part on the About Me page. We'll focus on the good stuff and skip anything negative. We want it to sound really friendly and welcoming!

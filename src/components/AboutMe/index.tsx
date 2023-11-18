@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import ContactSection from "../common/ContactSection";
+import ContactSection from "../VSCode_Components/ContactSection";
 import Details from "./Details";
 import Header from "./Header";
 import Skills from "./Skills";

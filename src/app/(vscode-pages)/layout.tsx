@@ -1,9 +1,8 @@
-import AppLayout from "components/common/Layout";
+import AppLayout from "components/VSCode_Components/Layout";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Poppins } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "../globals.css";
-import { Providers } from "../providers";
 
 const jetBrains = JetBrains_Mono({
   subsets: ["latin"],

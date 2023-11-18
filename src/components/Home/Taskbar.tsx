@@ -1,12 +1,12 @@
 import {
-  mdiBattery90,
-  mdiCheckboxMultipleBlankOutline,
-  mdiChevronUp,
-  mdiMicrosoft,
-  mdiVolumeHigh,
-  mdiWifi,
+    mdiBattery90,
+    mdiCheckboxMultipleBlankOutline,
+    mdiChevronUp,
+    mdiMicrosoft,
+    mdiVolumeHigh,
+    mdiWifi,
 } from "@mdi/js";
-import Time from "components/common/Statusbar/Time";
+import Time from "components/VSCode_Components/Statusbar/Time";
 import Image from "next/image";
 import { vscodeIcon } from "../../assets";
 import { DesktopItem, DesktopLink } from "./CommonButtons";

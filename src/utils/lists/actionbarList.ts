@@ -8,7 +8,7 @@ import {
   mdiInformationOutline,
 } from "@mdi/js";
 
-export const actionbarTopList: {
+const actionbarTopList: {
   title: string;
   icon: string;
   route: string;
@@ -34,7 +34,7 @@ export const actionbarTopList: {
     route: "/contact",
   },
 ];
-export const actionbarBottomList: {
+const actionbarBottomList: {
   title: string;
   icon: string;
   route: string;
@@ -57,3 +57,4 @@ export const actionbarBottomList: {
     route: "/settings",
   },
 ];
+export { actionbarBottomList, actionbarTopList };

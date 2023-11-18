@@ -1,4 +1,4 @@
-export const skillList = {
+const skillList = {
   Level_1: "Novice",
   Level_2: "Advanced Beginner",
   Level_3: "Competent",
@@ -6,9 +6,9 @@ export const skillList = {
   Level_5: "Expert",
 } as const;
 
-export type SkillExperience = (typeof skillList)[keyof typeof skillList];
+type SkillExperience = (typeof skillList)[keyof typeof skillList];
 
-export interface Skill {
+interface Skill {
   name: string;
   experience: SkillExperience;
 }
@@ -17,7 +17,7 @@ interface SkillDict<T extends Skill[]> {
   [key: string]: T;
 }
 
-export const skillDict: SkillDict<Skill[]> = {
+const skillDict: SkillDict<Skill[]> = {
   languages: [
     { name: "HTML5", experience: skillList.Level_4 },
     { name: "CSS3", experience: skillList.Level_3 },
@@ -64,3 +64,8 @@ export const skillDict: SkillDict<Skill[]> = {
     { name: "Unreal Engine 4", experience: skillList.Level_1 },
   ],
 };
+
+export { skillDict, skillList };
+
+  export type { Skill, SkillExperience };
+

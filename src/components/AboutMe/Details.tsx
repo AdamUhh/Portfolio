@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sections, DetailHeader } from ".";
+import { DetailHeader, Sections } from ".";
 
 export default function Details() {
   return (
@@ -13,7 +13,7 @@ export default function Details() {
             I&apos;m good at building responsive, user-friendly web
             applications.{" "}
           </span>{" "}
-          I&apos;m flexible with problem-solving and can adapt to new tech,
+          I&apos;m flexible with problem-solving and can quickly adapt to new tech,
           making me handy in fast-paced development.
         </p>
         <p className="text-white/50">

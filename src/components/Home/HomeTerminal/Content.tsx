@@ -1,4 +1,4 @@
-import Terminal from "components/common/Terminal";
+import Terminal from "components/Terminal";
 import { HomeTerminalContentProps } from "./types";
 
 export default function HomeTerminalContent({

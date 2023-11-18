@@ -1,6 +1,6 @@
 import { mdiClose } from "@mdi/js";
 import Icon from "@mdi/react";
-import Terminal from "components/common/Terminal";
+import Terminal from "components/Terminal";
 import { cn } from "utils/cn";
 import { I_Terminal } from "./types";
 

@@ -1,11 +1,11 @@
 "use client";
 
-import Actionbar from "components/common/Actionbar";
-import Explorer from "components/common/Explorer";
-import Statusbar from "components/common/Statusbar";
-import Tabs from "components/common/Tabs";
-import Titlebar from "components/common/Titlebar";
-import VSCodeTerminal from "components/common/VSCodeTerminal";
+import Actionbar from "components/VSCode_Components/Actionbar";
+import Explorer from "components/VSCode_Components/Explorer";
+import Statusbar from "components/VSCode_Components/Statusbar";
+import Tabs from "components/VSCode_Components/Tabs";
+import Titlebar from "components/VSCode_Components/Titlebar";
+import VSCodeTerminal from "components/VSCode_Components/VSCodeTerminal";
 import { ReactNode, useState } from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
