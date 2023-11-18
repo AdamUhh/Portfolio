@@ -8,7 +8,7 @@ export default function Tab({ pathname, route, name }: TabProps) {
   return (
     <Link
       href={route}
-      className={`group flex h-full min-w-[115px] items-center justify-between gap-4 bg-tab px-2 hover:bg-tab-ACTIVE
+      className={`group flex h-[45px] w-fit min-w-[180px] items-center justify-between gap-4 bg-tab px-2 py-2 hover:bg-tab-ACTIVE
           ${route === pathname ? "tab-active bg-tab-ACTIVE" : ""}`}
       title={name}
     >

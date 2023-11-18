@@ -9,8 +9,8 @@ export default function LanguagesUsedSection({
         <div
           key={l.name}
           style={{
-            backgroundColor: l.color || "",
-            color: l.text || "inherit",
+            backgroundColor: l.bgColor || "",
+            color: l.color || "inherit",
           }}
           className="h-fit w-fit rounded px-2 py-1"
         >

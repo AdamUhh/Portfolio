@@ -3,8 +3,8 @@ import { loFlo } from "../../assets";
 
 interface I_Language {
   name: string;
-  color: string;
-  text?: string;
+  bgColor: string;
+  color?: string;
 }
 
 interface I_LanguagesUsed {
@@ -39,9 +39,9 @@ const projectList: I_ProjectList[] = [
     description:
       "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
     languagesUsed: [
-      { name: "NextJS", color: "#0284C7" },
-      { name: "Prisma ORM", color: "#7E22CE" },
-      { name: "Sqlite/Postgres", color: "#15803D" },
+      { name: "NextJS", bgColor: "#0284C7" },
+      { name: "Prisma ORM", bgColor: "#7E22CE" },
+      { name: "Sqlite/Postgres", bgColor: "#15803D" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
     extra: [
@@ -62,9 +62,9 @@ const projectList: I_ProjectList[] = [
     description:
       "A task manager/todo list app, inspired by the clean look of VSCode. You can easily create, edit, and delete tasks in a file-like structure. Utilize quick shortcuts to transform lines into todo checkboxes. Whether hosted locally or saved on the cloud, it's a straightforward tool to enhance your productivity.",
     languagesUsed: [
-      { name: "React", color: "#0284C7" },
-      { name: "Electron", color: "#50A8EE", text: "#000" },
-      { name: "Redux", color: "#7046B2" },
+      { name: "React", bgColor: "#0284C7" },
+      { name: "Electron", bgColor: "#50A8EE", color: "#000" },
+      { name: "Redux", bgColor: "#7046B2" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/VSTL",
   },
@@ -75,10 +75,9 @@ const projectList: I_ProjectList[] = [
     imgSrc: loFlo,
     description:
       "A personal portfolio showcasing my skills, projects, and experiences. This website is designed to highlight my capabilities and provide a comprehensive overview of my work.",
-
     languagesUsed: [
-      { name: "NextJS", color: "#0284C7" },
-      { name: "AWS SES", color: "#DAA83F" },
+      { name: "NextJS", bgColor: "#0284C7" },
+      { name: "AWS SES", bgColor: "#DAA83F", color: "#000" },
     ],
     sourceCodeUrl: "https://github.com/AdamUhh/Portfolio",
     extra: [

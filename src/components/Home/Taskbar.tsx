@@ -19,7 +19,7 @@ const Taskbar = () => (
       <DesktopItem
         path={mdiCheckboxMultipleBlankOutline}
         size={1.4}
-        title="Checkbox"
+        title="Monitors"
       />
       <DesktopLink href="/about" title="Go To Portfolio">
         <Image src={vscodeIcon} alt="VSCode Portfolio" width={27} />

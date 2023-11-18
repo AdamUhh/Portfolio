@@ -105,7 +105,8 @@
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
+    height: 6px;
   }
 
   *::-webkit-scrollbar-track {
@@ -117,7 +118,7 @@
   }
 
   .titlebar-height {
-    @apply h-11;
+    @apply h-[45px] overflow-y-hidden;
   }
 
   .middle-dimensions {

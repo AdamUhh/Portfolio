@@ -8,7 +8,7 @@ export default function Tabs() {
   const pathname = usePathname();
 
   return (
-    <div className="titlebar-height no-scrollbar text-xs flex overflow-auto bg-tab font-poppins">
+    <div className="titlebar-height text-xs flex overflow-x-auto bg-tab font-poppins">
       {explorerList
         .filter((t) => !t.hideInTabs)
         .map((t) => (
