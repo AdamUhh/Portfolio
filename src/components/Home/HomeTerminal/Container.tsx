@@ -15,7 +15,7 @@ export default function HomeTerminalContainer({
     <Draggable handle=".draggable-handle" nodeRef={nodeRef}>
       <div
         className={cn(
-          "left-[30%] top-[20%] h-[60%] min-h-[300px] w-[40%] min-w-[300px] translate-x-[-50%] translate-y-[-50%] rounded-2xl bg-[#151515] shadow-[0_0_10px_2px_rgba(0,0,0,1)] ",
+          "left-[35%] top-[8%] h-[60%] min-h-[300px] w-[40%] min-w-[300px]  rounded-2xl bg-[#151515] shadow-[0_0_10px_2px_rgba(0,0,0,1)] lg:w-[60%] sm:left-[5%] ",
           isOpen ? "fixed" : "hidden",
         )}
         ref={nodeRef}

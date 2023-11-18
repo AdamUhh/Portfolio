@@ -40,7 +40,7 @@ export default function Terminal({ isTerminalOpen }: TerminalProps) {
   return (
     <div
       ref={terminalContainerRef}
-      className="h-full"
+      className="h-full font-jetBrains"
       onClick={handleTerminalClick}
     >
       <TerminalOutput output={output} />
