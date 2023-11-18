@@ -25,7 +25,7 @@ export default function FormLayout({ children }: FormLayoutProps) {
 
   return (
     <form
-      className="w-full min-w-[500px] rounded-xl bg-gray-700 p-6"
+      className="w-full min-w-[500px] sm:min-w-fit rounded-xl bg-gray-700 p-6"
       action={formAction}
     >
       {children}
