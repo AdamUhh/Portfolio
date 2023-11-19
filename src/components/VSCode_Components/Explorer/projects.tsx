@@ -19,8 +19,8 @@ function ProjectLink({ route, name, isActive, isProjectUrl }: ProjectProps) {
     >
       <div
         className={cn(
-          "mb-1  flex items-center gap-1 px-2 py-[1px] hover:bg-explorer-HOVER",
-          isActive ? "bg-explorer-HOVER" : "",
+          "mb-1  flex items-center gap-1 px-2 py-[1px] hover:bg-common-HOVER",
+          isActive ? "bg-common-HOVER" : "",
         )}
       >
         <Icon
@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <div className="mt-4 flex flex-col gap-1">
       <button
-        className="flex w-full items-center text-sm font-semibold tracking-wide hover:bg-explorer-HOVER"
+        className="flex w-full items-center text-sm font-semibold tracking-wide hover:bg-common-HOVER"
         onClick={() => setShowFolder((prev) => !prev)}
       >
         <Icon

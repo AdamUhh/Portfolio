@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { actionbarBottomList, actionbarTopList } from "utils/lists";
-import { I_Terminal } from "../VSCodeTerminal";
+import { I_Terminal } from "../VSCodeTerminal/types";
 import ActionButtonItem from "./Button";
 import ActionItem from "./Item";
 
@@ -13,7 +13,7 @@ export default function Actionbar({
   const pathname = usePathname();
 
   return (
-    <div className="middle-dimensions flex flex-col items-center bg-actionbar">
+    <div className="w-[50px] h-[calc(100vh-2.75rem-21px)] ml-1 flex flex-col items-center bg-actionbar">
       {actionbarTopList.map((a) => (
         <ActionItem key={a.route} isActive={pathname === a.route} {...a} />
       ))}
@@ -23,8 +23,8 @@ export default function Actionbar({
             <ActionButtonItem
               key={a.route}
               isActive={showTerminal}
-              {...a}
               setShowTerminal={setShowTerminal}
+              {...a}
             />
           ) : (
             <ActionItem key={a.route} isActive={pathname === a.route} {...a} />

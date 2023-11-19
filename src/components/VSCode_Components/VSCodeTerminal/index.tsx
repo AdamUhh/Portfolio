@@ -11,7 +11,7 @@ export default function VSCodeTerminal({
   return (
     <div
       className={cn(
-        "terminal-placement z-50 border-l-2 border-t-2 border-l-accent border-t-accent bg-terminal px-4 py-3",
+        "bottom-6 right-0 z-50 h-[40%] w-[calc(100vw-50px-256px)] border-l-2 border-t-2 border-l-accent border-t-accent bg-terminal px-4 py-3 lg:w-[calc(100vw-50px)]",
         showTerminal ? "fixed" : "hidden",
       )}
     >
@@ -21,13 +21,13 @@ export default function VSCodeTerminal({
         </div>
         <button
           type="button"
-          className="hover:bg-tab-ACTIVE"
+          className="hover:bg-common-HOVER"
           onClick={() => setShowTerminal(false)}
         >
           <Icon path={mdiClose} size={1} />
         </button>
       </div>
-      <div className="h-[calc(100%-20px)] w-full overflow-auto py-2">
+      <div className="h-[calc(100%-20px)] w-full overflow-auto py-2 text-main-FOREGROUND/90">
         <Terminal isTerminalOpen={showTerminal} />
       </div>
     </div>

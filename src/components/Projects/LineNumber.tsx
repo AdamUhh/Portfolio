@@ -1,6 +1,6 @@
 import React from "react";
-import { NumberedListProps } from "./types";
 import { cn } from "utils/cn";
+import { NumberedListProps } from "./types";
 
 export default function NumberedList({ children }: NumberedListProps) {
   return (
@@ -10,7 +10,7 @@ export default function NumberedList({ children }: NumberedListProps) {
           <div className="relative flex items-center gap-6 text-lg">
             <div
               className={cn(
-                "min-w-[50px] sm:min-w-[25px] text-right font-medium text-faded",
+                "min-w-[50px] sm:min-w-[25px] text-right font-medium text-main-FOREGROUND/30",
                 index === 1 && "mb-5",
               )}
             >

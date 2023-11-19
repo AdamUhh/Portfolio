@@ -1,4 +1,4 @@
-export function calculateAge(birthdate: Date = new Date("2002-06-05")): number {
+function calculateAge(birthdate: Date = new Date("2002-06-05")): number {
   const currentDate = new Date();
   const birthYear = birthdate.getFullYear();
   const currentYear = currentDate.getFullYear();
@@ -15,3 +15,5 @@ export function calculateAge(birthdate: Date = new Date("2002-06-05")): number {
 
   return age;
 }
+
+export { calculateAge };

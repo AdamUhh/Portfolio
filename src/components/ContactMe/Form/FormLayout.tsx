@@ -11,7 +11,7 @@ function FormButton() {
   return (
     <button
       type="submit"
-      className="mt-4 w-full rounded-md bg-blue-500 p-2 text-white hover:bg-blue-600"
+      className="mt-4 w-full rounded-md bg-blue-600/80 p-2 font-semibold text-white hover:bg-blue-500"
       aria-disabled={pending}
       disabled={pending}
     >
@@ -25,7 +25,7 @@ export default function FormLayout({ children }: FormLayoutProps) {
 
   return (
     <form
-      className="w-full min-w-[500px] sm:min-w-fit rounded-xl bg-gray-700 p-6"
+      className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:min-w-fit"
       action={formAction}
     >
       {children}

@@ -1,10 +1,12 @@
 import { FieldProps } from "./types";
 
 export default function Field({ label, type, id }: FieldProps) {
+  const inputClass = "w-full rounded-md border-2 bg-transparent border-main-FOREGROUND/20 p-2"
+  
   return (
     <div className="mb-4">
       <label
-        className="mb-2 block text-sm font-bold text-yellow-300"
+        className="mb-2 block text-sm font-bold text-contactme-CLASS"
         htmlFor={id}
       >
         {label}
@@ -13,7 +15,7 @@ export default function Field({ label, type, id }: FieldProps) {
         <textarea
           id={id}
           name={id}
-          className="w-full rounded-md border border-gray-600 bg-gray-800 p-2"
+          className={inputClass}
           required
         />
       ) : (
@@ -21,7 +23,7 @@ export default function Field({ label, type, id }: FieldProps) {
           type={type}
           id={id}
           name={id}
-          className="w-full rounded-md border border-gray-600 bg-gray-800 p-2"
+          className={inputClass}
           required
         />
       )}

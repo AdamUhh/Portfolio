@@ -1,6 +1,6 @@
 import Icon from "@mdi/react";
-import { ActionButtonItemProps } from "./types";
 import { cn } from "utils/cn";
+import { ActionButtonItemProps } from "./types";
 
 export default function ActionButtonItem({
   title,
@@ -20,8 +20,8 @@ export default function ActionButtonItem({
         path={icon}
         size={2.3}
         className={cn(
-          "cursor-pointer px-3 brightness-75 hover:bg-actionbar-HOVER hover:brightness-105",
-          isActive ? "actionbar-border brightness-100" : "",
+          "cursor-pointer px-3 brightness-75 hover:bg-common-HOVER hover:brightness-105",
+          isActive ? "actionbar-active-shadow brightness-100" : "",
         )}
       />
     </button>

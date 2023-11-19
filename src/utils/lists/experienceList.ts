@@ -26,7 +26,6 @@ const skillDict: SkillDict<Skill[]> = {
     { name: "CSharp", experience: skillList.Level_2 },
     { name: "Autohotkey", experience: skillList.Level_2 },
   ],
-
   frontend: [
     { name: "React", experience: skillList.Level_4 },
     { name: "Next.js", experience: skillList.Level_4 },

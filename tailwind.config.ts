@@ -7,6 +7,10 @@ const config: Config = {
   ],
   darkMode: ["class"],
   theme: {
+    fontFamily: {
+      jetBrains: ["var(--font-jetBrains)"],
+      poppins: ["var(--font-poppins)"],
+    },
     fontSize: {
       sm: "0.8rem",
       ms: "0.9rem",
@@ -35,30 +39,46 @@ const config: Config = {
       // => @media (max-width: 639px) { ... }
     },
     extend: {
-      fontFamily: {
-        jetBrains: ["var(--font-jetBrains)"],
-        poppins: ["var(--font-poppins)"],
-      },
       spacing: {
         "0.5px": "2px",
         "1.5px": "6px",
       },
       borderWidth: {
-        "1": "1px",
         "6": "6px",
       },
       colors: {
         main: {
-          DEFAULT: "var(--main)",
+          DEFAULT: "hsl(var(--main))",
           FOREGROUND: "hsl(var(--main-foreground))",
         },
 
-        accent: "var(--accent-color)",
-        faded: "var(--faded-color)",
+        accent: {
+          DEFAULT: "hsl(var(--accent-color))",
+        },
+
+        common: {
+          HOVER: "hsl(var(--common-hover))",
+        },
 
         titlebar: {
-          DEFAULT: "var(--titlebar)",
-          HOVER: "var(--titlebar-hover)",
+          DEFAULT: "hsl(var(--titlebar))",
+        },
+
+        actionbar: {
+          DEFAULT: "hsl(var(--actionbar))",
+        },
+
+        explorer: {
+          DEFAULT: "hsl(var(--explorer))",
+        },
+
+        tab: {
+          DEFAULT: "hsl(var(--tab))",
+        },
+
+        statusbar: {
+          DEFAULT: "hsl(var(--statusbar))",
+          REMOTE: "hsl(var(--statusbar-dev-remote-window))",
         },
 
         aboutme: {
@@ -73,39 +93,16 @@ const config: Config = {
           VALUE: "var(--contactme-css-value)",
         },
 
-        actionbar: {
-          DEFAULT: "var(--actionbar)",
-          HOVER: "var(--actionbar-hover)",
+        terminal: {
+          DEFAULT: "hsl(var(--terminal))",
         },
 
-        explorer: {
-          DEFAULT: "var(--explorer)",
-          HOVER: "var(--explorer-hover)",
-          BORDER: "var(--explorer-border)",
-        },
-        tab: {
-          DEFAULT: "var(--tab)",
-          ACTIVE: "var(--tab-active)",
-          BORDER: "var(--tab-border)",
-          BACKGROUND: "var(--tab-background)",
-        },
-        statusbar: {
-          DEFAULT: "var(--statusbar)",
-          HOVER: "hsl(var(--statusbar-hover))",
-          BORDER: "var(--statusbar-border)",
-          REMOTE: "var(--statusbar-dev-remote-window)",
-        },
-
-        terminal: "var(--terminal)",
-
-        button: {
-          DEFAULT: "var(--button-bg)",
-          FOREGROUND: "var(--button-foreground)",
-        },
-        scrollbar: {
-          TRACK: "var(--scrollbar-track)",
-          THUMB: "var(--scrollbar-thumb)",
-        },
+        code: {
+          CLASS: "var(--code-class)",
+          PROPERTY: "var(--code-property)",
+          VALUE: "var(--code-value)", 
+          BRACKET: "var(--code-bracket)", 
+        }
       },
       keyframes: {
         "custom-ping": {

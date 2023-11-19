@@ -20,7 +20,7 @@ export default function AboutMe() {
   return (
     <div className="h-full w-full overflow-y-auto overflow-x-hidden py-5">
       <Header />
-      <div className="mb-3 flex border-b-2 border-b-white/10 px-5">
+      <div className="mb-3 flex border-b-2 border-b-main-FOREGROUND/10 px-5">
         <div className="mb-[-2px] border-b-2 pb-2 text-xl font-bold">
           Details
         </div>

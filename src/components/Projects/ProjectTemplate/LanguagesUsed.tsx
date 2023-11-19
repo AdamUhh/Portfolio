@@ -4,7 +4,7 @@ export default function LanguagesUsedSection({
   languagesUsed,
 }: I_LanguagesUsed) {
   return (
-    <div className="mb-3 mt-2 flex h-fit flex-wrap items-center gap-2 text-ms font-jetBrains font-medium ">
+    <div className="mb-3 mt-2 flex h-fit flex-wrap items-center gap-2 text-ms font-jetBrains text-white/95 font-medium ">
       {languagesUsed.map((l: any) => (
         <div
           key={l.name}

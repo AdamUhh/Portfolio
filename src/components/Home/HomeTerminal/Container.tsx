@@ -12,10 +12,10 @@ export default function HomeTerminalContainer({
   const nodeRef = useRef(null);
 
   return (
-    <Draggable handle=".draggable-handle" nodeRef={nodeRef}>
+    <Draggable handle=".draggable_handle" nodeRef={nodeRef}>
       <div
         className={cn(
-          "left-[35%] top-[8%] h-[60%] min-h-[300px] w-[40%] min-w-[300px]  rounded-2xl bg-[#151515] shadow-[0_0_10px_2px_rgba(0,0,0,1)] lg:w-[60%] sm:left-[5%] ",
+          "left-[35%] top-[8%] h-[60%] min-h-[300px] w-[40%] min-w-[300px] max-w-[500px] rounded-2xl bg-[#151515] shadow-[0_0_2px] shadow-white lg:w-[60%] sm:left-[5%] ",
           isOpen ? "fixed" : "hidden",
         )}
         ref={nodeRef}

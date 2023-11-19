@@ -12,7 +12,7 @@ import { vscodeIcon } from "../../assets";
 import { DesktopItem, DesktopLink } from "./CommonButtons";
 
 const Taskbar = () => (
-  <footer className="taskbar-bg absolute bottom-0 left-0 grid h-14 w-screen sm:grid-cols-2 grid-cols-3 bg-[#5c5c5c3d] shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+  <footer className="absolute bottom-0 left-0 grid h-14 w-screen grid-cols-3 bg-[#7777773d] shadow-[0_0_15px_rgba(255,255,255,0.4)] blur-[20.5]  sm:grid-cols-2">
     <div className="sm:hidden" />
     <ul className="mx-auto grid h-full grid-cols-[60px_60px_60px]">
       <DesktopItem path={mdiMicrosoft} size={1.4} title="Microsoft" />

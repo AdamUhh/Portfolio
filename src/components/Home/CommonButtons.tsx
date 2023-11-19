@@ -1,10 +1,10 @@
 import Icon from "@mdi/react";
 import Link from "next/link";
-import { DesktopProps, DesktopIconProps, DesktopLinkProps } from "./types";
+import { DesktopIconProps, DesktopLinkProps, DesktopProps } from "./types";
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
-    className="flex flex-col items-center justify-center gap-1 "
+    className="flex flex-col items-center justify-center gap-1 text-white/80"
     title={title}
   >
     {children}

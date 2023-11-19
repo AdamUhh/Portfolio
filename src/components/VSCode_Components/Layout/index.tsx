@@ -25,7 +25,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         <Explorer />
         <div className="w-full overflow-x-auto overflow-y-hidden">
           <Tabs />
-          <main className="main-height w-full overflow-y-auto px-1">
+          <main className="h-[calc(100vh-110px)] w-full overflow-y-auto px-1">
             {children}
           </main>
         </div>

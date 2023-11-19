@@ -30,14 +30,14 @@ export default function NotificationContent({
         <button
           type="button"
           onClick={handleVSCodeClick}
-          className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
+          className="flex-grow rounded-md bg-white/90 py-1.5 drop-shadow-md hover:bg-white/80"
           title="Go To Portfolio"
         >
           Go To Portfolio
         </button>
         <Link
           href={"/cv"}
-          className="flex-grow rounded-md bg-white py-1.5 drop-shadow-md hover:brightness-95"
+          className="flex-grow rounded-md bg-white/90 py-1.5 drop-shadow-md hover:bg-white/80"
           title="View My CV"
         >
           View CV

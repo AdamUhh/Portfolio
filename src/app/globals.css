@@ -4,87 +4,287 @@
 
 @layer base {
   :root {
-    --main: #24292e;
-    --main-foreground: 0 0% 94%; /* This is HSL in order to be able to change opacity inline */
+    /* Using numbers of HSL in order to be able to change tailwind opacity inline */
+    --main: 210 12% 16%;
+    --main-foreground: 0 0% 94%;
 
-    --accent-color: #f9826c;
-    --faded-color: rgba(255, 255, 255, 0.3);
+    --accent-color: 9 92% 70%;
 
-    --titlebar: #1f2428;
-    --titlebar-hover: #424649;
+    --titlebar: 207 13% 14%;
+    --actionbar: 210 12% 16%;
+    --explorer: 207 13% 14%;
+    --tab: 207 13% 14%;
+    --statusbar: 216 10% 10%;
 
-    --actionbar: #24292e;
-    --actionbar-hover: #1f2428;
+    --common-hover: 206 5% 27%;
 
-    --explorer: #1f2428;
-    --explorer-hover: #333e43;
-    --explorer-border: #161a1d;
+    --statusbar-dev-remote-window: 221 50% 60%;
 
-    /* --aboutme-css-class: #fff;
-    --aboutme-css-property: #fde047;
-    --aboutme-css-value: #93c5fd; */
+    --terminal: 216 10% 10%;
+
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #fff;
+    --contactme-css-class: #ffffff;
     --contactme-css-property: #fde047;
     --contactme-css-value: #93c5fd;
 
-    --tab: #1f2428;
-    --tab-active: #2e353a;
-    --tab-border: #24292e;
-    --tab-background: #1f2428;
-
-    --statusbar: #16181b;
-    --statusbar-hover: 240 2% 32%;
-    --statusbar-border: #1b1f23;
-    --statusbar-dev-remote-window: #6788cd;
-
-    --article: #1f2428;
-
-    --button-bg: #176f2c;
-    --button-foreground: #dcffe4;
-
-    --scrollbar-track: #24292e;
-    --scrollbar-thumb: #333536;
-
-    --terminal: #16181b;
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
   }
 
-  .dark {
-    --main: #24292e;
-    --main-foreground: #efefef;
+  [data-theme="light"] {
+    /* Using numbers of HSL in order to be able to change tailwind opacity inline */
+    --main: 0 0% 100%; /* Lightened main color */
+    --main-foreground: 0 0% 10%; /* Darkened main foreground color */
 
-    --accent-color: #f9826c;
+    --accent-color: 9 92% 70%;
 
-    --titlebar: #1f2428;
+    --titlebar: 207 13% 86%; /* Lightened titlebar color */
+    --actionbar: 210 12% 90%; /* Lightened actionbar color */
+    --explorer: 207 13% 86%; /* Lightened explorer color */
+    --tab: 207 13% 86%; /* Lightened tab color */
+    --statusbar: 216 10% 90%; /* Lightened statusbar color */
 
-    --actionbar: #24292e;
-    --actionbar-hover: #1f2428;
+    --common-hover: 206 5% 95%; /* Lightened common hover color */
 
-    --explorer: #1f2428;
-    --explorer-hover: #24292e;
-    --explorer-border: #161a1d;
+    --statusbar-dev-remote-window: 221 50% 90%; /* Lightened statusbar dev remote window color */
 
-    --tab: #1f2428;
-    --tab-active: #24292e;
-    --tab-border: #24292e;
-    --tab-background: #1f2428;
+    --terminal: 216 10% 90%; /* Lightened terminal color */
 
-    --statusbar: #24292e;
-    --statusbar-hover: #4f4f52;
-    --statusbar-border: #1b1f23;
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
 
-    --article: #1f2428;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #dbc761;
+    --contactme-css-value: #93c5fd;
 
-    --button-bg: #176f2c;
-    --button-foreground: #dcffe4;
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
 
-    --scrollbar-track: #24292e;
-    --scrollbar-thumb: #333536;
+  [data-theme="ocean"] {
+    --main: 200 50% 90%;
+    --main-foreground: 200 50% 10%;
 
-    --terminal: #16181b;
+    --accent-color: 185 85% 60%;
+
+    --titlebar: 200 30% 92%;
+    --actionbar: 200 28% 95%;
+    --explorer: 200 30% 92%;
+    --tab: 200 30% 92%;
+    --statusbar: 210 25% 95%;
+
+    --common-hover: 200 15% 97%;
+
+    --statusbar-dev-remote-window: 221 50% 90%;
+
+    --terminal: 210 25% 95%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="sunset"] {
+    --main: 30 60% 90%;
+    --main-foreground: 30 60% 10%;
+
+    --accent-color: 15 80% 60%;
+
+    --titlebar: 30 40% 92%;
+    --actionbar: 30 38% 95%;
+    --explorer: 30 40% 92%;
+    --tab: 30 40% 92%;
+    --statusbar: 40 35% 95%;
+
+    --common-hover: 30 25% 97%;
+
+    --statusbar-dev-remote-window: 51 50% 90%;
+
+    --terminal: 40 35% 95%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="forest"] {
+    --main: 120 40% 90%;
+    --main-foreground: 120 40% 10%;
+
+    --accent-color: 110 60% 60%;
+
+    --titlebar: 120 20% 92%;
+    --actionbar: 120 18% 95%;
+    --explorer: 120 20% 92%;
+    --tab: 120 20% 92%;
+    --statusbar: 130 15% 95%;
+
+    --common-hover: 120 5% 97%;
+
+    --statusbar-dev-remote-window: 141 50% 90%;
+
+    --terminal: 130 15% 95%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="midnight"] {
+    --main: 240 10% 15%;
+    --main-foreground: 240 10% 85%;
+
+    --accent-color: 220 60% 50%;
+
+    --titlebar: 240 8% 18%;
+    --actionbar: 240 7% 20%;
+    --explorer: 240 8% 18%;
+    --tab: 240 8% 18%;
+    --statusbar: 250 5% 22%;
+
+    --common-hover: 240 3% 25%;
+
+    --statusbar-dev-remote-window: 261 50% 22%;
+
+    --terminal: 250 5% 22%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="autumn"] {
+    --main: 30 60% 85%;
+    --main-foreground: 30 60% 15%;
+
+    --accent-color: 15 80% 50%;
+
+    --titlebar: 30 40% 78%;
+    --actionbar: 30 38% 80%;
+    --explorer: 30 40% 78%;
+    --tab: 30 40% 78%;
+    --statusbar: 40 35% 80%;
+
+    --common-hover: 30 25% 83%;
+
+    --statusbar-dev-remote-window: 51 50% 78%;
+
+    --terminal: 40 35% 80%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="pinkish"] {
+    --main: 330 50% 90%;
+    --main-foreground: 330 50% 10%;
+
+    --accent-color: 320 70% 60%;
+
+    --titlebar: 330 30% 92%;
+    --actionbar: 330 28% 95%;
+    --explorer: 330 30% 92%;
+    --tab: 330 30% 92%;
+    --statusbar: 340 25% 95%;
+
+    --common-hover: 330 15% 97%;
+
+    --statusbar-dev-remote-window: 351 50% 90%;
+
+    --terminal: 340 25% 95%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
+  }
+  [data-theme="solar"] {
+    --main: 45 80% 92%;
+    --main-foreground: 45 80% 10%;
+
+    --accent-color: 30 90% 70%;
+
+    --titlebar: 45 60% 96%;
+    --actionbar: 45 58% 98%;
+    --explorer: 45 60% 96%;
+    --tab: 45 60% 96%;
+    --statusbar: 55 55% 98%;
+
+    --common-hover: 45 45% 99%;
+
+    --statusbar-dev-remote-window: 66 50% 98%;
+
+    --terminal: 55 55% 98%;
+
+    --aboutme-css-class: #2e95d3;
+    --aboutme-css-property: #d5626a;
+    --aboutme-css-value: #c49262;
+
+    --contactme-css-class: #ffffff;
+    --contactme-css-property: #fde047;
+    --contactme-css-value: #93c5fd;
+
+    --code-class: #78b7fd;
+    --code-property: #e16b7b;
+    --code-value: #98c97b;
+    --code-bracket: #8b99a5;
   }
 }
 
@@ -96,7 +296,7 @@
     @apply bg-main text-main-FOREGROUND;
   }
 
-  /* ===== Scrollbar CSS ===== */
+  /* #region ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
     scrollbar-width: thin;
@@ -114,71 +314,25 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    @apply rounded-sm border-faded bg-faded brightness-105;
+    @apply rounded border-main-FOREGROUND bg-main-FOREGROUND/30 brightness-105;
   }
+  /* #endregion ===== Scrollbar CSS ===== */
 
   .titlebar-height {
     @apply h-[45px] overflow-y-hidden;
   }
 
-  .middle-dimensions {
-    height: calc(100vh - 2.75rem - 21px);
-    width: 50px;
+  .actionbar-active-shadow {
+    @apply shadow-[inset_2px_0px] shadow-accent;
   }
 
-  .explorer-dimensions {
-    @apply w-64 min-w-[256px];
-  }
-
-  .statusbar-height {
-    @apply h-[21px];
-  }
-
-  .main-height {
-    @apply h-[calc(100vh-110px)];
-  }
-
-  .statusbar-button {
-    @apply flex h-full cursor-pointer items-center gap-1 px-3 text-sm hover:bg-statusbar-HOVER;
-  }
-
-  .actionbar-border {
-    @apply shadow-[inset_2px_0px_0px] shadow-accent;
-  }
-
-  .tab-active {
-    @apply shadow-[inset_0px_-2px_0px] shadow-accent;
-  }
-
-  .terminal-placement {
-    @apply bottom-6 right-0 h-[40%] w-[calc(100vw-50px-256px)] lg:w-[calc(100vw-50px)];
-  }
-
-  .undraggable {
-    user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  .taskbar-bg {
-    backdrop-filter: blur(20.5px);
-    background: rgba(3, 21, 41, 0.35);
-  }
-
-  .skill-bar:before {
+  .about-me-skill-bar:before {
     content: "";
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    @apply border-b-2 border-faded md:hidden;
+    @apply absolute top-[50%] w-full translate-y-[-50%] border-b-2 border-main-FOREGROUND/30 md:hidden;
   }
 
   .numbered-row::before {
-    content: attr(data-number); /* Use the data-number attribute as content */
-    padding-right: 5px; /* Adjust spacing */
+    content: attr(data-number);
+    padding-right: 5px;
   }
 }

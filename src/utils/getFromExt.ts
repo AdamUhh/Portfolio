@@ -10,60 +10,106 @@ import {
 } from "@mdi/js";
 import { explorerList } from "./lists";
 
-const extColorDict: Record<string, string> = {
-  ".tsx": "#00bcd4",
-  ".jsx": "#00bcd4",
-  ".ts": "#0a84c8",
-  ".js": "#f6df1c",
-  ".html": "#e44d26",
-  ".css": "#50a8ee",
-  ".md": "#42a5f5",
-  ".json": "#debb7b",
+enum FileExtension {
+  TSX = ".tsx",
+  JSX = ".jsx",
+  TS = ".ts",
+  JS = ".js",
+  HTML = ".html",
+  CSS = ".css",
+  MD = ".md",
+  JSON = ".json",
+}
+
+interface ExtensionConfig {
+  color: string;
+  icon: string;
+  fullName: string;
+}
+
+const extensionConfigs: Record<FileExtension, ExtensionConfig> = {
+  [FileExtension.TSX]: {
+    color: "#00bcd4",
+    icon: mdiReact,
+    fullName: "TypeScript JSX",
+  },
+  [FileExtension.JSX]: {
+    color: "#00bcd4",
+    icon: mdiReact,
+    fullName: "JavaScript JSX",
+  },
+  [FileExtension.TS]: {
+    color: "#0a84c8",
+    icon: mdiLanguageTypescript,
+    fullName: "TypeScript",
+  },
+  [FileExtension.JS]: {
+    color: "#f6df1c",
+    icon: mdiLanguageJavascript,
+    fullName: "JavaScript",
+  },
+  [FileExtension.HTML]: {
+    color: "#e44d26",
+    icon: mdiLanguageHtml5,
+    fullName: "HTML",
+  },
+  [FileExtension.CSS]: {
+    color: "#50a8ee",
+    icon: mdiLanguageCss3,
+    fullName: "Tailwind CSS",
+  },
+  [FileExtension.MD]: {
+    color: "#42a5f5",
+    icon: mdiLanguageMarkdown,
+    fullName: "Markdown",
+  },
+  [FileExtension.JSON]: {
+    color: "#debb7b",
+    icon: mdiCodeJson,
+    fullName: "JSON",
+  },
 };
 
-const extIconDict: Record<string, string> = {
-  ".tsx": mdiReact,
-  ".jsx": mdiReact,
-  ".ts": mdiLanguageTypescript,
-  ".js": mdiLanguageJavascript,
-  ".html": mdiLanguageHtml5,
-  ".css": mdiLanguageCss3,
-  ".md": mdiLanguageMarkdown,
-  ".json": mdiCodeJson,
-};
-
-const fullExtDict: Record<string, string> = {
-  ".tsx": "TypeScript JSX",
-  ".ts": "TypeScript",
-  ".js": "JavaScript",
-  ".html": "HTML",
-  ".css": "Tailwind CSS",
-  ".md": "Markdown",
-  ".json": "JSON",
-};
-
-export const getColorFromFileExt = (filename: string): string => {
+const getColorFromFileExt = (
+  filename: string,
+  defaultColor: string = "#fff",
+): string => {
   const lastDotIndex = filename.lastIndexOf(".");
   const ext = lastDotIndex !== -1 ? filename.substring(lastDotIndex) : filename;
 
-  return extColorDict[ext] || "#fff";
+  return extensionConfigs[ext as FileExtension]?.color || defaultColor;
 };
 
-export const getIconFromFileExt = (filename: string): string => {
+const getIconFromFileExt = (
+  filename: string,
+  defaultIcon: string = mdiFile,
+): string => {
   const lastDotIndex = filename.lastIndexOf(".");
   const ext = lastDotIndex !== -1 ? filename.substring(lastDotIndex) : filename;
 
-  return extIconDict[ext] || mdiFile;
+  return extensionConfigs[ext as FileExtension]?.icon || defaultIcon;
 };
 
-export const getFullExtensionFromName = (pathname: string) => {
-  const filename = explorerList.filter((e) => e.route === pathname);
-  if (filename.length > 0) {
-    const { name } = filename[0];
+const getFullExtensionFromName = (
+  pathname: string,
+  defaultExtension: string = "TypeScript JSX",
+): string => {
+  const [file] = explorerList.filter((e) => e.route === pathname);
+
+  if (file) {
+    const { name } = file;
     const lastDotIndex = name.lastIndexOf(".");
     const ext = lastDotIndex !== -1 ? name.substring(lastDotIndex) : name;
 
-    return fullExtDict[ext] || "#fff";
+    return extensionConfigs[ext as FileExtension]?.fullName || defaultExtension;
   }
+
   return "Unknown";
 };
+
+export {
+  getColorFromFileExt,
+  getFullExtensionFromName,
+  getIconFromFileExt
+};
+

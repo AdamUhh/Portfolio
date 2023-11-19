@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { Fragment, MouseEvent, useState } from "react";
 import { cn } from "utils/cn";
 import { contactInfo, gmailUrl } from "./constants";
-import Link from "next/link";
 
 export default function ContactInformation() {
   const [isEmailCopied, setIsEmailCopied] = useState(false);
@@ -24,11 +24,11 @@ export default function ContactInformation() {
   };
 
   return (
-    <div className="flex w-fit flex-col rounded-xl bg-gray-700 p-6  2xl:w-full">
+    <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 2xl:w-full">
       <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
       <pre className="mb-2 text-green-400">
         <code className="font-jetBrains ">
-          <span className="text-contactme-CLASS ">contact_info</span>
+          <span className="text-contactme-CLASS ">.contact_info</span>
           <span className="ml-2 text-blue-500">&#123;</span>
           <br />
           {Object.entries(contactInfo).map(([key, value]) => (
@@ -53,28 +53,24 @@ export default function ContactInformation() {
       <button
         type="button"
         onClick={(e) => copyEmailToClipboard(e)}
-        className="mt-auto cursor-pointer rounded-lg bg-tab p-1 px-3 text-center hover:bg-tab-ACTIVE"
+        className={cn(
+          "bg-common-HOVER hover:bg-common-HOVER/80 mt-auto cursor-pointer rounded-lg p-1 px-3 text-center",
+          isEmailCopied && "bg-green-500 text-white/90 hover:bg-green-500",
+        )}
       >
-        <span
-          className={cn(
-            "text-lg hover:text-yellow-300",
-            isEmailCopied && "text-green-500",
-          )}
-        >
+        <span className="text-lg">
           {isEmailCopied ? "Email copied to clipboard!" : "Copy Email"}
         </span>
       </button>
       <button
         type="button"
         onClick={(e) => copyEmailToClipboard(e, gmailUrl)}
-        className="mt-2 cursor-pointer rounded-lg bg-tab p-1 px-3 text-center hover:bg-tab-ACTIVE"
+        className={cn(
+          "bg-common-HOVER hover:bg-common-HOVER/80 mt-2 cursor-pointer rounded-lg p-1 px-3 text-center",
+          isEmailCopied && "bg-green-500 text-white/90 hover:bg-green-500",
+        )}
       >
-        <span
-          className={cn(
-            "text-lg hover:text-yellow-300",
-            isEmailCopied && "text-green-500",
-          )}
-        >
+        <span className="text-lg">
           {isEmailCopied
             ? "Email copied to clipboard!"
             : "Copy Email and Go To Gmail"}

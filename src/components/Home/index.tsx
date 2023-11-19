@@ -9,7 +9,7 @@ import {
 import Icon from "@mdi/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { vscodeIcon } from "../../assets";
 import { DesktopItem, DesktopLink } from "./CommonButtons";
 import HomeTerminal from "./HomeTerminal";
@@ -33,15 +33,27 @@ export default function Home() {
   };
 
   const handleWelcomeGreetingClick = () => {
-    setIsWelcomeGreetingOpen((prev) => !prev);
+    setIsWelcomeGreetingOpen((prev) => {
+      sessionStorage.setItem(
+        "vscode-portfolio-adamuhh-home-help-modal",
+        prev ? "false" : "true",
+      );
+      return !prev;
+    });
   };
+
+  useEffect(() => {
+    const storedValue = sessionStorage.getItem(
+      "vscode-portfolio-adamuhh-home-help-modal",
+    );
+    setIsWelcomeGreetingOpen(storedValue !== "false" ?? true);
+  }, []);
 
   return (
     <div
       className="home-wallpaper relative h-screen w-screen p-2"
       style={{
         backgroundImage: `url('/wallpaper.png')`,
-        // backgroundImage: `url('/home_screen.jpg')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",

@@ -24,12 +24,12 @@ export default function Projects() {
   return (
     <NumberedList>
       <h1
-        className="border-b-1 border-white text-3xl font-medium"
+        className="border-b border-main-FOREGROUND text-3xl font-medium"
         id="overview"
       >
         Personal Projects
       </h1>
-      <p className="mb-5 text-xl text-white/30">
+      <p className="mb-5 text-xl text-main-FOREGROUND/30">
         These are some of the projects I have worked on:
       </p>
       {projectList.map((project) => (

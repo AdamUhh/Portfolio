@@ -14,10 +14,10 @@ export default function Explorer() {
   const [showFolder, setShowFolder] = useState<boolean>(true);
 
   return (
-    <div className="explorer-dimensions bg-explorer pt-2 lg:hidden ">
+    <div className=" w-64 min-w-[256px] bg-explorer pt-2 lg:hidden ">
       <div className="flex items-center justify-between pl-6 pr-4 text-sm">
         <h4 className="tracking-tight brightness-75">EXPLORER</h4>
-        <button className="rounded-md p-1 brightness-75 hover:bg-explorer-HOVER hover:brightness-100">
+        <button className="rounded-md p-1 brightness-75 hover:bg-common-HOVER hover:brightness-100">
           <Icon path={mdiDotsHorizontal} size={0.9} />
         </button>
       </div>

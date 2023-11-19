@@ -5,10 +5,10 @@ import { cn } from "utils/cn";
 import { skillDict, skillList } from "utils/lists";
 import { DetailHeader, Sections } from ".";
 import {
-  SkillItemProps,
-  SkillCategoryProps,
-  FilterButtonProps,
   ExperienceFilterOptions,
+  FilterButtonProps,
+  SkillCategoryProps,
+  SkillItemProps,
 } from "./types";
 
 function SkillItem({ name, experience, experienceFilter }: SkillItemProps) {
@@ -40,11 +40,11 @@ function SkillCategory({
   return (
     <div
       className={cn(
-        "relative w-full min-w-[300px] rounded-lg border-[3px] border-white/10 p-4 pb-6 font-jetBrains lg:min-w-full",
-        isCollapsed && "flex h-fit border-white/5",
+        "relative w-full min-w-[300px] rounded-lg border-[3px] border-main-FOREGROUND/10 p-4 pb-6 font-jetBrains lg:min-w-full",
+        isCollapsed && "flex h-fit border-main-FOREGROUND/5",
       )}
     >
-      <div className="absolute right-1 top-[-10px] flex w-fit items-center gap-1 bg-main px-2 text-sm text-white/50 ">
+      <div className="absolute right-1 top-[-10px] flex w-fit items-center gap-1 bg-main px-2 text-sm text-main-FOREGROUND/50 ">
         <button
           type="button"
           onClick={handleCollapsedClick}
@@ -63,11 +63,11 @@ function SkillCategory({
           >
             .{category}
           </span>
-          <span className="ml-2 font-normal text-main-FOREGROUND">&#123;</span>
+          <span className="ml-2">&#123;</span>
         </h5>
         <ul
           className={cn(
-            "h-fit list-none pl-5 font-medium text-white/40",
+            "h-fit list-none pl-5 font-medium text-main-FOREGROUND/40",
             isCollapsed && "pl-0",
           )}
         >
@@ -82,7 +82,7 @@ function SkillCategory({
                 />
               ))}
         </ul>
-        <span className="font-normal text-main-FOREGROUND">&#125;</span>
+        <span>&#125;</span>
       </div>
     </div>
   );
@@ -92,15 +92,15 @@ function FilterButton({ label, isActive, onClick }: FilterButtonProps) {
   return (
     <button
       className={cn(
-        "z-10 flex h-8 w-fit items-center justify-center bg-main px-4 text-center text-white/60 hover:text-white/90",
+        "z-10 flex h-8 w-fit items-center justify-center bg-main px-4 text-center text-main-FOREGROUND/60 hover:text-main-FOREGROUND/90",
         isActive && "text-main-FOREGROUND ",
       )}
       onClick={onClick}
     >
       <span
         className={cn(
-          "flex h-full w-fit items-center border-b-1 border-transparent hover:border-b-white/90 hover:text-white/90",
-          isActive && "border-b-white/60",
+          "flex h-full w-fit items-center border-b border-transparent hover:border-b-main-FOREGROUND/90 hover:text-main-FOREGROUND/90",
+          isActive && "border-b-main-FOREGROUND/60",
         )}
       >
         {label}
@@ -117,7 +117,7 @@ export default function Skills() {
     <Sections>
       <DetailHeader name="Skills" />
       <div className="relative flex flex-col items-center">
-        <div className="skill-bar relative flex w-full flex-wrap justify-center space-x-4">
+        <div className="about-me-skill-bar relative flex w-full flex-wrap justify-center space-x-4">
           <FilterButton
             label="Show All"
             isActive={experienceFilter === "Show All"}
