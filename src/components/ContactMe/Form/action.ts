@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
 export default async function sendEmail(prevState: any, formData: FormData) {
@@ -34,7 +33,7 @@ export default async function sendEmail(prevState: any, formData: FormData) {
     // ? AWS SES Here
     console.log(data);
 
-    revalidatePath("/contact");
+    // revalidatePath("/contact");
     return { success: true, message: "Email Sent!" };
   } catch (e) {
     return { success: false, message: "Failed to send email" };

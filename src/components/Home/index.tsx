@@ -3,8 +3,9 @@
 import {
   mdiBadgeAccount,
   mdiConsole,
+  mdiEmailEdit,
   mdiGithub,
-  mdiHumanGreeting,
+  mdiHumanGreeting
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
@@ -89,10 +90,13 @@ export default function Home() {
         <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
           <Icon path={mdiBadgeAccount} size={2} />
         </DesktopLink>
+        <DesktopLink href="/contact" name="Contact" title="Contact Me">
+          <Icon path={mdiEmailEdit} size={2} />
+        </DesktopLink>
         <DesktopItem
           path={mdiHumanGreeting}
           size={2}
-          title="Open Help/Greetings"
+          title="Open Help/Greeting Popup"
           name="Help"
           onClick={handleWelcomeGreetingClick}
         />

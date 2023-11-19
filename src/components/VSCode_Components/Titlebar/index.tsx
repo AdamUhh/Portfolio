@@ -3,6 +3,7 @@ import Link from "next/link";
 import { closeTab } from "utils/window";
 import { vscodeIcon } from "../../../assets";
 import { TitlebarProps } from "./types";
+
 const fileList = ["File", "Edit", "View", "Go", "Run", "Terminal", "Help"];
 
 export default function Titlebar({ handle }: TitlebarProps) {

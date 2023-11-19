@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Poppins } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -27,8 +28,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <Providers>
+          <NextTopLoader showSpinner={false} />
           <div
-            className={`${jetBrains.variable} ${poppins.variable} font-poppins overflow-hidden`}
+            className={`${jetBrains.variable} ${poppins.variable} overflow-hidden font-poppins`}
           >
             {children}
           </div>
