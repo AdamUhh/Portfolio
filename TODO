@@ -1,24 +1,6 @@
-
-Todo:
-  ☐ Responsiveness
-  ✘ Analytics @cancelled(23-11-15 19:31)
-  ☐ Contact Me (AWS SES)
-  ☐ Refactor colors, make sure all colors are inside css variables
-  ☐ refactor code in general
-  ☐ Add not-found.tsx page
-
 Pages:
   ☐ Create CV pdf
     ☐ Link to CV page
-  ☐ Contact
-    ☐ Add AWS SES functionality
-      ☐ Ensure that it cannot be spammed or have too many bounced requests?
-      ☐ Max 2 posts per session per day? I dont know
-
-Server Actions references:
-  ☐ https://www.youtube.com/watch?v=dDpZfOQBMaU
-  ☐ https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations#server-only-forms
-  ☐ https://www.youtube.com/watch?v=RadgkoJrhu0
 
 Dribbble and Secret Page:
   ☐ Maybe share work on Dribbble?

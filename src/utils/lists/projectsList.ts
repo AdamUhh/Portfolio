@@ -1,5 +1,11 @@
 import { StaticImageData } from "next/image";
-import { loFlo } from "../../assets";
+import {
+  dynamicClock,
+  loFlo,
+  portfolio,
+  tausk,
+  workInProgress,
+} from "../../assets";
 
 interface I_Language {
   name: string;
@@ -58,7 +64,7 @@ const projectList: I_ProjectList[] = [
     name: "vstl.tsx",
     route: "#vstl",
     title: "VSTL",
-    imgSrc: loFlo,
+    imgSrc: workInProgress,
     description:
       "A task manager/todo list app, inspired by the clean look of VSCode. You can easily create, edit, and delete tasks in a file-like structure. Utilize quick shortcuts to transform lines into todo checkboxes. Whether hosted locally or saved on the cloud, it's a straightforward tool to enhance your productivity.",
     languagesUsed: [
@@ -72,7 +78,7 @@ const projectList: I_ProjectList[] = [
     name: "portfolio.tsx",
     route: "#portfolio",
     title: "Portfolio",
-    imgSrc: loFlo,
+    imgSrc: portfolio,
     description:
       "A personal portfolio showcasing my skills, projects, and experiences. This website is designed to highlight my capabilities and provide a comprehensive overview of my work.",
     languagesUsed: [
@@ -98,6 +104,60 @@ const projectList: I_ProjectList[] = [
       },
     ],
   },
+  {
+    name: "tausk.jsx",
+    route: "#tausk",
+    title: "Tausk",
+    imgSrc: tausk,
+    description:
+      "A todolist app I made when I first started web development. It has features such as add/edit/delete todos, as well as a drag and drop file system, all linked to an Authentication system via Firebase.",
+    languagesUsed: [
+      { name: "React", bgColor: "#0284C7" },
+      { name: "Redux Saga", bgColor: "#999999" },
+      { name: "Firebase", bgColor: "#ffca28", color: "#000" },
+    ],
+    viewDemoUrl: "https://tausk.netlify.app/",
+    sourceCodeUrl: "https://github.com/AdamUhh/Tausk",
+    extra: [
+      {
+        title: "Why I made it",
+        description: [
+          "I wanted to see what I could make that was bigger than usual, and decided to go for this project. Looking at it now, I'm happy to see that I can make a much better version at a much quicker, organized pace (VSTL).",
+        ],
+      },
+      {
+        title: "Challenges",
+        description: [
+          "The drag and drop feature was quite confusing, especially since at the time, the documentation itself was a bit jumbled up. Moreover, the amount of boilerplate required for redux saga at the time was enormous and time-consuming to go through. Additionally, perhaps most importantly, after completing 90% of the project, I got my first burn out. I wasn't really expecting it and it took around a month for me to get past it and work on another project.",
+        ],
+      },
+    ],
+  },
+  {
+    name: "clock.jsx",
+    route: "#clock",
+    title: "Dynamic Clock",
+    imgSrc: dynamicClock,
+    description:
+      "A clock app with a cosy design (atleast to me) to keep track of the current time, It has a stopwatch that works even after putting your computer to sleep, though it might not be 100% accurate.",
+    languagesUsed: [
+      { name: "React", bgColor: "#0284C7" },
+      { name: "Redux", bgColor: "#764abc" },
+      { name: "NodeJS", bgColor: "#339933" },
+      { name: "Express", bgColor: "#8cbf3f" },
+      { name: "MongoDB", bgColor: "#47a248" },
+    ],
+    viewDemoUrl: "https://dynamicclock.netlify.app/",
+    sourceCodeUrl: "https://github.com/AdamUhh/Dynamic-Clock-v2",
+    extra: [
+      {
+        title: "Why I made it",
+        description: [
+          "Since I had dual monitors at the time, I just wanted one of my inactive screens to show the time.",
+        ],
+      },
+    ],
+  },
 ];
 
 const projectExplorerList: I_ProjectExplorerList[] = [
@@ -107,5 +167,4 @@ const projectExplorerList: I_ProjectExplorerList[] = [
 
 export { projectExplorerList, projectList };
 
-  export type { I_LanguagesUsed, I_ProjectExtraList, I_ProjectList };
-
+export type { I_LanguagesUsed, I_ProjectExtraList, I_ProjectList };
