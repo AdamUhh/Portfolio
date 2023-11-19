@@ -10,9 +10,8 @@ interface FieldProps {
   id: any;
 }
 
-interface T_formState {
-  success?: boolean;
-  message?: string;
+interface FormButtonProps {
+  isSuccessful: boolean;
 }
 
-export type { FormLayoutProps, FieldProps, T_formState };
+export type { FormLayoutProps, FieldProps,FormButtonProps };

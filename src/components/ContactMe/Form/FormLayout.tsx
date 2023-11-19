@@ -2,47 +2,42 @@
 
 import { mdiAlertCircle } from "@mdi/js";
 import Icon from "@mdi/react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef } from "react";
+import { useFormState } from "react-dom";
+import FormButton from "./FormButton";
 import sendEmail from "./action";
-import { FormLayoutProps, T_formState } from "./types";
-
-function FormButton() {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      type="submit"
-      className="mt-4 w-full rounded-md bg-blue-600/80 p-2 font-semibold text-white hover:bg-blue-500"
-      aria-disabled={pending}
-      disabled={pending}
-    >
-      {pending ? "Submitting" : "Submit"}
-    </button>
-  );
-}
+import { FormLayoutProps } from "./types";
 
 export default function FormLayout({ children }: FormLayoutProps) {
-  const [formState, formAction] = useFormState(sendEmail, null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [formState, onFormSubmit] = useFormState(sendEmail, {
+    status: "default",
+    returnMessage: "",
+  });
+
+  useEffect(() => {
+    if (formState.status === "true") {
+      formRef.current?.reset();
+    }
+  }, [formState.status]);
 
   return (
     <form
       className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:min-w-fit"
-      action={formAction}
+      ref={formRef}
+      action={onFormSubmit}
     >
-      {children}
-      <FormButton />
-      {formState !== null && (formState as unknown as T_formState)?.success && (
-        <p>{(formState as unknown as T_formState)?.message || "Email Sent!"}</p>
+      <fieldset disabled={formState.status === "true"}>{children}</fieldset>
+      <FormButton isSuccessful={formState.status === "true"} />
+      {formState.status === "false" && (
+        <div className="mt-2 flex items-center gap-1">
+          <Icon path={mdiAlertCircle} size={0.8} color={"#ff0000"} />
+          <p className="text-red-500">
+            {formState.returnMessage || "Failed to send email"}
+          </p>
+        </div>
       )}
-      {formState !== null &&
-        (formState as unknown as T_formState)?.success === false && (
-          <div className="mt-2 flex items-center gap-1">
-            <Icon path={mdiAlertCircle} size={0.8} color={"#ff0000"} />
-            <p className="text-red-500">
-              {(formState as unknown as T_formState)?.message ||
-                "Failed to send email"}
-            </p>
-          </div>
-        )}
     </form>
   );
 }

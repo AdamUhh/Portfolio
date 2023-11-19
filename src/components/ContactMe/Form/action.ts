@@ -1,8 +1,25 @@
 "use server";
 
+require("aws-sdk/lib/maintenance_mode_message").suppress = true;
+
+import SES from "aws-sdk/clients/ses";
 import { z } from "zod";
 
-export default async function sendEmail(prevState: any, formData: FormData) {
+interface I_SendEmailReturn {
+  status: string;
+  returnMessage: string;
+}
+
+const ses = new SES({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
+});
+
+export default async function sendEmail(
+  _: any,
+  formData: FormData,
+): Promise<I_SendEmailReturn> {
   const schema = z.object({
     name: z.string().trim().min(1, { message: "Name field has to be filled." }),
     email: z
@@ -22,20 +39,44 @@ export default async function sendEmail(prevState: any, formData: FormData) {
 
   if (!parse.success) {
     return {
-      success: false,
-      message: parse.error.errors?.[0]?.message || "Missing Fields!",
+      status: "false",
+      returnMessage: parse.error.errors?.[0]?.message || "Missing Fields!",
     };
   }
 
   const data = parse.data;
 
   try {
-    // ? AWS SES Here
-    console.log(data);
+    const params = {
+      Destination: {
+        ToAddresses: ["adamuhh.dev@gmail.com"],
+      },
+      Message: {
+        Body: {
+          Text: {
+            Data: `
+Name: ${data.name}\n
+Email: ${data.email}\n
+Message:\n\n${data.message}`,
+          },
+        },
+        Subject: {
+          Data: "Message from: " + data.name,
+        },
+      },
+      Source: "Portfolio Contact Form <contact@adamuhh.dev>",
+    };
 
-    // revalidatePath("/contact");
-    return { success: true, message: "Email Sent!" };
+    await ses.sendEmail(params).promise();
+
+    return {
+      status: "true",
+      returnMessage: "Email Sent!",
+    };
   } catch (e) {
-    return { success: false, message: "Failed to send email" };
+    return {
+      status: "false",
+      returnMessage: "Failed to send email",
+    };
   }
 }
