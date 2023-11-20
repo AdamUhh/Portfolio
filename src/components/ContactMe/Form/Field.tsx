@@ -1,6 +1,6 @@
 import { FieldProps } from "./types";
 
-export default function Field({ label, type, id }: FieldProps) {
+export default function Field({ label, type, id, onChange }: FieldProps) {
   const inputClass = "w-full rounded-md border-2 bg-transparent border-main-FOREGROUND/20 p-2"
   
   return (
@@ -17,6 +17,7 @@ export default function Field({ label, type, id }: FieldProps) {
           name={id}
           className={inputClass}
           required
+          onChange={onChange}
         />
       ) : (
         <input

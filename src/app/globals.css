@@ -342,14 +342,14 @@
     mask-image: linear-gradient(
       transparent,
       hsl(var(--main)) 10%,
-      hsl(var(--main)) 90%,
+      hsl(var(--main)) 85%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to right,
       transparent,
       hsl(var(--main)) 10%,
-      hsl(var(--main)) 90%,
+      hsl(var(--main)) 85%,
       transparent 100%
     );
   }

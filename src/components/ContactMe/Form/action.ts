@@ -21,15 +21,21 @@ export default async function sendEmail(
   formData: FormData,
 ): Promise<I_SendEmailReturn> {
   const schema = z.object({
-    name: z.string().trim().min(1, { message: "Name field has to be filled." }),
+    name: z
+      .string()
+      .trim()
+      .min(1, { message: "Name field has to be filled." })
+      .max(50, { message: "Name too long! Max Characters: 50" }),
     email: z
       .string()
       .min(1, { message: "Email field has to be filled." })
-      .email("This is not a valid email."),
+      .email("This is not a valid email.")
+      .max(256, { message: "Email too long! Max Characters: 256" }),
     message: z
       .string()
       .trim()
-      .min(1, { message: "Message field has to be filled." }),
+      .min(1, { message: "Message field has to be filled." })
+      .max(1000, { message: "Message too long! Max Characters: 1000" }),
   });
   const parse = schema.safeParse({
     name: formData.get("name"),
