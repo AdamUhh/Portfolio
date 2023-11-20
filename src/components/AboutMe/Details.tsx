@@ -20,7 +20,7 @@ export default function Details() {
           Explore my
           <Link
             href={"/projects"}
-            className="mx-1 rounded-[2px] bg-sky-700 px-1.5 py-0.5 text-ms font-semibold text-white/80 hover:bg-sky-700/90"
+            className="mx-1 rounded-[2px] bg-sky-700 px-1.5 py-0.5 text-ms font-bold text-white/80 hover:bg-sky-700/90"
           >
             Projects
           </Link>
@@ -41,7 +41,7 @@ export default function Details() {
         </p>
       </Sections>
       <Sections>
-        <DetailHeader name="🛠️What it's like to work with me" />
+        <DetailHeader name="🛠️ What it's like to work with me" />
         <p className="text-main-FOREGROUND/50">
           I&apos;d say working with me is manageable/typical, like having a
           helpful teammate who&apos;s able to solve problems and is able to

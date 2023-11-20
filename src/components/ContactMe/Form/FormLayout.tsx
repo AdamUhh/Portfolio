@@ -24,7 +24,7 @@ export default function FormLayout({ children }: FormLayoutProps) {
 
   return (
     <form
-      className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:min-w-fit"
+      className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:p-4 sm:min-w-fit"
       ref={formRef}
       action={onFormSubmit}
     >

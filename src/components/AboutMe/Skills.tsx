@@ -53,8 +53,10 @@ function SkillCategory({
           [ {isCollapsed ? "show" : "hide"} ]
         </button>
       </div>
-      <div className={cn("", isCollapsed && "flex items-end")}>
-        <h5 className="w-full pt-2 text-md">
+      <div
+        className={cn("text-md sm:text-ms", isCollapsed && "flex items-end")}
+      >
+        <h5 className="w-full pt-2 ">
           <span
             className={cn(
               "font-normal text-aboutme-CLASS",
@@ -67,7 +69,7 @@ function SkillCategory({
         </h5>
         <ul
           className={cn(
-            "h-fit list-none pl-5 font-medium text-main-FOREGROUND/40",
+            "h-fit list-none  pl-5 font-medium text-main-FOREGROUND/40",
             isCollapsed && "pl-0",
           )}
         >

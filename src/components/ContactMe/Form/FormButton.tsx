@@ -8,7 +8,7 @@ export default function FormButton({ isSuccessful }: FormButtonProps) {
   const { pending } = useFormStatus();
 
   const commonClassNames =
-    "mt-4 flex w-full items-center justify-center gap-2 rounded-md p-2 font-semibold text-white";
+    "mt-4 flex w-full items-center justify-center gap-2 rounded-md p-2 font-bold text-white";
 
   if (isSuccessful)
     return (

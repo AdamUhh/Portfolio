@@ -22,7 +22,7 @@ export default function Explorer() {
         </button>
       </div>
       <button
-        className="flex items-center pb-1 pr-2 pt-3 text-sm font-semibold tracking-wide"
+        className="flex items-center pb-1 pr-2 pt-3 text-sm font-bold tracking-wide"
         onClick={() => setShowFolder((prev) => !prev)}
       >
         <Icon

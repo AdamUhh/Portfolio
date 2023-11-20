@@ -5,12 +5,12 @@ import { NumberedListProps } from "./types";
 export default function NumberedList({ children }: NumberedListProps) {
   return (
     <div className="flex h-full w-full py-3">
-      <div className="flex h-full w-full flex-col gap-1 pr-4">
+      <div className="flex h-full w-full flex-col gap-1 pr-4 sm:pr-2">
         {React.Children.map(children, (child, index) => (
-          <div className="relative flex items-center gap-6 text-lg">
+          <div className="relative flex items-center gap-6 text-lg sm:gap-4">
             <div
               className={cn(
-                "min-w-[50px] sm:min-w-[25px] text-right font-medium text-main-FOREGROUND/30",
+                "min-w-[50px] sm:min-w-[20px] text-right font-medium text-main-FOREGROUND/30",
                 index === 1 && "mb-5",
               )}
             >

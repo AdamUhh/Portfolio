@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <div className="mt-4 flex flex-col gap-1">
       <button
-        className="flex w-full items-center text-sm font-semibold tracking-wide hover:bg-common-HOVER"
+        className="flex w-full items-center text-sm font-bold tracking-wide hover:bg-common-HOVER"
         onClick={() => setShowFolder((prev) => !prev)}
       >
         <Icon

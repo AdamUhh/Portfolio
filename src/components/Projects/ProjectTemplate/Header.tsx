@@ -6,7 +6,7 @@ export default function ProjectHeader({
 }: ProjectHeaderProps) {
   return (
     <>
-      <h1 id="#lo-flo" className="text-2xl font-semibold">
+      <h1 id="#lo-flo" className="text-2xl font-bold">
         {title}
       </h1>
       <h4 className="text-md text-main-FOREGROUND/50">{description}</h4>

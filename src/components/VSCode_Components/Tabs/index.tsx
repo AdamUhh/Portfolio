@@ -16,7 +16,7 @@ export default function Tabs() {
             key={t.route}
             route={t.route}
             name={t.name}
-            pathname={pathname}
+            isActive={t.route === pathname}
           />
         ))}
       {pathname === "/settings" && (
@@ -24,7 +24,7 @@ export default function Tabs() {
           key="/settings"
           route="/settings"
           name="settings.json"
-          pathname={pathname}
+          isActive={"/settings" === pathname}
         />
       )}
     </div>

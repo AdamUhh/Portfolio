@@ -5,13 +5,13 @@ import { selfLogo } from "../../assets";
 
 export default function Header() {
   return (
-    <div className="grid grid-cols-[12rem_auto] px-5 pb-4 pt-2 lg:grid-rows-[1fr_auto] sm:grid-cols-[1fr] sm:grid-rows-[1fr_auto_auto] ">
+    <div className="grid grid-cols-[12rem_auto] px-5 sm:px-2 pb-4 pt-2 lg:grid-rows-[1fr_auto] sm:grid-cols-[1fr] sm:grid-rows-[1fr_auto_auto] ">
       <div className="col-start-1 row-span-2 flex h-48 w-48 flex-shrink-0 items-center justify-center rounded bg-white p-2 sm:row-span-1 sm:row-start-1 sm:mb-4">
         <Image src={selfLogo} alt="AdamUhh Logo" />
       </div>
       <section className="flex flex-col justify-center gap-1 pl-4 sm:row-start-2 sm:pl-0">
         <div className="flex flex-wrap items-center gap-2">
-          <h1 className="font-jet text-3xl font-semibold">AdamUhh</h1>
+          <h1 className="font-jet text-3xl font-bold">AdamUhh</h1>
           <code className="h-6 rounded bg-[#4b4b4b] px-2 py-[1px] font-jetBrains text-white/50">
             full_stack.developer
           </code>
@@ -38,7 +38,7 @@ export default function Header() {
           Hi there! I&apos;m Adam, a full-stack web developer with expertise in
           front-end and back-end technologies.
         </p>
-        <div className="flex gap-3 text-sm font-semibold text-white/80">
+        <div className="flex gap-3 text-sm font-bold text-white/80">
           <Link
             href={"/cv"}
             className="rounded-sm bg-sky-600 px-1.5 py-0.5 hover:bg-sky-600/90"

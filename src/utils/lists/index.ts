@@ -1,4 +1,4 @@
-import { aboutMeList } from './aboutList';
+import { aboutMeList } from "./aboutList";
 import { actionbarBottomList, actionbarTopList } from "./actionbarList";
 import { Skill, SkillExperience, skillDict, skillList } from "./experienceList";
 import { explorerList } from "./explorerList";
@@ -10,7 +10,8 @@ import {
 } from "./projectsList";
 
 export {
-  aboutMeList, actionbarBottomList,
+  aboutMeList,
+  actionbarBottomList,
   actionbarTopList,
   explorerList,
   projectExplorerList,

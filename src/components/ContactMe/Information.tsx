@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { cn } from "utils/cn";
 import { contactInfo, gmailUrl } from "./constants";
 
@@ -24,15 +24,15 @@ export default function ContactInformation() {
   };
 
   return (
-    <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 2xl:w-full">
+    <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:p-4 2xl:w-full">
       <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
-      <pre className="mb-2 text-green-400">
+      <pre className="mb-2 text-green-400 sm:text-ms">
         <code className="font-jetBrains ">
           <span className="text-contactme-CLASS ">.contact_info</span>
           <span className="ml-2 text-blue-500">&#123;</span>
           <br />
           {Object.entries(contactInfo).map(([key, value]) => (
-            <Fragment key={key}>
+            <div key={key} className="sm:flex sm:flex-col">
               <span className="ml-4 text-contactme-PROPERTY">{key}:</span>{" "}
               {value.type === "link" ? (
                 <Link href={value.text} target="_blank">
@@ -40,12 +40,10 @@ export default function ContactInformation() {
                 </Link>
               ) : (
                 <span className="text-contactme-VALUE">
-                  &apos;{value.text}&apos;
+                  &apos;{value.text}&apos;;
                 </span>
               )}
-              ;
-              <br />
-            </Fragment>
+            </div>
           ))}
           <span className="text-blue-500">&#125;</span>
         </code>
@@ -58,7 +56,7 @@ export default function ContactInformation() {
           isEmailCopied && "bg-green-500 text-white/90 hover:bg-green-500",
         )}
       >
-        <span className="text-lg">
+        <span className="text-lg  sm:text-md">
           {isEmailCopied ? "Email copied to clipboard!" : "Copy Email"}
         </span>
       </button>
@@ -70,7 +68,7 @@ export default function ContactInformation() {
           isEmailCopied && "bg-green-500 text-white/90 hover:bg-green-500",
         )}
       >
-        <span className="text-lg">
+        <span className="text-lg  sm:text-md">
           {isEmailCopied
             ? "Email copied to clipboard!"
             : "Copy Email and Go To Gmail"}

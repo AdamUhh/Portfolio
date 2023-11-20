@@ -10,7 +10,7 @@ export default function ReadMoreSection({
       <>
         {extra.map((e: any) => (
           <Fragment key={e.title}>
-            <h2 className="mt-2 text-2xl font-semibold">{e.title}</h2>
+            <h2 className="mt-2 text-2xl font-bold">{e.title}</h2>
             {e.description.map((d: string) => (
               <p key={d} className="mb-1 text-md text-main-FOREGROUND/50">
                 {d}

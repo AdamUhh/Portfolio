@@ -294,6 +294,8 @@
   }
   body {
     @apply bg-main text-main-FOREGROUND;
+    -webkit-font-smoothing: subpixel-antialiased;
+
   }
 
   /* #region ===== Scrollbar CSS ===== */

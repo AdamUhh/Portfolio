@@ -14,7 +14,7 @@ export default function ActionButtons({
     "mt-auto h-fit w-fit cursor-pointer rounded border-2 border-sky-600 px-2 py-1";
 
   return (
-    <div className="flex flex-grow items-center gap-2 font-semibold text-ms">
+    <div className="flex flex-grow items-center gap-2 font-bold text-ms">
       {isExtra && (
         <button
           type="button"

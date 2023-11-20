@@ -29,7 +29,7 @@ export default function Projects() {
       >
         Personal Projects
       </h1>
-      <p className="mb-5 text-xl text-main-FOREGROUND/30">
+      <p className="mb-5 text-xl text-main-FOREGROUND/40">
         These are some of the projects I have worked on:
       </p>
       {projectList.map((project) => (

@@ -3,8 +3,7 @@
 import { usePathname } from "next/navigation";
 import { actionbarBottomList, actionbarTopList } from "utils/lists";
 import { I_Terminal } from "../VSCodeTerminal/types";
-import ActionButtonItem from "./Button";
-import ActionItem from "./Item";
+import { ActionButtonItem, ActionItem } from "./Item";
 
 export default function Actionbar({
   showTerminal,

@@ -5,7 +5,7 @@ import {
   mdiConsole,
   mdiEmailEdit,
   mdiGithub,
-  mdiHumanGreeting
+  mdiHumanGreeting,
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
@@ -26,6 +26,11 @@ export default function Home() {
 
   const handleVSCodeClick = () => {
     router.replace("/about");
+    setIsVSCodeOpen(true);
+  };
+
+  const handleContactClick = () => {
+    router.replace("/contact");
     setIsVSCodeOpen(true);
   };
 
@@ -52,7 +57,7 @@ export default function Home() {
 
   return (
     <div
-      className="home-wallpaper relative h-screen w-screen p-2"
+      className="relative h-screen w-screen p-2"
       style={{
         backgroundImage: `url('/wallpaper.png')`,
         backgroundSize: "cover",
@@ -62,7 +67,7 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <ul className="grid list-none grid-cols-[90px] grid-rows-[repeat(5,90px)] gap-3 font-medium">
+      <ul className="grid list-none grid-cols-[90px] grid-rows-[repeat(5,90px)] gap-3  font-medium">
         <DesktopItem
           onClick={handleVSCodeClick}
           name="Portfolio"
@@ -88,11 +93,17 @@ export default function Home() {
         />
 
         <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
-          <Icon path={mdiBadgeAccount} size={2} />
+          <Icon color={"white"} path={mdiBadgeAccount} size={2} />
         </DesktopLink>
-        <DesktopLink href="/contact" name="Contact" title="Contact Me">
+
+        <DesktopItem
+          onClick={handleContactClick}
+          name="Contact"
+          title="Contact Me"
+          size={1}
+        >
           <Icon path={mdiEmailEdit} size={2} />
-        </DesktopLink>
+        </DesktopItem>
         <DesktopItem
           path={mdiHumanGreeting}
           size={2}

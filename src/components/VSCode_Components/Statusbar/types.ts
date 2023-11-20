@@ -4,6 +4,7 @@ interface StatusbarButtonProps {
   text?: string;
   extendClassName?: string;
   children?: React.ReactNode;
+  hideOnSmallViewport?: boolean;
 }
 
 export type { StatusbarButtonProps };

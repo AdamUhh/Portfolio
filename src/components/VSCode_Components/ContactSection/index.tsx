@@ -8,7 +8,7 @@ export default function ContactSection() {
       </h2>
       <Link
         href={"/contact"}
-        className=" flex h-fit w-[300px] items-center justify-center rounded-md bg-gradient-to-r from-[#5faeeb] to-[#447fff] py-6 text-[22.5px] font-bold text-main-FOREGROUND  hover:brightness-110 lg:w-full  "
+        className=" flex h-fit w-[300px] items-center justify-center rounded-md bg-gradient-to-r from-[#5faeeb] to-[#447fff] py-6 text-[22.5px] font-bold text-main-FOREGROUND  hover:brightness-110 lg:w-full md:mt-2 "
       >
         Contact Me
       </Link>
