@@ -94,7 +94,7 @@ function FilterButton({ label, isActive, onClick }: FilterButtonProps) {
   return (
     <button
       className={cn(
-        "z-10 flex h-8 w-fit items-center justify-center bg-main px-4 text-center text-main-FOREGROUND/60 hover:text-main-FOREGROUND/90",
+        "z-10 flex h-8 w-fit sm:h-auto items-center justify-center bg-main sm:px-0 px-4 text-center text-main-FOREGROUND/60 hover:text-main-FOREGROUND/90",
         isActive && "text-main-FOREGROUND ",
       )}
       onClick={onClick}
@@ -117,9 +117,9 @@ export default function Skills() {
 
   return (
     <Sections>
-      <DetailHeader name="Skills" />
-      <div className="relative flex flex-col items-center">
-        <div className="about-me-skill-bar relative flex w-full flex-wrap justify-center space-x-4">
+      <DetailHeader name="📚 Skills" />
+      <div className="relative flex flex-col items-center sm:mt-4">
+        <div className="about-me-skill-bar relative flex sm:grid sm:grid-cols-2 sm:gap-4 sm:justify-items-center w-full flex-wrap justify-center space-x-4 sm:space-x-0">
           <FilterButton
             label="Show All"
             isActive={experienceFilter === "Show All"}

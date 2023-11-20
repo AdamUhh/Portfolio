@@ -295,7 +295,6 @@
   body {
     @apply bg-main text-main-FOREGROUND;
     -webkit-font-smoothing: subpixel-antialiased;
-
   }
 
   /* #region ===== Scrollbar CSS ===== */
@@ -330,11 +329,28 @@
 
   .about-me-skill-bar:before {
     content: "";
-    @apply absolute top-[50%] w-full translate-y-[-50%] border-b-2 border-main-FOREGROUND/30 md:hidden;
+    @apply sm:hidden absolute top-[50%] w-full translate-y-[-50%] border-b-2 border-main-FOREGROUND/30 md:hidden;
   }
 
   .numbered-row::before {
     content: attr(data-number);
     padding-right: 5px;
+  }
+
+  .tab-fade {
+    @apply sm:pl-2;
+    mask-image: linear-gradient(
+      transparent,
+      hsl(var(--main)) 10%,
+      hsl(var(--main)) 90%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      hsl(var(--main)) 10%,
+      hsl(var(--main)) 90%,
+      transparent 100%
+    );
   }
 }

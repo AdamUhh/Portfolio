@@ -24,22 +24,23 @@ export default function Projects() {
   return (
     <NumberedList>
       <h1
-        className="border-b border-main-FOREGROUND text-3xl font-medium"
+        className="border-b border-main-FOREGROUND text-3xl font-medium sm:text-2xl"
         id="overview"
       >
         Personal Projects
       </h1>
-      <p className="mb-5 text-xl text-main-FOREGROUND/40">
+      <p className="mb-5 sm:mb-10 text-xl text-main-FOREGROUND/40 sm:text-md">
         These are some of the projects I have worked on:
       </p>
       {projectList.map((project) => (
-        <div key={project.name}>
-          <ProjectTemplate isActive={urlHash === project.route} {...project} />
-          <br />
-        </div>
+        <ProjectTemplate
+          key={project.name}
+          isActive={urlHash === project.route}
+          {...project}
+        />
       ))}
       <ContactSection />
-      <br/>
+      <br />
     </NumberedList>
   );
 }

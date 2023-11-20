@@ -16,7 +16,7 @@ export default function Header() {
             full_stack.developer
           </code>
         </div>
-        <div className="flex flex-wrap gap-1 text-lg font-medium text-main-FOREGROUND sm:mt-4">
+        <div className="flex flex-wrap gap-1 text-lg font-medium text-main-FOREGROUND sm:mt-4 sm:text-md sm:text-main-FOREGROUND/80">
           <div className="flex flex-wrap gap-1">
             <span className="border-accent pr-4 lg:border-l-2 lg:pl-4">
               Adam M.
