@@ -91,6 +91,7 @@ const config: Config = {
           CLASS: "var(--contactme-css-class)",
           PROPERTY: "var(--contactme-css-property)",
           VALUE: "var(--contactme-css-value)",
+          "ALT-VALUE": "var(--contactme-css-alt-value)",
         },
 
         terminal: {

@@ -5,20 +5,20 @@ import { selfLogo } from "../../assets";
 
 export default function Header() {
   return (
-    <div className="grid grid-cols-[12rem_auto] px-5 sm:px-2 pb-4 pt-2 lg:grid-rows-[1fr_auto] sm:grid-cols-[1fr] sm:grid-rows-[1fr_auto_auto] ">
+    <div className="grid grid-cols-[12rem_auto] px-5 pb-4 pt-2 lg:grid-rows-[1fr_auto] sm:grid-cols-[1fr] sm:grid-rows-[1fr_auto_auto] sm:px-2 ">
       <div className="col-start-1 row-span-2 flex h-48 w-48 flex-shrink-0 items-center justify-center rounded bg-white p-2 sm:row-span-1 sm:row-start-1 sm:mb-4">
         <Image src={selfLogo} alt="AdamUhh Logo" />
       </div>
-      <section className="flex flex-col justify-center gap-1 pl-4 sm:row-start-2 sm:pl-0">
+      <section className="flex flex-col justify-center gap-1 pl-4 pb-2 lg:pb-0 sm:row-start-2 sm:pl-0">
         <div className="flex flex-wrap items-center gap-2">
           <h1 className="font-jet text-3xl font-bold">AdamUhh</h1>
           <code className="h-6 rounded bg-[#4b4b4b] px-2 py-[1px] font-jetBrains text-white/50">
             full_stack.developer
           </code>
         </div>
-        <div className="flex flex-wrap gap-1 text-lg font-medium text-main-FOREGROUND sm:mt-4 sm:text-md sm:text-main-FOREGROUND/80">
+        <div className="flex flex-wrap gap-1 text-lg font-medium sm:mt-4 sm:text-md text-main-FOREGROUND/80">
           <div className="flex flex-wrap gap-1">
-            <span className="border-accent pr-4 lg:border-l-2 lg:pl-4">
+            <span className="border-accent pr-4 md:border-l-2 md:pl-4">
               Adam M.
             </span>
             <span className="border-l-2 border-accent pl-4 pr-4">Male</span>

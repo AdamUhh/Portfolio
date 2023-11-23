@@ -4,23 +4,22 @@
 
 @layer base {
   :root {
-    /* Using numbers of HSL in order to be able to change tailwind opacity inline */
-    --main: 210 12% 16%;
-    --main-foreground: 0 0% 94%;
+    --main: 240 10% 15%;
+    --main-foreground: 240 10% 85%;
 
-    --accent-color: 9 92% 70%;
+    --accent-color: 220 60% 50%;
 
-    --titlebar: 207 13% 14%;
-    --actionbar: 210 12% 16%;
-    --explorer: 207 13% 14%;
-    --tab: 207 13% 14%;
-    --statusbar: 216 10% 10%;
+    --titlebar: 240 8% 18%;
+    --actionbar: 240 7% 20%;
+    --explorer: 240 8% 18%;
+    --tab: 240 8% 18%;
+    --statusbar: 250 5% 22%;
 
-    --common-hover: 206 5% 27%;
+    --common-hover: 240 3% 25%;
 
-    --statusbar-dev-remote-window: 221 50% 60%;
+    --statusbar-dev-remote-window: 261 50% 22%;
 
-    --terminal: 216 10% 10%;
+    --terminal: 250 5% 22%;
 
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
@@ -29,6 +28,7 @@
     --contactme-css-class: #ffffff;
     --contactme-css-property: #fde047;
     --contactme-css-value: #93c5fd;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -37,23 +37,22 @@
   }
 
   [data-theme="light"] {
-    /* Using numbers of HSL in order to be able to change tailwind opacity inline */
-    --main: 0 0% 100%; /* Lightened main color */
-    --main-foreground: 0 0% 10%; /* Darkened main foreground color */
+    --main: 0 0% 100%;
+    --main-foreground: 0 0% 10%;
 
     --accent-color: 9 92% 70%;
 
-    --titlebar: 207 13% 86%; /* Lightened titlebar color */
-    --actionbar: 210 12% 90%; /* Lightened actionbar color */
-    --explorer: 207 13% 86%; /* Lightened explorer color */
-    --tab: 207 13% 86%; /* Lightened tab color */
-    --statusbar: 216 10% 90%; /* Lightened statusbar color */
+    --titlebar: 207 13% 86%;
+    --actionbar: 210 12% 90%;
+    --explorer: 207 13% 86%;
+    --tab: 207 13% 86%;
+    --statusbar: 216 10% 90%;
 
-    --common-hover: 206 5% 95%; /* Lightened common hover color */
+    --common-hover: 206 5% 95%;
 
-    --statusbar-dev-remote-window: 221 50% 90%; /* Lightened statusbar dev remote window color */
+    --statusbar-dev-remote-window: 221 50% 90%;
 
-    --terminal: 216 10% 90%; /* Lightened terminal color */
+    --terminal: 216 10% 90%;
 
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
@@ -91,9 +90,10 @@
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #1114ca;
+    --contactme-css-value: #4099ff;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -120,11 +120,12 @@
 
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
-    --aboutme-css-value: #c49262;
+    --aboutme-css-value: #ee7300;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #cc8323;
+    --contactme-css-value: #5c6600;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -153,32 +154,34 @@
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #1114ca;
+    --contactme-css-value: #4099ff;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
     --code-value: #98c97b;
     --code-bracket: #8b99a5;
   }
-  [data-theme="midnight"] {
-    --main: 240 10% 15%;
-    --main-foreground: 240 10% 85%;
+  [data-theme="accented dark"] {
+    /* Using numbers of HSL in order to be able to change tailwind opacity inline */
+    --main: 210 12% 16%;
+    --main-foreground: 0 0% 94%;
 
-    --accent-color: 220 60% 50%;
+    --accent-color: 9 92% 70%;
 
-    --titlebar: 240 8% 18%;
-    --actionbar: 240 7% 20%;
-    --explorer: 240 8% 18%;
-    --tab: 240 8% 18%;
-    --statusbar: 250 5% 22%;
+    --titlebar: 207 13% 14%;
+    --actionbar: 210 12% 16%;
+    --explorer: 207 13% 14%;
+    --tab: 207 13% 14%;
+    --statusbar: 216 10% 10%;
 
-    --common-hover: 240 3% 25%;
+    --common-hover: 206 5% 27%;
 
-    --statusbar-dev-remote-window: 261 50% 22%;
+    --statusbar-dev-remote-window: 221 50% 60%;
 
-    --terminal: 250 5% 22%;
+    --terminal: 216 10% 10%;
 
     --aboutme-css-class: #2e95d3;
     --aboutme-css-property: #d5626a;
@@ -205,7 +208,7 @@
     --tab: 30 40% 78%;
     --statusbar: 40 35% 80%;
 
-    --common-hover: 30 25% 83%;
+    --common-hover: 30 5% 97%;
 
     --statusbar-dev-remote-window: 51 50% 78%;
 
@@ -215,9 +218,10 @@
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #cc8323;
+    --contactme-css-value: #5c6600;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -246,9 +250,10 @@
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #942f2f;
+    --contactme-css-property: #ff0000;
+    --contactme-css-value: #d638c9;
+    --contactme-css-alt-value: #000000;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -277,9 +282,10 @@
     --aboutme-css-property: #d5626a;
     --aboutme-css-value: #c49262;
 
-    --contactme-css-class: #ffffff;
-    --contactme-css-property: #fde047;
-    --contactme-css-value: #93c5fd;
+    --contactme-css-class: #000000;
+    --contactme-css-property: #cc8323;
+    --contactme-css-value: #5c6600;
+    --contactme-css-alt-value: #14b14e;
 
     --code-class: #78b7fd;
     --code-property: #e16b7b;
@@ -329,7 +335,7 @@
 
   .about-me-skill-bar:before {
     content: "";
-    @apply sm:hidden absolute top-[50%] w-full translate-y-[-50%] border-b-2 border-main-FOREGROUND/30 md:hidden;
+    @apply absolute top-[50%] w-full translate-y-[-50%] border-b-2 border-main-FOREGROUND/30 md:hidden sm:hidden;
   }
 
   .numbered-row::before {

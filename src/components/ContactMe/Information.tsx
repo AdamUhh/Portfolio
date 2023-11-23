@@ -26,7 +26,7 @@ export default function ContactInformation() {
   return (
     <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:p-4 2xl:w-full">
       <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
-      <pre className="mb-2 text-green-400 sm:text-ms">
+      <pre className="mb-2 text-contactme-ALT-VALUE sm:text-ms">
         <code className="font-jetBrains ">
           <span className="text-contactme-CLASS ">.contact_info</span>
           <span className="ml-2 text-blue-500">&#123;</span>
