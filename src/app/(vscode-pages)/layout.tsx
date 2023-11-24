@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     username: "AdamUhh",
     gender: "Male",
   },
+  metadataBase: new URL("https://adamuhh.dev"),
 };
 
 
