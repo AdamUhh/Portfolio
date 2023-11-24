@@ -10,7 +10,7 @@ export function DetailHeader({ name = "Introduction" }: { name: string }) {
 
 export function Sections({ children }: { children: ReactNode }) {
   return (
-    <section className="mx-auto flex w-full flex-col px-5 sm:px-2 py-3">
+    <section className="mx-auto flex w-full flex-col px-5 py-3 sm:px-2">
       {children}
     </section>
   );
@@ -21,7 +21,7 @@ export default function AboutMe() {
     <div className="h-full w-full overflow-y-auto overflow-x-hidden py-5 sm:py-2">
       <Header />
       <div className="mb-3 flex border-b-2 border-b-main-FOREGROUND/10 px-5 sm:px-2">
-        <div className="mb-[-2px] border-b-2 pb-2 text-xl font-bold">
+        <div className="mb-[-2px] border-b-2 border-b-main-FOREGROUND pb-2 text-xl font-bold">
           Details
         </div>
       </div>

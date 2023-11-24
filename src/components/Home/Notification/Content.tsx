@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { vscodeIcon } from "../../../assets";
 import { NotificationContentProps } from "./types";
 
@@ -35,13 +34,13 @@ export default function NotificationContent({
         >
           Go To Portfolio
         </button>
-        <Link
+        {/* <Link
           href={"/cv"}
           className="flex-grow rounded-md bg-white/90 py-1.5 drop-shadow-md hover:bg-white/80"
           title="View My CV"
         >
           View CV
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

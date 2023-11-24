@@ -9,14 +9,14 @@ export default function Header() {
       <div className="col-start-1 row-span-2 flex h-48 w-48 flex-shrink-0 items-center justify-center rounded bg-white p-2 sm:row-span-1 sm:row-start-1 sm:mb-4">
         <Image src={selfLogo} alt="AdamUhh Logo" />
       </div>
-      <section className="flex flex-col justify-center gap-1 pl-4 pb-2 lg:pb-0 sm:row-start-2 sm:pl-0">
+      <section className="flex flex-col justify-center gap-1 pb-2 pl-4 lg:pb-0 sm:row-start-2 sm:pl-0">
         <div className="flex flex-wrap items-center gap-2">
           <h1 className="font-jet text-3xl font-bold">AdamUhh</h1>
           <code className="h-6 rounded bg-[#4b4b4b] px-2 py-[1px] font-jetBrains text-white/50">
             full_stack.developer
           </code>
         </div>
-        <div className="flex flex-wrap gap-1 text-lg font-medium sm:mt-4 sm:text-md text-main-FOREGROUND/80">
+        <div className="flex flex-wrap gap-1 text-lg font-medium text-main-FOREGROUND/80 sm:mt-4 sm:text-md">
           <div className="flex flex-wrap gap-1">
             <span className="border-accent pr-4 md:border-l-2 md:pl-4">
               Adam M.
@@ -39,21 +39,21 @@ export default function Header() {
           front-end and back-end technologies.
         </p>
         <div className="flex gap-3 text-sm font-bold text-white/80">
-          <Link
+          {/* <Link
             href={"/cv"}
-            className="rounded-sm bg-sky-600 px-1.5 py-0.5 hover:bg-sky-600/90"
+            className="rounded bg-sky-600 px-1.5 py-0.5 hover:bg-sky-600/90"
           >
             View CV
-          </Link>
+          </Link> */}
           <Link
             href={"/projects"}
-            className="rounded-sm bg-sky-700 px-1.5 py-0.5 hover:bg-sky-700/90"
+            className="rounded bg-sky-700 px-1.5 py-0.5 hover:bg-sky-700/90"
           >
             View Projects
           </Link>
           <Link
             href={"https://github.com/AdamUhh"}
-            className="rounded-sm bg-sky-800 px-1.5 py-0.5 hover:bg-sky-800/90"
+            className="rounded bg-sky-800 px-1.5 py-0.5 hover:bg-sky-800/90"
             target="_blank"
           >
             View Github

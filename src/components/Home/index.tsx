@@ -1,11 +1,10 @@
 "use client";
 
 import {
-  mdiBadgeAccount,
   mdiConsole,
   mdiEmailEdit,
   mdiGithub,
-  mdiHumanGreeting,
+  mdiHumanGreeting
 } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
@@ -67,14 +66,14 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      <ul className="grid list-none grid-cols-[90px] grid-rows-[repeat(5,90px)] gap-3  font-medium">
+      <ul className="grid list-none grid-cols-[90px] grid-rows-[repeat(5,90px)] gap-3 font-medium">
         <DesktopItem
           onClick={handleVSCodeClick}
           name="Portfolio"
           title="Go To Portfolio"
           size={1}
         >
-          <Image src={vscodeIcon} alt="VSCode Portfolio" width={35} />
+          <Image src={vscodeIcon} alt="VSCode Portfolio" width={40} />
         </DesktopItem>
         <DesktopLink
           href="https://github.com/AdamUhh"
@@ -82,7 +81,7 @@ export default function Home() {
           name="Github"
           title="Go To AdamUhh's Github"
         >
-          <Icon path={mdiGithub} size={2} />
+          <Icon path={mdiGithub} size={2} color={"#ddd"} />
         </DesktopLink>
         <DesktopItem
           path={mdiConsole}
@@ -92,9 +91,9 @@ export default function Home() {
           onClick={handleTerminalClick}
         />
 
-        <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
-          <Icon color={"white"} path={mdiBadgeAccount} size={2} />
-        </DesktopLink>
+        {/* <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
+          <Icon color={"#ddd"} path={mdiBadgeAccount} size={2} />
+        </DesktopLink> */}
 
         <DesktopItem
           onClick={handleContactClick}

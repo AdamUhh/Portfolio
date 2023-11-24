@@ -4,7 +4,7 @@ import { DesktopIconProps, DesktopLinkProps, DesktopProps } from "./types";
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
-    className="flex sm:bg-black/60  flex-col items-center justify-center gap-1 text-white/80"
+    className="flex flex-col  items-center justify-center gap-1 text-white/80 sm:bg-black/60"
     title={title}
   >
     {children}
@@ -29,7 +29,7 @@ export const DesktopItem = ({
     {path && (
       <DesktopItemBase title={title} name={name}>
         <Icon
-          color={"white"}
+          color={"#ddd"}
           path={path}
           size={size}
           className={rotate ? "rotate-90" : ""}

@@ -1,7 +1,16 @@
+
+
 interface TabProps {
   route: string;
   name: string;
-  isActive:boolean;
+  isActive: boolean;
+  onClick?: () => void;
 }
 
-export type { TabProps };
+interface TabContentProps {
+  name: string;
+  isActive: boolean;
+  handleClick?: () => void;
+}
+export type { TabContentProps, TabProps };
+

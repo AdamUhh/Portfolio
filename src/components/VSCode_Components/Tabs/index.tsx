@@ -1,11 +1,12 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { explorerList } from "utils/lists";
 import Tab from "./Tab";
 
 export default function Tabs() {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <div className="titlebar-height text-xs flex overflow-x-auto bg-tab font-poppins sm:tab-fade">
@@ -25,6 +26,7 @@ export default function Tabs() {
           route="/settings"
           name="settings.json"
           isActive={"/settings" === pathname}
+          onClick={router.back}
         />
       )}
     </div>
