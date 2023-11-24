@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     siteName: "AdamUhh's Portfolio",
     images: [
       {
-        url: "/logo_600x600.png",
+        url: "https://adamuhh.dev/logo_600x600.png",
         width: 600,
         height: 600,
         alt: "AdamUhh Logo",
       },
       {
-        url: "/logo_1000x1000.png",
+        url: "https://adamuhh.dev/logo_1000x1000.png",
         width: 1000,
         height: 1000,
         alt: "AdamUhh Logo",
