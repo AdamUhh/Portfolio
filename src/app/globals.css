@@ -299,8 +299,7 @@
     @apply box-border;
   }
   body {
-    @apply bg-main text-main-FOREGROUND;
-    -webkit-font-smoothing: subpixel-antialiased;
+    @apply bg-main text-main-FOREGROUND antialiased;
   }
 
   /* #region ===== Scrollbar CSS ===== */

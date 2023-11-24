@@ -15,8 +15,38 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AdamUhh's Portfolio - Home",
-  description: "Home Page",
+  title: "AdamUhh's Portfolio",
+  description: "Welcome to my portfolio",
+  generator: "Next.js",
+  applicationName: "AdamUhh's Portfolio",
+  keywords: ["Next.js", "Portfolio", "Developer Portfolio"],
+  creator: "AdamUhh",
+  openGraph: {
+    title: "AdamUhh's Portfolio",
+    description: "Welcome to my portfolio",
+    url: "https://adamuhh.dev",
+    siteName: "AdamUhh's Portfolio",
+    images: [
+      {
+        url: "/logo_600x600.png",
+        width: 600,
+        height: 600,
+        alt: "AdamUhh Logo",
+      },
+      {
+        url: "/logo_1000x1000.png",
+        width: 1000,
+        height: 1000,
+        alt: "AdamUhh Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "profile",
+    firstName: "Adam",
+    lastName: "M.",
+    username: "AdamUhh",
+    gender: "Male",
+  },
 };
 
 export default function RootLayout({

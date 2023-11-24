@@ -20,7 +20,7 @@ export default function Titlebar({ handle }: TitlebarProps) {
           </p>
         ))}
       </div>
-      <div className="flex flex-1 items-center justify-center  text-center text-ms font-bold text-main-FOREGROUND/75">
+      <div className="flex flex-1 items-center justify-center  text-center text-ms font-medium text-main-FOREGROUND/75">
         <span className="w-fit whitespace-nowrap rounded-lg bg-common-HOVER px-28 xl:px-20 lg:px-14 md:px-20 sm:px-10">
           AdamUhh - VSCode Portfolio
         </span>
