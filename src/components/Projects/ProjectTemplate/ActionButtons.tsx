@@ -27,6 +27,7 @@ export default function ActionButtons({
       {sourceCodeUrl && (
         <Link
           href={sourceCodeUrl}
+          target="_blank"
           className={cn("hover:bg-sky-600", commonClassNames)}
         >
           View Source Code

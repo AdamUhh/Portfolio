@@ -11,7 +11,7 @@ export default function SecretPage() {
         backgroundImage: `url('/secret_wallpaper.png')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
+        backgroundPosition: "center bottom",
         width: "100%",
         height: "100%",
       }}

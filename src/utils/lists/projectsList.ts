@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import {
-  dynamicClock,
+  clockHub,
   loFlo,
   portfolio,
   tausk,
@@ -134,26 +134,20 @@ const projectList: I_ProjectList[] = [
     ],
   },
   {
-    name: "clock.jsx",
-    route: "#clock",
-    title: "Dynamic Clock",
-    imgSrc: dynamicClock,
+    name: "clock-hub.jsx",
+    route: "#clock-hub",
+    title: "Clock Hub",
+    imgSrc: clockHub,
     description:
-      "A clock app with a cosy design (atleast to me) to keep track of the current time, It has a stopwatch that works even after putting your computer to sleep, though it might not be 100% accurate.",
-    languagesUsed: [
-      { name: "React", bgColor: "#0284C7" },
-      { name: "Redux", bgColor: "#764abc" },
-      { name: "NodeJS", bgColor: "#339933" },
-      { name: "Express", bgColor: "#8cbf3f" },
-      { name: "MongoDB", bgColor: "#47a248" },
-    ],
-    viewDemoUrl: "https://dynamicclock.netlify.app/",
-    sourceCodeUrl: "https://github.com/AdamUhh/Dynamic-Clock-v2",
+      "A clock app to keep track of the current time. It features a stopwatch and international clock support, with a range of selected wallpapers.",
+    languagesUsed: [{ name: "SvelteKit", bgColor: "#0284C7" }],
+    viewDemoUrl: "https://clock-hub.netlify.app/",
+    sourceCodeUrl: "https://github.com/AdamUhh/clock-hub",
     extra: [
       {
         title: "Why I made it",
         description: [
-          "Since I had dual monitors at the time, I just wanted one of my inactive screens to show the time.",
+          "Not much to it, really. I had two screens, and I just wanted one of them to display the time when it was inactive. I added clocks for different time zones so I could coordinate game times with my friends in different countries.",
         ],
       },
     ],

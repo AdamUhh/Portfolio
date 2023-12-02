@@ -1,8 +1,8 @@
 import selfLogo from "./self_logo.png";
 import vscodeIcon from "./vscode_icon.svg";
-import loFlo from "./projects/loflo.png";
+import loFlo from "./projects/lo-flo.gif";
 import tausk from "./projects/tausk.png";
-import dynamicClock from "./projects/dynamicclock.png";
+import clockHub from "./projects/clock-hub.gif";
 import workInProgress from "./projects/workinprogress.png";
 import portfolio from "./projects/portfolio.png";
 
@@ -11,7 +11,7 @@ export {
   vscodeIcon,
   loFlo,
   tausk,
-  dynamicClock,
+  clockHub,
   workInProgress,
   portfolio,
 };
