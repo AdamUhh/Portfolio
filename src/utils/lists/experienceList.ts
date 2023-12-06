@@ -28,15 +28,17 @@ const skillDict: SkillDict<Skill[]> = {
   ],
   frontend: [
     { name: "React", experience: skillList.Level_4 },
-    { name: "Next.js", experience: skillList.Level_4 },
+    { name: "NextJS", experience: skillList.Level_4 },
     { name: "Redux", experience: skillList.Level_3 },
+    { name: "Astro", experience: skillList.Level_3 },
+    { name: "SvelteKit", experience: skillList.Level_2 },
   ],
   backend: [
     { name: "Node.js", experience: skillList.Level_2 },
     { name: "Express", experience: skillList.Level_2 },
     { name: "GraphQL", experience: skillList.Level_2 },
     { name: "Prisma", experience: skillList.Level_2 },
-    { name: "Docker", experience: skillList.Level_2 },
+    { name: "Docker", experience: skillList.Level_1 },
   ],
   databases: [
     { name: "MySQL", experience: skillList.Level_2 },
