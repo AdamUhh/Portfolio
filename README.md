@@ -2,8 +2,8 @@
 
 [<img src="./public/logo_600x600.png" width="100" alt="AdamUhh's logo">](https://adamuhh.dev)
 
-<h1>AdamUhh's <br/> <span style="font-size:20px">VSCode Portfolio Website</span>
-</h1>
+<h1>AdamUhh's</h1>
+<h2>VSCode Portfolio Website</h2>
 <h3>
   <a href="https://adamuhh.dev" target="_blank">adamuhh.dev</a>
 </h3>
@@ -22,7 +22,7 @@
 
 - **NextJS v14**
 - **TailwindCSS**
-- **AWS SNS (SDK JavaScript v3)**
+- **AWS SES (SDK JavaScript v3)**
 
 ---
 
