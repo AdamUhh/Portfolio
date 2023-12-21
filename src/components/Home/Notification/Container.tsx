@@ -15,7 +15,7 @@ export default function NotificationContainer({
     <Draggable handle=".draggable_handle" nodeRef={nodeRef}>
       <div
         className={cn(
-          "left-[35%] top-[15%] h-fit min-h-[200px] w-[40%] min-w-[300px] max-w-[500px] rounded-2xl  bg-gradient-to-r from-[#e0edf8] to-[#d6deef] shadow-lg  shadow-black lg:w-[60%] sm:left-[5%] sm:min-h-[200px]",
+          "left-[35%] top-[15%] h-fit min-h-[200px] w-[40%] min-w-[300px] max-w-[500px] rounded-lg  bg-gradient-to-r from-[#e9f4ff] to-[#d6deef] shadow-lg  shadow-black lg:w-[60%] sm:left-[5%] sm:min-h-[200px]",
           isOpen ? "fixed" : "hidden",
         )}
         // className={cn(

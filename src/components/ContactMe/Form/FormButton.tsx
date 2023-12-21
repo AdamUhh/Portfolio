@@ -14,9 +14,9 @@ export default function FormButton({ isSuccessful }: FormButtonProps) {
     return (
       <button
         type="submit"
-        className={cn("bg-green-700", commonClassNames)}
+        className={cn(commonClassNames, "bg-green-700 m-0")}
         aria-disabled={true}
-        disabled={true}
+        disabled
       >
         <Icon path={mdiCheck} size={1} />
         Email Sent!

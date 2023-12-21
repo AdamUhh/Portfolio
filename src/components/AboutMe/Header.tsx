@@ -38,7 +38,7 @@ export default function Header() {
           Hi there! I&apos;m Adam, a full-stack web developer with expertise in
           front-end and back-end technologies.
         </p>
-        <div className="flex gap-3 text-sm font-bold text-white/80">
+        <div className="flex gap-3 text-sm tracking-wide font-medium text-white/80">
           {/* <Link
             href={"/cv"}
             className="rounded bg-sky-600 px-1.5 py-0.5 hover:bg-sky-600/90"

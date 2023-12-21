@@ -101,9 +101,9 @@ const config: Config = {
         code: {
           CLASS: "var(--code-class)",
           PROPERTY: "var(--code-property)",
-          VALUE: "var(--code-value)", 
-          BRACKET: "var(--code-bracket)", 
-        }
+          VALUE: "var(--code-value)",
+          BRACKET: "var(--code-bracket)",
+        },
       },
       keyframes: {
         "custom-ping": {
@@ -116,9 +116,13 @@ const config: Config = {
             opacity: "1",
           },
         },
+        blink: {
+          "50%": { opacity: "0" },
+        },
       },
       animation: {
         "custom-ping": "custom-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+        blink: "blink 1s step-start 0s infinite",
       },
     },
   },

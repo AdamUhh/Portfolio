@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  mdiConsole,
-  mdiEmailEdit,
-  mdiGithub,
-  mdiHumanGreeting
-} from "@mdi/js";
+import { mdiConsole, mdiEmailEdit, mdiGithub, mdiHumanGreeting } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -73,7 +68,7 @@ export default function Home() {
           title="Go To Portfolio"
           size={1}
         >
-          <Image src={vscodeIcon} alt="VSCode Portfolio" width={40} />
+          <Image src={vscodeIcon} alt="VSCode Portfolio" width={35} />
         </DesktopItem>
         <DesktopLink
           href="https://github.com/AdamUhh"
@@ -81,11 +76,11 @@ export default function Home() {
           name="Github"
           title="Go To AdamUhh's Github"
         >
-          <Icon path={mdiGithub} size={2} color={"#ddd"} />
+          <Icon path={mdiGithub} size={1.8} color={"#ddd"} />
         </DesktopLink>
         <DesktopItem
           path={mdiConsole}
-          size={2}
+          size={1.7}
           title="Open Terminal"
           name="Terminal"
           onClick={handleTerminalClick}
@@ -99,13 +94,12 @@ export default function Home() {
           onClick={handleContactClick}
           name="Contact"
           title="Contact Me"
-          size={1}
-        >
-          <Icon path={mdiEmailEdit} size={2} />
-        </DesktopItem>
+          path={mdiEmailEdit}
+          size={1.6}
+        />
         <DesktopItem
           path={mdiHumanGreeting}
-          size={2}
+          size={1.8}
           title="Open Help/Greeting Popup"
           name="Help"
           onClick={handleWelcomeGreetingClick}

@@ -26,7 +26,7 @@ export default function Settings() {
       <h2 className="mb-5 border-b border-b-main-FOREGROUND/30 text-2xl">
         Manage Themes
       </h2>
-      <div className="mx-4 flex flex-wrap items-center gap-10">
+      <div className="mx-4 grid grid-cols-4 items-center gap-10 2xl:grid-cols-3 xl:grid-cols-2 md:grid-cols-1">
         {themeList.map((_theme, index) => (
           <ThemeOption
             key={index}

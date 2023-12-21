@@ -13,14 +13,14 @@ export default function Details() {
             I&apos;m good at building responsive, user-friendly web
             applications.{" "}
           </span>{" "}
-          I&apos;m flexible with problem-solving and can quickly adapt to new tech,
-          making me handy in fast-paced development.
+          I&apos;m flexible with problem-solving and can quickly adapt to new
+          tech, making me handy in fast-paced development.
         </p>
         <p className="text-main-FOREGROUND/50">
           Explore my
           <Link
             href={"/projects"}
-            className="mx-1 rounded-[2px] bg-sky-700 px-1.5 py-0.5 text-ms font-bold text-white/80 hover:bg-sky-700/90"
+            className="mx-1 rounded-[2px] bg-sky-700 px-1.5 py-0.5 text-ms font-medium  tracking-wide text-white/80 hover:bg-sky-700/90"
           >
             Projects
           </Link>

@@ -6,7 +6,7 @@ export default function NotificationTitlebar({
   return (
     <div className=" flex h-10 w-full cursor-grab items-center justify-between rounded-tl-2xl rounded-tr-2xl">
       <div className="flex-1 draggable_handle px-4 py-2">
-        <h1 className="text-md font-medium text-black/80">Notification</h1>
+        <h1 className="text-ms font-medium text-black/80">Notification</h1>
       </div>
       <div className="flex px-4 py-2">
         <button

@@ -4,7 +4,7 @@ import { DesktopIconProps, DesktopLinkProps, DesktopProps } from "./types";
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
-    className="flex flex-col  items-center justify-center gap-1 text-white/80 sm:bg-black/60"
+    className="flex flex-col text-ms items-center justify-center gap-1 text-white/80 sm:bg-black/60"
     title={title}
   >
     {children}

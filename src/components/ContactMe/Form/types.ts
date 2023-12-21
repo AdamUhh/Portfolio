@@ -8,6 +8,8 @@ interface FieldProps {
   label: string;
   type: string;
   id: any;
+  placeholder?: string;
+  required?:boolean;
   onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
@@ -16,4 +18,3 @@ interface FormButtonProps {
 }
 
 export type { FieldProps, FormButtonProps, FormLayoutProps };
-

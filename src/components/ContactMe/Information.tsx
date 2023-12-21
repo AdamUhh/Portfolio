@@ -1,5 +1,7 @@
 "use client";
 
+import { mdiContentCopy } from "@mdi/js";
+import Icon from "@mdi/react";
 import Link from "next/link";
 import { MouseEvent, useState } from "react";
 import { cn } from "utils/cn";
@@ -24,12 +26,12 @@ export default function ContactInformation() {
   };
 
   return (
-    <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:p-4 2xl:w-full">
-      <h2 className="mb-4 text-3xl font-bold">Contact Information</h2>
+    <div className="flex w-fit flex-col rounded-xl border-4 border-main-FOREGROUND/20 p-6 2xl:w-full sm:p-4">
+      <h2 className="text-3xl font-bold">Contact Information</h2>
       <pre className="mb-2 text-contactme-ALT-VALUE sm:text-ms">
         <code className="font-jetBrains ">
-          <span className="text-contactme-CLASS ">.contact_info</span>
-          <span className="ml-2 text-blue-500">&#123;</span>
+          {/* <span className="text-contactme-CLASS ">.contact_info</span> */}
+          <span className=" text-blue-500">&#123;</span>
           <br />
           {Object.entries(contactInfo).map(([key, value]) => (
             <div key={key} className="sm:flex sm:flex-col">
@@ -48,7 +50,35 @@ export default function ContactInformation() {
           <span className="text-blue-500">&#125;</span>
         </code>
       </pre>
-      <button
+      <div className="ml-auto mt-auto flex gap-2 text-ms">
+        <button
+          type="button"
+          title="Copy Email"
+          onClick={(e) => copyEmailToClipboard(e)}
+          className={cn(
+            "mt-auto flex w-fit cursor-pointer items-center gap-2 rounded bg-common-HOVER px-3 py-2 text-center hover:bg-common-HOVER/80",
+            isEmailCopied && "bg-green-500 text-black/90 hover:bg-green-500",
+          )}
+          disabled={isEmailCopied}
+        >
+          <Icon path={mdiContentCopy} size={0.8} />
+          <span>Email</span>
+        </button>
+        <button
+          type="button"
+          title="Copy Email & Redirect To Gmail"
+          onClick={(e) => copyEmailToClipboard(e, gmailUrl)}
+          className={cn(
+            "mt-auto flex w-fit cursor-pointer items-center gap-2 rounded bg-common-HOVER px-3 py-2 text-center hover:bg-common-HOVER/80",
+            isEmailCopied && "bg-green-500 text-black/90 hover:bg-green-500",
+          )}
+          disabled={isEmailCopied}
+        >
+          <Icon path={mdiContentCopy} size={0.8} />
+          <span>Email & Go to Gmail</span>
+        </button>
+      </div>
+      {/* <button
         type="button"
         onClick={(e) => copyEmailToClipboard(e)}
         className={cn(
@@ -59,8 +89,8 @@ export default function ContactInformation() {
         <span className="text-lg  sm:text-md">
           {isEmailCopied ? "Email copied to clipboard!" : "Copy Email"}
         </span>
-      </button>
-      <button
+      </button> */}
+      {/* <button
         type="button"
         onClick={(e) => copyEmailToClipboard(e, gmailUrl)}
         className={cn(
@@ -73,7 +103,7 @@ export default function ContactInformation() {
             ? "Email copied to clipboard!"
             : "Copy Email and Go To Gmail"}
         </span>
-      </button>
+      </button> */}
     </div>
   );
 }

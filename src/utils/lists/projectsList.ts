@@ -141,7 +141,7 @@ const projectList: I_ProjectList[] = [
     description:
       "A clock app to keep track of the current time. It features a stopwatch and international clock support, with a range of selected wallpapers.",
     languagesUsed: [{ name: "SvelteKit", bgColor: "#0284C7" }],
-    viewDemoUrl: "https://clock-hub.netlify.app/",
+    viewDemoUrl: "https://clockhub.netlify.app/",
     sourceCodeUrl: "https://github.com/AdamUhh/clock-hub",
     extra: [
       {

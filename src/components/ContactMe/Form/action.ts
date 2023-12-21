@@ -28,9 +28,16 @@ export default async function sendEmail(
       .max(50, { message: "Name too long! Max Characters: 50" }),
     email: z
       .string()
+      .trim()
       .min(1, { message: "Email field has to be filled." })
       .email("This is not a valid email.")
       .max(256, { message: "Email too long! Max Characters: 256" }),
+    company: z
+      .string()
+      .trim()
+      .max(50, { message: "Company name too long! Max Characters: 50" })
+      .optional()
+      .or(z.literal("")),
     message: z
       .string()
       .trim()
@@ -38,9 +45,10 @@ export default async function sendEmail(
       .max(1000, { message: "Message too long! Max Characters: 1000" }),
   });
   const parse = schema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: formData.get("message"),
+    name: formData.get("name")?.toString().trim(),
+    email: formData.get("email")?.toString().trim(),
+    company: formData.get("company")?.toString().trim(),
+    message: formData.get("message")?.toString().trim(),
   });
 
   if (!parse.success) {
@@ -61,7 +69,7 @@ export default async function sendEmail(
         Body: {
           Text: {
             Data: `
-Name: ${data.name}\n
+Name: ${data.name}\n${!!data.company?.length ? `Company: ${data.company}\n` : ""}
 Email: ${data.email}\n
 Message:\n\n${data.message}`,
           },

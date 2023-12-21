@@ -14,6 +14,9 @@ export default function FormLayout({ children }: FormLayoutProps) {
   const [formState, onFormSubmit] = useFormState(sendEmail, {
     status: "default",
     returnMessage: "",
+  } as {
+    status: "default" | "true" | "false";
+    returnMessage: string;
   });
 
   useEffect(() => {
@@ -24,11 +27,16 @@ export default function FormLayout({ children }: FormLayoutProps) {
 
   return (
     <form
-      className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:p-4 sm:min-w-fit"
+      className="w-full min-w-[500px] rounded-xl border-4 border-main-FOREGROUND/20 p-6 sm:min-w-fit sm:p-4"
       ref={formRef}
       action={onFormSubmit}
     >
-      <fieldset disabled={formState.status === "true"}>{children}</fieldset>
+      <fieldset
+        disabled={formState.status === "true"}
+        style={formState.status === "true" ? { display: "none" } : {}}
+      >
+        {children}
+      </fieldset>
       <FormButton isSuccessful={formState.status === "true"} />
       {formState.status === "false" && (
         <div className="mt-2 flex items-center gap-1">

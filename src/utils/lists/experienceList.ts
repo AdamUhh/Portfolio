@@ -38,14 +38,17 @@ const skillDict: SkillDict<Skill[]> = {
     { name: "Express", experience: skillList.Level_2 },
     { name: "GraphQL", experience: skillList.Level_2 },
     { name: "Prisma", experience: skillList.Level_2 },
+    { name: "DrizzleOrm", experience: skillList.Level_2 },
     { name: "Docker", experience: skillList.Level_1 },
   ],
   databases: [
+    { name: "SQLite", experience: skillList.Level_3 },
     { name: "MySQL", experience: skillList.Level_2 },
     { name: "PostgreSQL", experience: skillList.Level_2 },
     { name: "MongoDB", experience: skillList.Level_2 },
     { name: "Firebase", experience: skillList.Level_2 },
     { name: "Supabase", experience: skillList.Level_2 },
+    { name: "Turso", experience: skillList.Level_2 },
   ],
   "desktop-applications": [
     { name: "Electron", experience: skillList.Level_3 },

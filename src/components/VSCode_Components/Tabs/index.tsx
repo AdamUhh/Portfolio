@@ -9,7 +9,7 @@ export default function Tabs() {
   const router = useRouter();
 
   return (
-    <div className="titlebar-height text-xs flex overflow-x-auto bg-tab font-poppins sm:tab-fade">
+    <div className="drop-shadow titlebar-height text-xs flex overflow-x-auto bg-tab font-poppins sm:tab-fade">
       {explorerList
         .filter((t) => !t.hideInTabs)
         .map((t) => (

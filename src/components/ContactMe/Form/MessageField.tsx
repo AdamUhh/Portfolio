@@ -8,9 +8,10 @@ export default function MessageField() {
   return (
     <>
       <Field
-        label="Message"
+        label="Message*"
         type="textarea"
         id="message"
+        placeholder="Hiya ..."
         onChange={(e) => setCharLength(e.target.value.length)}
       />
       {charLength !== 0 && (
