@@ -38,24 +38,30 @@ interface I_ProjectList extends I_ProjectExplorerList, I_LanguagesUsed {
 
 const projectList: I_ProjectList[] = [
   {
-    name: "lo-flo.jsx",
-    route: "#lo-flo",
-    title: "Lo-Flo",
+    name: "loflo.jsx",
+    route: "#loflo",
+    title: "LoFlo",
     imgSrc: loFlo,
     description:
-      "A flashcard app, similar to Quizlet. It helps you learn stuff with digital flashcards that are easy to make and use. It's simple and makes learning questions or languages easier. Just a straightforward tool to help you study better. It can be hosted locally or saved on the cloud.",
+      "A flashcard app where users can learn more effectively using digital flashcards and sub-folders.",
     languagesUsed: [
       { name: "NextJS", bgColor: "#0284C7" },
-      { name: "Prisma ORM", bgColor: "#7E22CE" },
-      { name: "Sqlite/Postgres", bgColor: "#15803D" },
+      { name: "Drizzle Orm", bgColor: "#c5f74f", color: "#000" },
+      { name: "TursoDB", bgColor: "#2a937c" },
     ],
-    sourceCodeUrl: "https://github.com/AdamUhh/Lo-flo--SQLite",
+    sourceCodeUrl: "https://github.com/AdamUhh/Loflo",
     extra: [
       {
         title: "Why I made it",
         description: [
-          "I made this flashcard app because I wanted an easy way to remember some programming concepts and definitions. Learning programming concepts can be confusing at first, so I created a tool that keeps things simple.",
-          "This app, like Quizlet but more tailored to my needs, helps me study by using digital flashcards. It's straightforward and makes learning questions, definitions, or even natural languages easier. You can use it on your own computer or save it in the cloud (e.g. supabase) for easy access. I made it to make studying less of a hassle and more straightforward for anyone learning something new.",
+          "I made this flashcard app because I wanted an easy way to remember generic phrases (for languages), and some programming concepts/definitions.",
+          "Additionally, it was useful in learning more about NextJS v14",
+        ],
+      },
+      {
+        title: "Challenges",
+        description: [
+          "I had some trouble coming up with a nice design, before deciding to simply make it minimalistic. Moreover, I initially had larger plans such as adding queues and sharing folders, but decided to scale it down as I wouldn't really use these features, and decided that weren't that difficult to implement if needed later on, but would just take up a big chunk of time - I decided to simply use that time on other projects that I had delayed",
         ],
       },
     ],
@@ -128,7 +134,7 @@ const projectList: I_ProjectList[] = [
       {
         title: "Challenges",
         description: [
-          "The drag and drop feature was quite confusing, especially since at the time, the documentation itself was a bit jumbled up. Moreover, the amount of boilerplate required for redux saga at the time was enormous and time-consuming to go through. Additionally, perhaps most importantly, after completing 90% of the project, I got my first burn out. I wasn't really expecting it and it took around a month for me to get past it and work on another project.",
+          "The drag and drop feature was quite confusing, especially since at the time, as the documentation was difficult to understand. Moreover, the amount of boilerplate required for redux saga at the time was enormous and time-consuming to go through. Additionally, perhaps most importantly, after completing 90% of the project, I got my first burn out. I wasn't really expecting it and it took around a month for me to get past it and work on another project.",
         ],
       },
     ],

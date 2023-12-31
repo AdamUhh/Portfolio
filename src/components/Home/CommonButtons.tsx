@@ -22,7 +22,7 @@ export const DesktopItem = ({
   rotate,
 }: DesktopIconProps) => (
   <li
-    className="flex h-full w-full cursor-pointer items-center justify-center rounded-md hover:bg-[#83c3ff3d]"
+    className="flex h-full px-1 w-full cursor-pointer items-center justify-center rounded-md hover:bg-[#83c3ff3d]"
     title={title}
     onClick={onClick}
   >
