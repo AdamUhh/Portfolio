@@ -49,6 +49,7 @@ const projectList: I_ProjectList[] = [
       { name: "Drizzle Orm", bgColor: "#c5f74f", color: "#000" },
       { name: "TursoDB", bgColor: "#2a937c" },
     ],
+    viewDemoUrl: "https://loflo.vercel.app/",
     sourceCodeUrl: "https://github.com/AdamUhh/Loflo",
     extra: [
       {
