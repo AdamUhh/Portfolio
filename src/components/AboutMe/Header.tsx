@@ -39,12 +39,12 @@ export default function Header() {
           front-end and back-end technologies.
         </p>
         <div className="flex gap-3 text-sm tracking-wide font-medium text-white/80">
-          {/* <Link
-            href={"/cv"}
+          <Link
+            href={"https://cv.adamuhh.dev/"}
             className="rounded bg-sky-600 px-1.5 py-0.5 hover:bg-sky-600/90"
           >
             View CV
-          </Link> */}
+          </Link>
           <Link
             href={"/projects"}
             className="rounded bg-sky-700 px-1.5 py-0.5 hover:bg-sky-700/90"

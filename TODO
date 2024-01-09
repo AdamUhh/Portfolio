@@ -1,7 +1,3 @@
-Pages:
-  ☐ Create CV pdf
-    ☐ Link to CV page
-
 Issues:
   ☐ Had an issue with next@14.0.3 and nextjs-toploader@1.6.4
     ☐ Read: https://github.com/TheSGJ/nextjs-toploader/issues/56

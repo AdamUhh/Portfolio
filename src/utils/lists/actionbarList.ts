@@ -1,4 +1,5 @@
 import {
+  mdiBadgeAccount,
   mdiCog,
   mdiConsole,
   mdiDevTo,
@@ -12,6 +13,7 @@ const actionbarTopList: {
   title: string;
   icon: string;
   route: string;
+  external?: boolean;
 }[] = [
   {
     title: "Home",
@@ -32,6 +34,12 @@ const actionbarTopList: {
     title: "Contact",
     icon: mdiEmailEdit,
     route: "/contact",
+  },
+  {
+    title: "CV",
+    icon: mdiBadgeAccount,
+    route: "https://cv.adamuhh.dev/",
+    external: true,
   },
 ];
 const actionbarBottomList: {

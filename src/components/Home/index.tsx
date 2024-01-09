@@ -1,6 +1,6 @@
 "use client";
 
-import { mdiConsole, mdiEmailEdit, mdiGithub, mdiHumanGreeting } from "@mdi/js";
+import { mdiBadgeAccount, mdiConsole, mdiEmailEdit, mdiGithub, mdiHumanGreeting } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -86,9 +86,9 @@ export default function Home() {
           onClick={handleTerminalClick}
         />
 
-        {/* <DesktopLink href="/cv" target="_blank" name="CV" title="View My CV">
+        <DesktopLink href="https://cv.adamuhh.dev/" target="_blank" name="CV" title="View My CV">
           <Icon color={"#ddd"} path={mdiBadgeAccount} size={2} />
-        </DesktopLink> */}
+        </DesktopLink>
 
         <DesktopItem
           onClick={handleContactClick}

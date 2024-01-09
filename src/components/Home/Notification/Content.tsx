@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { vscodeIcon } from "../../../assets";
 import { NotificationContentProps } from "./types";
+import Link from "next/link";
 
 export default function NotificationContent({
   handleVSCodeClick,
 }: NotificationContentProps) {
   return (
-    <div className="h-[calc(100%-40px)] pt- overflow-y-auto overflow-x-hidden p-4 text-black">
+    <div className="pt- h-[calc(100%-40px)] overflow-y-auto overflow-x-hidden p-4 text-black">
       <div className="flex items-center font-semibold">
         <span className="text-2xl">👋</span>
         <h1 className="pl-1  text-2xl">Welcome to my Portfolio!</h1>
@@ -25,22 +26,23 @@ export default function NotificationContent({
         </div>
         <p>or click the below</p>
       </div>
-      <div className="mt-7 flex flex-col justify-evenly gap-3 text-center font-medium">
+      <div className="mx-auto mt-7 flex w-fit flex-col justify-evenly gap-3 text-center font-medium">
         <button
           type="button"
           onClick={handleVSCodeClick}
-          className="w-fit px-16 mx-auto rounded-md bg-white/90 py-1.5 drop-shadow-md hover:bg-white/80"
+          className="mx-auto w-fit rounded-md bg-white/90 px-16 py-1.5 drop-shadow-md hover:bg-white/80"
           title="Go To Portfolio"
         >
           Go To Portfolio
         </button>
-        {/* <Link
-          href={"/cv"}
-          className="flex-grow rounded-md bg-white/90 py-1.5 drop-shadow-md hover:bg-white/80"
+        <Link
+          href={"https://cv.adamuhh.dev/"}
+          className="mx-auto w-full rounded-md bg-white/90 px-16 py-1.5 drop-shadow-md hover:bg-white/80"
           title="View My CV"
+          target="_blank"
         >
           View CV
-        </Link> */}
+        </Link>
       </div>
     </div>
   );
