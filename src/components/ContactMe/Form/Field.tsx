@@ -14,7 +14,7 @@ export default function Field({
   return (
     <div className="mb-4">
       <label
-        className="mb-2 block  text-sm font-bold text-contactme-CLASS"
+        className="mb-2 block text-sm font-bold text-contactme-CLASS"
         htmlFor={id}
       >
         {label}

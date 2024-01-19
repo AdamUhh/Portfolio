@@ -11,6 +11,7 @@ interface DesktopIconProps extends DesktopProps {
   size: number;
   rotate?: boolean;
   onClick?: () => void;
+  hideOnMobile?:boolean;
 }
 
 interface DesktopLinkProps extends DesktopProps {

@@ -1,6 +1,7 @@
 import Icon from "@mdi/react";
 import Link from "next/link";
 import { DesktopIconProps, DesktopLinkProps, DesktopProps } from "./types";
+import { cn } from "utils/cn";
 
 const DesktopItemBase = ({ children, title, name }: DesktopProps) => (
   <div
@@ -20,9 +21,10 @@ export const DesktopItem = ({
   path,
   size,
   rotate,
+  hideOnMobile = false
 }: DesktopIconProps) => (
   <li
-    className="flex h-full px-1 w-full cursor-pointer items-center justify-center rounded-md hover:bg-[#83c3ff3d]"
+    className={cn("text-center flex h-full px-1 w-full cursor-pointer items-center justify-center rounded-md hover:bg-[#83c3ff3d]", hideOnMobile && "sm:hidden")}
     title={title}
     onClick={onClick}
   >

@@ -12,9 +12,9 @@ import { vscodeIcon } from "../../assets";
 import { DesktopItem, DesktopLink } from "./CommonButtons";
 
 const Taskbar = () => (
-  <footer className="absolute bottom-0 left-0 grid h-12 w-screen grid-cols-3 bg-[#7777773d] shadow-[0_0_15px_rgba(255,255,255,0.4)] blur-[20.5]  sm:grid-cols-2">
+  <footer className="absolute bottom-0 left-0 grid h-12 w-screen grid-cols-3 bg-[#7777773d] shadow-[0_0_15px_rgba(255,255,255,0.4)] blur-[20.5] sm:grid-cols-2">
     <div className="sm:hidden" />
-    <ul className="mx-auto grid h-full grid-cols-[60px_60px_60px]">
+    <ul className="mx-auto grid h-full grid-cols-[60px_60px_60px] sm:grid-cols-[55px_55px_55px]">
       <DesktopItem path={mdiMicrosoft} size={1.2} title="Microsoft" />
       <DesktopItem
         path={mdiCheckboxMultipleBlankOutline}
@@ -25,9 +25,9 @@ const Taskbar = () => (
         <Image src={vscodeIcon} alt="VSCode Portfolio" width={27} />
       </DesktopLink>
     </ul>
-    <ul className="ml-auto grid h-fit my-auto grid-cols-[1fr_1fr_1fr_1fr_100px] gap-1">
+    <ul className="ml-auto grid h-fit my-auto grid-cols-[1fr_1fr_1fr_1fr_100px] sm:grid-cols-[1fr_1fr_1fr_85px] gap-1">
       <DesktopItem path={mdiChevronUp} size={0.8} title="Tasks" />
-      <DesktopItem path={mdiBattery90} size={0.8} title="Battery" rotate />
+      <DesktopItem path={mdiBattery90} size={0.8} title="Battery" rotate hideOnMobile />
       <DesktopItem path={mdiWifi} size={0.7} title="Wifi" />
       <DesktopItem path={mdiVolumeHigh} size={0.8} title="Volume" />
       <DesktopItem size={0.8} title="Time">

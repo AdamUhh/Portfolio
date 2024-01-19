@@ -38,7 +38,7 @@ export default function ContactInformation() {
               <span className="ml-4 text-contactme-PROPERTY">{key}:</span>{" "}
               {value.type === "link" ? (
                 <Link href={value.text} target="_blank">
-                  &apos;{value.text}&apos;
+                  &apos;{value.text}&apos;;
                 </Link>
               ) : (
                 <span className="text-contactme-VALUE">
