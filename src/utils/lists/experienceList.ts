@@ -51,7 +51,7 @@ const skillDict: SkillDict<Skill[]> = {
     { name: "Turso", experience: skillList.Level_2 },
   ],
   "desktop-applications": [
-    { name: "Electron", experience: skillList.Level_3 },
+    { name: "Electron", experience: skillList.Level_4 },
     { name: "AvaloniaUI", experience: skillList.Level_2 },
   ],
   cloud: [
