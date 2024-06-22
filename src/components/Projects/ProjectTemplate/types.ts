@@ -1,29 +1,28 @@
 import { I_ProjectExtraList, I_ProjectList } from "utils/lists";
 
 interface ActionButtonsProps {
-  isExtra: boolean;
-  sourceCodeUrl?: string;
-  viewDemoUrl?: string;
-  handleReadMore: () => void;
-  showReadMore: boolean;
+    isExtra: boolean;
+    sourceCodeUrl?: string;
+    viewDemoUrl?: string;
+    // handleReadMore: () => void;
+    // showReadMore: boolean;
 }
 
 interface ProjectTemplateProps extends I_ProjectList {
-  isActive?: boolean;
+    isActive?: boolean;
 }
 interface ReadMoreSectionProps {
-  showReadMore: boolean;
-  extra?: I_ProjectExtraList[];
+    extra?: I_ProjectExtraList[];
 }
 
 interface ProjectHeaderProps {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 
 export type {
-  ProjectHeaderProps,
-  ActionButtonsProps,
-  ProjectTemplateProps,
-  ReadMoreSectionProps,
+    ProjectHeaderProps,
+    ActionButtonsProps,
+    ProjectTemplateProps,
+    ReadMoreSectionProps,
 };

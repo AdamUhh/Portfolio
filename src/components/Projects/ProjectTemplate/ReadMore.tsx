@@ -2,12 +2,11 @@ import { Fragment } from "react";
 import { ReadMoreSectionProps } from "./types";
 
 export default function ReadMoreSection({
-  showReadMore,
   extra,
 }: ReadMoreSectionProps) {
-  if (showReadMore && extra && extra.length > 0)
+  if (extra && extra.length > 0)
     return (
-      <>
+      <div className="flex flex-col">
         {extra.map((e: any) => (
           <Fragment key={e.title}>
             <h2 className="mt-2 text-2xl font-bold">{e.title}</h2>
@@ -18,7 +17,7 @@ export default function ReadMoreSection({
             ))}
           </Fragment>
         ))}
-      </>
+      </div>
     );
 
   return <></>;
