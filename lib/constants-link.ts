@@ -8,3 +8,4 @@ export const CLOCKHUB_LINK = "https://clockhub.netlify.app";
 export const LOFLO_LINK = "https://github.com/AdamUhh/LoFlo";
 export const HEADLESS_DASHBOARD_LINK =
     "https://github.com/AdamUhh/Headless-eCommerce-CMS";
+export const STOREFRONT_DEMO = "https://storefront-dummy.vercel.app/";

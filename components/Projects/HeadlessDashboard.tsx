@@ -39,7 +39,7 @@ export function HeadlessDashboard({ returnToProjects }: ProjectProps) {
                     <div className="overflow-hidden rounded-lg border border-[#3e3e42] bg-[#252526]">
                         <FallbackImage
                             src="/projects/headless-dashboard.gif"
-                            alt="Loflo app Interface"
+                            alt="Headless Dashboard"
                             width={0}
                             height={0}
                             className="aspect-video w-full object-cover"
@@ -155,10 +155,10 @@ export function HeadlessDashboard({ returnToProjects }: ProjectProps) {
                         </h2>
                         <p className="leading-relaxed text-accent/80">
                             One of the more interesting optimizations I worked
-                            on was indexing. I hadn’t done much of this before,
-                            so I seeded the database, measured query times, and
-                            iterated until I figured out and wrote efficient SQL
-                            and indexes.
+                            on was indexing. I hadn&apos;t done much of this
+                            before, so I seeded the database, measured query
+                            times, and iterated until I figured out and wrote
+                            efficient SQL and indexes.
                         </p>
 
                         <p className="leading-relaxed text-accent/80">

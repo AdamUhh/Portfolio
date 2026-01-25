@@ -1,6 +1,7 @@
 import { ClockHub } from "./ClockHub";
 import { HeadlessDashboard } from "./HeadlessDashboard";
 import { Loflo } from "./Loflo";
+import { StorefrontDemo } from "./StorefrontDemo";
 import { ProjectProps } from "./projects.type";
 
 export enum TagType {
@@ -84,13 +85,47 @@ Next came the UX and quality-of-life improvements. I focused on making the workf
 When it came to blogs, I took a step back to map out how drafts, published posts, and unpublished drafts would work together, especially since I wanted the flexibility to save both a draft and a published version simultaneously. Additionally, I used TipTap as my Markdown, and the base.
 
 > Optimizations
-One of the more interesting optimizations I worked on was indexing. I hadn’t done much of this before, so I seeded the database, measured query times, and iterated until I figured out and wrote efficient SQL and indexes.
+One of the more interesting optimizations I worked on was indexing. I hadn't done much of this before, so I seeded the database, measured query times, and iterated until I figured out and wrote efficient SQL and indexes.
 
 As I mentioned previously, I also cached all API calls for collections, brands, models, and tags. Without caching, every product creation or edit would trigger multiple requests, so this made a huge difference.
 
 To reduce server load, I optimized forms on the client side so only changed data is sent. This significantly cut down the amount of data sent.
 
 The same approach applied to images: instead of deleting and uploading new ones, I simply updated the S3 ID, and refreshed the CloudFront CDN.
+
+> Tech Stack
+NextJS, TypeScript, AWS, Drizzle ORM, Cockroach DB
+`,
+    },
+
+    "demo-storefront": {
+        title: "Demo Storefront",
+        description: "A demo of a storefront.",
+        imageSrc: "/projects/storefront-demo.gif",
+        tags: [
+            TagType.Work,
+            TagType.NextJS,
+            TagType.Typescript,
+            TagType.AWS,
+            TagType.DrizzleORM,
+            TagType.CockroachDB,
+        ],
+        component: StorefrontDemo,
+        rawText: `Storefront Demo
+
+A demo storefront built to showcase a simplified version of a real production store's frontend.
+
+> Why I Made It
+This storefront was built as a demo to go along with my headless dashboard project. Rather than using the real production site, I made a simplified version to showcase it.
+
+All the content is just placeholder text and images since the main focus is on layout, performance, and interaction, not the backend.
+
+> Challenges
+I had some trouble getting the Collection Filters to work with multiple options, but I learned a lot in the process.
+
+Another consideration I focused on was making the UI feel smooth. I added smooth scrolling with Lenis, but users didn't really like how it felt.
+
+The homepage carousel was also a bit tricky on mobile because browser viewports behave inconsistently, so I had to write some custom code to make sure it looked and scrolled properly on all devices.
 
 > Tech Stack
 NextJS, TypeScript, AWS, Drizzle ORM, Cockroach DB

@@ -337,8 +337,8 @@ function Details({
                         to drift off when the work becomes monotonous and
                         I&apos;m just sitting.{" "}
                         <span className="text-accent">
-                            Deadlines aren’t something I enjoy, I doubt anyone
-                            does, but I understand them.
+                            Deadlines aren&apos;t something I enjoy, I doubt
+                            anyone does, but I understand them.
                         </span>
                     </p>
                 </div>
