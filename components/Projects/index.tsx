@@ -33,7 +33,7 @@ function ProjectCard({
 }) {
     return (
         <div
-            className="group relative aspect-10/11 w-full overflow-hidden rounded-lg bg-[#252526] shadow-md transition-all duration-300 hover:scale-[1.02] hover:cursor-pointer hover:shadow-xl"
+            className="group relative w-full overflow-hidden rounded-lg bg-[#252526] shadow-md transition-all duration-300 hover:scale-[1.02] hover:cursor-pointer hover:shadow-xl"
             onPointerUp={(e) => {
                 e.stopPropagation();
                 onClick();

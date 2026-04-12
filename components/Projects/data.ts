@@ -1,4 +1,5 @@
 import { ClockHub } from "./ClockHub";
+import { Filamint } from "./Filamint";
 import { HeadlessDashboard } from "./HeadlessDashboard";
 import { Loflo } from "./Loflo";
 import { StorefrontDemo } from "./StorefrontDemo";
@@ -7,8 +8,11 @@ import { ProjectProps } from "./projects.type";
 export enum TagType {
     SideProject = "Side Project",
     Work = "Work",
+    Wails = "Wails",
+    Golang = "Golang",
     SvelteKit = "SvelteKit",
     NextJS = "NextJS",
+    React = "React",
     Typescript = "Typescript",
     AWS = "AWS",
     DrizzleORM = "DrizzleOrm",
@@ -24,8 +28,11 @@ interface TagConfig {
 export const tagConfigs: Record<TagType, TagConfig> = {
     [TagType.SideProject]: { bgColor: "#4f83cc" },
     [TagType.Work]: { bgColor: "#f07167", color: "#000000" },
+    [TagType.Wails]: { bgColor: "#b31e23" },
+    [TagType.Golang]: { bgColor: "#79d4fd", color: "#000000" },
     [TagType.SvelteKit]: { bgColor: "#ff3e00" },
     [TagType.NextJS]: { bgColor: "#000000" },
+    [TagType.React]: { bgColor: "#58c4dc", color: "#000000" },
     [TagType.Typescript]: { bgColor: "#3178c6" },
     [TagType.AWS]: { bgColor: "#ff9900", color: "#000000" },
     [TagType.DrizzleORM]: { bgColor: "#c6f754", color: "#000000" },
@@ -45,6 +52,56 @@ export const projectsData: Record<
         rawText: string;
     }
 > = {
+    filamint: {
+        title: "Filamint - 3D Print & Filamint Tracker",
+        description:
+            "A simple desktop app for tracking your 3D printing spools and prints.",
+        imageSrc: "/projects/filamint.gif",
+        tags: [
+            TagType.SideProject,
+            TagType.Wails,
+            TagType.Golang,
+            TagType.Typescript,
+            TagType.React,
+        ],
+        component: Filamint,
+        rawText: `Filamint - 3D Print & Filamint Tracker
+
+A simple desktop app for tracking your 3D printing spools and prints.
+
+> Why I Made It
+Ive got a 3D printer, and have been using an excel file to keep track of my prints and spools. It works but I wanted to use something else. I was tempted to use other apps but instead decided to instead make my own and learn how to create desktop apps in the process.
+
+> What It Does
+ • Create, edit, and delete spools and prints.
+ • Upload files to prints with automatic deduplication to avoid storing duplicate files.
+ • Keyboard shortcuts for faster navigation and actions.
+ • Advanced search with qualifiers (e.g. material:PLA, vendor:"Bambu Labs").
+ • Preview models directly within the application via ThreeJS.
+ • Open prints directly in your preferred slicer (e.g. OrcaSlicer), configurable.
+ • Autocomplete suggestions for fields such as vendor and material, configurable.
+ • Multiple themes including light, dark, and additional variants.
+ • Cross-platform support for Windows and Linux (macOS likely compatible but untested).
+
+> Challenges
+Building the app with Wails itself was quite simple. However, since it was still in the v3 alpha stage (at the time I worked on the project), I soon ran into issues where the documentation was outdated, where some functions either didn't exist, required different arguments, or worse, was documented heavily, but did not actually exist (such as the updater).
+I was aware of documentation issues going in, and later on just relied on the Go package documentation as the source of truth.
+
+One of the more frustrating parts of being in alpha is the lack of a built-in app updater, so I ended up rolling my own. Most existing solutions felt like too much effort to integrate at the time. 
+In hindsight, I wish I had just gone that route. There is just so much trial and error needed to get it working across different OSes and distributions. Definitely a learning experience, but not one I would want to repeat if possible.
+
+> Optimizations
+I went with React Query, which made things a lot cleaner and simpler. I also added a simple file hash system to avoid duplicate .3mf/.stl files being reused across duplicate prints.
+
+All services are also modular, and I can reuse them easily across different wails projects, such as the shortcut service, logger service, database service, etc.
+
+I also aimed to keep the app scalable by structuring the code in a way that could be adapted for network use later, in case I decide to expand it for browser support later on.
+
+> Tech Stack
+Wails, Golang, Typescript, React
+`,
+    },
+
     "headless-dashboard": {
         title: "Headless Dashboard",
         description:

@@ -9,3 +9,4 @@ export const LOFLO_LINK = "https://github.com/AdamUhh/LoFlo";
 export const HEADLESS_DASHBOARD_LINK =
     "https://github.com/AdamUhh/Headless-eCommerce-CMS";
 export const STOREFRONT_DEMO = "https://storefront-dummy.vercel.app/";
+export const FILAMINT_LINK = "https://github.com/AdamUhh/Filamint";
