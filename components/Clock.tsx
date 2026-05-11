@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+const oneSecondInMS = 1000;
+
 export function Clock({
     className,
     hideSeconds,
@@ -15,23 +17,25 @@ export function Clock({
 }) {
     const [formattedTime, setFormattedTime] = useState("");
     const [formattedDate, setFormattedDate] = useState("");
+
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const update = () => {
             const _date = new Date();
             const timeOptions: Intl.DateTimeFormatOptions = hideSeconds
                 ? { hour: "2-digit", minute: "2-digit" }
                 : { hour: "2-digit", minute: "2-digit", second: "2-digit" };
             setFormattedTime(_date.toLocaleTimeString(undefined, timeOptions));
-
-            // Format date as "15 Mar, 2025"
             const day = _date.getDate();
             const month = _date.toLocaleString("en-US", { month: "short" });
             const year = _date.getFullYear();
             setFormattedDate(`${day} ${month}, ${year}`);
-        }, 1000);
-        // Clear the interval when the component is unmounted
+        };
+
+        update(); // render immediately
+        const intervalId = setInterval(update, oneSecondInMS);
         return () => clearInterval(intervalId);
     }, [hideSeconds]);
+
     return (
         <div className={cn("text-nowrap", className)}>
             {formattedTime}
@@ -46,14 +50,15 @@ export function TimeOnApp() {
     const [timeOnSite, setTimeOnSite] = useState<number>(0);
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const update = () => {
             const elapsedTime = Math.floor(
-                (new Date().getTime() - startTime.getTime()) / 1000
-            ); // in seconds
+                (new Date().getTime() - startTime.getTime()) / oneSecondInMS
+            );
             setTimeOnSite(elapsedTime);
-        }, 1000);
+        };
 
-        // Clear the interval when the component is unmounted
+        update();
+        const intervalId = setInterval(update, oneSecondInMS);
         return () => clearInterval(intervalId);
     }, [startTime]);
 
@@ -61,7 +66,6 @@ export function TimeOnApp() {
         const hours = Math.floor(seconds / 3600);
         const minutes = Math.floor((seconds % 3600) / 60);
         const remainingSeconds = seconds % 60;
-
         return `${hours}h ${minutes}m ${remainingSeconds}s`;
     };
 

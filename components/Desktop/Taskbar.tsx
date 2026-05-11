@@ -36,7 +36,7 @@ function TaskbarVSCode({ win }: { win: WindowMetadata | undefined }) {
                 <TooltipTrigger asChild>
                     <Button
                         className={cn(
-                            "relative mx-auto h-auto w-fit rounded-none p-2 transition-none after:absolute after:bottom-0 after:h-[3px] after:w-full after:content-normal after:bg-transparent hover:bg-accent/70",
+                            "relative mx-auto h-auto w-fit rounded-none p-2 transition-none after:absolute after:bottom-0 after:h-0.75 after:w-full after:content-normal after:bg-transparent hover:bg-accent/70",
                             win?.isFocused ? "bg-accent after:bg-blue-600" : ""
                         )}
                         variant="ghost"
@@ -67,7 +67,7 @@ function TaskbarItem({ win }: { win: WindowMetadata }) {
                 <TooltipTrigger asChild>
                     <Button
                         className={cn(
-                            "relative mx-auto h-auto w-fit rounded-none p-2 transition-none after:absolute after:bottom-0 after:h-[3px] after:w-full after:content-normal after:bg-transparent hover:bg-accent/70",
+                            "relative mx-auto h-auto w-fit rounded-none p-2 transition-none after:absolute after:bottom-0 after:h-0.75 after:w-full after:content-normal after:bg-transparent hover:bg-accent/70",
                             win.isFocused ? "bg-accent after:bg-blue-600" : ""
                         )}
                         variant="ghost"
@@ -98,7 +98,7 @@ function TaskbarItem({ win }: { win: WindowMetadata }) {
     );
 }
 
-export function Taskbar() {
+function TaskbarApps() {
     const { windows } = useWindowManager();
 
     const aboutWindow = windows.filter(
@@ -108,26 +108,41 @@ export function Taskbar() {
     const openWindows = windows.filter(
         (w) => w.appId !== APP_REGISTRY_NAMES.about
     );
+    return (
+        <ul className="mx-auto flex h-full w-fit flex-nowrap items-center justify-center gap-1">
+            <Icon path={mdiMicrosoft} className="size-9" />
+            <TaskbarVSCode win={aboutWindow} />
+            {openWindows.map((win) => (
+                <TaskbarItem key={win.id} win={win} />
+            ))}
+        </ul>
+    );
+}
 
+function TaskbarUtils() {
+    return (
+        <ul className="my-auto ml-auto grid h-fit grid-cols-[1fr_1fr_1fr_1fr_100px] items-center gap-4 not-tablet-xl:hidden">
+            <Icon path={mdiChevronUp} className="size-4" />
+            <Icon path={mdiBattery90} className="size-4 rotate-90" />
+            <button title="Wifi">
+                <WifiIcon className="size-4" />
+            </button>
+            <Icon path={mdiVolumeHigh} className="size-4" />
+            <Clock
+                key="clock"
+                className="pr-4 text-center text-xs"
+                hideSeconds
+            />
+        </ul>
+    );
+}
+
+export function Taskbar() {
     return (
         <footer className="fixed bottom-0 left-0 grid h-11 w-screen grid-cols-3 bg-gray-400 not-tablet-xl:grid-cols-1">
             <div className="not-tablet-xl:hidden" />
-            <ul className="mx-auto flex h-full w-fit flex-nowrap items-center justify-center gap-1">
-                <Icon path={mdiMicrosoft} className="size-9" />
-                <TaskbarVSCode win={aboutWindow} />
-                {openWindows.map((win) => (
-                    <TaskbarItem key={win.id} win={win} />
-                ))}
-            </ul>
-            <ul className="my-auto ml-auto grid h-fit grid-cols-[1fr_1fr_1fr_1fr_100px] items-center gap-4 not-tablet-xl:hidden">
-                <Icon path={mdiChevronUp} className="size-4" />
-                <Icon path={mdiBattery90} className="size-4 rotate-90" />
-                <button title="Wifi">
-                    <WifiIcon className="size-4" />
-                </button>
-                <Icon path={mdiVolumeHigh} className="size-4" />
-                <Clock className="pr-4 text-center text-xs" hideSeconds />
-            </ul>
+            <TaskbarApps />
+            <TaskbarUtils />
         </footer>
     );
 }

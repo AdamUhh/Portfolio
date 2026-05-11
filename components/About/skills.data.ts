@@ -18,9 +18,9 @@ interface SkillDict<T extends Skill[]> {
 export const skillDict: SkillDict<Skill[]> = {
     languages: [
         { name: "Autohotkey", experience: skillList.Level_2 },
-        { name: "CSharp", experience: skillList.Level_1 },
+        { name: "C#", experience: skillList.Level_3 },
         { name: "CSS3", experience: skillList.Level_4 },
-        { name: "Go", experience: skillList.Level_1 },
+        { name: "Go", experience: skillList.Level_2 },
         { name: "HTML5", experience: skillList.Level_4 },
         { name: "Rust", experience: skillList.Level_1 },
         { name: "TypeScript", experience: skillList.Level_4 },
@@ -31,7 +31,7 @@ export const skillDict: SkillDict<Skill[]> = {
         { name: "NextJS", experience: skillList.Level_4 },
         { name: "React", experience: skillList.Level_4 },
         { name: "Redux", experience: skillList.Level_3 },
-        { name: "SvelteKit", experience: skillList.Level_2 },
+        { name: "SvelteKit", experience: skillList.Level_1 },
     ],
 
     backend: [
@@ -44,22 +44,22 @@ export const skillDict: SkillDict<Skill[]> = {
     ],
 
     databases: [
-        { name: "MongoDB", experience: skillList.Level_2 },
-        { name: "MySQL", experience: skillList.Level_2 },
+        { name: "MongoDB", experience: skillList.Level_1 },
+        { name: "MySQL", experience: skillList.Level_1 },
         { name: "PostgreSQL", experience: skillList.Level_3 },
-        { name: "SQLite", experience: skillList.Level_2 },
-        { name: "Turso", experience: skillList.Level_2 },
+        { name: "SQLite", experience: skillList.Level_3 },
+        { name: "Turso", experience: skillList.Level_1 },
     ],
 
     "desktop-frameworks": [
-        { name: "Electron", experience: skillList.Level_3 },
-        { name: "Wails", experience: skillList.Level_1 },
+        { name: "Electron", experience: skillList.Level_2 },
+        { name: "Wails", experience: skillList.Level_3 },
     ],
 
     platforms: [
         { name: "AWS", experience: skillList.Level_2 },
         { name: "Firebase", experience: skillList.Level_1 },
-        { name: "Shopify", experience: skillList.Level_3 },
+        { name: "Shopify", experience: skillList.Level_2 },
         { name: "Supabase", experience: skillList.Level_1 },
         { name: "Webflow", experience: skillList.Level_3 },
         { name: "Xano", experience: skillList.Level_2 },
@@ -72,7 +72,7 @@ export const skillDict: SkillDict<Skill[]> = {
     ],
 
     "game-development": [
-        { name: "Godot", experience: skillList.Level_2 },
+        { name: "Godot", experience: skillList.Level_3 },
         { name: "Unity", experience: skillList.Level_2 },
         { name: "Unreal Engine 4", experience: skillList.Level_1 },
     ],

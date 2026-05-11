@@ -320,8 +320,10 @@ function Details({
                         <span className="text-accent">teaches me</span>{" "}
                         something new, like taking over{" "}
                         <span className="text-accent">challenging tasks</span>,
-                        or things someone would hesitate to wanna try.{" "}
-                        <span className="text-accent">I just wanna learn.</span>
+                        or things someone would hesitate to try.{" "}
+                        <span className="text-accent">
+                            I just enjoy learning.
+                        </span>
                     </p>
                 </div>
 
@@ -555,25 +557,25 @@ function Experience() {
                             <span className="text-accent">
                                 Built an e-commerce platform
                             </span>{" "}
-                            with a tailored headless CMS
+                            with a tailored headless CMS.
                         </li>
                         <li>
                             Created dynamic{" "}
                             <span className="text-accent">dashboards</span> for
-                            blogs
+                            blogs.
                         </li>
                         <li>
                             Developed{" "}
                             <span className="text-accent">inventory</span>{" "}
-                            management with bulk edits and filters
+                            management with bulk edits and filters.
                         </li>
                         <li>
                             Implemented complete{" "}
                             <span className="text-accent">
-                                product management
+                                product management.
                             </span>
                         </li>
-                        <li>Content creation for Instagram</li>
+                        <li>Content creation for Instagram.</li>
                     </ul>
                 </div>
                 <div>
@@ -592,25 +594,26 @@ function Experience() {
                             <span className="text-accent">
                                 multi-industry platforms
                             </span>
+                            .
                         </li>
                         <li>
                             Built role-based{" "}
                             <span className="text-accent">fitness system</span>{" "}
                             with user, coach, and admin{" "}
                             <span className="text-accent">dashboards</span>{" "}
-                            (booking, session management, finance tools)
+                            (booking, session management, finance tools).
                         </li>
                         <li>
                             Created an{" "}
                             <span className="text-accent">events site</span> for
-                            entertainment client
+                            entertainment client.
                         </li>
                         <li>
                             Developed CMS-driven{" "}
                             <span className="text-accent">
                                 education portal
                             </span>{" "}
-                            with media and interactive tools
+                            with media and interactive tools.
                         </li>
                     </ul>
                 </div>
@@ -630,11 +633,12 @@ function Experience() {
                             <span className="text-accent">
                                 inventory management system
                             </span>
+                            .
                         </li>
                         <li>
                             Assisted in{" "}
                             <span className="text-accent">
-                                day to day operations
+                                day to day operations.
                             </span>
                         </li>
                     </ul>
